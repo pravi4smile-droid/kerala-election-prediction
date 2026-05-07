@@ -1,0 +1,2442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kerala Election Live Predictor 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── Kerala Election Predictor — Rich Light Theme ───────────────────────── */
+:root {
+  /* Alliance palette */
+  --ldf: #991b1b;  --ldf-light: #fecaca;  --ldf-mid: #dc2626;  --ldf-xlight: #fef2f2;
+  --ldf-grad: linear-gradient(135deg, #ef4444 0%, #991b1b 100%);
+  --udf: #1e40af;  --udf-light: #dbeafe;  --udf-mid: #2563eb;  --udf-xlight: #eff6ff;
+  --udf-grad: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+  --nda: #9a3412;  --nda-light: #fed7aa;  --nda-mid: #ea580c;  --nda-xlight: #fff7ed;
+  --nda-grad: linear-gradient(135deg, #f97316 0%, #c2410c 100%);
+  --ind: #4b5563;  --ind-light: #f3f4f6;  --ind-mid: #6b7280;
+
+  /* Canvas — warm white */
+  --bg: #f4f1eb;
+  --surface: #ffffff;
+  --surface2: #f9f7f3;
+  --surface3: #f0ede6;
+  --surface4: #e8e3da;
+
+  /* Borders */
+  --border: #e5e0d8;  --border-mid: #cfc9be;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(60,50,30,.06);
+  --shadow: 0 1px 3px rgba(60,50,30,.08), 0 4px 18px rgba(60,50,30,.07);
+  --shadow-md: 0 2px 6px rgba(60,50,30,.09), 0 8px 30px rgba(60,50,30,.09);
+  --shadow-lg: 0 4px 12px rgba(60,50,30,.10), 0 18px 52px rgba(60,50,30,.11);
+  --shadow-inset: inset 0 1px 3px rgba(60,50,30,.07);
+
+  /* Typography */
+  --text: #1c1814;  --muted: #72685e;  --muted2: #a89e94;
+  --accent: #dc2626;
+
+  /* Geometry */
+  --radius: 8px;  --radius-lg: 14px;  --radius-xl: 20px;
+  --font: 'Plus Jakarta Sans', sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 15px; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); min-height: 100vh; }
+
+/* ── Custom scrollbars ────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #b0a898; }
+
+/* ── Layout ───────────────────────────────────────────────────────────────── */
+.shell { display: grid; grid-template-columns: 272px 1fr; height: 100vh; overflow: hidden; }
+.sidebar { background: linear-gradient(180deg, #fdfcfa 0%, #f7f4ee 100%); border-right: 1px solid var(--border); display: flex; flex-direction: column; overflow: hidden; }
+.main { display: flex; flex-direction: column; overflow: hidden; }
+
+/* ── Top bar ──────────────────────────────────────────────────────────────── */
+.topbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 22px;
+  height: 58px;
+  display: flex; align-items: center; gap: 14px; flex-shrink: 0;
+  position: relative;
+  box-shadow: 0 1px 0 var(--border), 0 2px 14px rgba(60,50,30,.06);
+}
+.topbar::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--ldf-mid) 0%, var(--ldf-mid) 33.3%, var(--udf-mid) 33.3%, var(--udf-mid) 66.6%, var(--nda-mid) 66.6%, var(--nda-mid) 100%);
+  opacity: .65;
+}
+.topbar-title {
+  font-size: 15px; font-weight: 700;
+  letter-spacing: .01em; flex: 1; color: var(--text);
+}
+.topbar-title span { color: var(--accent); }
+.live-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  background: linear-gradient(135deg, #fee2e2, #fecaca);
+  color: var(--accent); padding: 4px 10px; border-radius: 100px;
+  box-shadow: 0 1px 4px rgba(220,38,38,.18);
+}
+.live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: blink 1.4s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
+.scoreboard-mini { display: flex; gap: 14px; }
+.score-chip { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; }
+.score-chip .dot { width: 10px; height: 10px; border-radius: 50%; box-shadow: 0 0 0 2px rgba(0,0,0,.08); }
+.score-chip .num { font-family: var(--mono); font-weight: 700; }
+
+/* ── Sidebar head ─────────────────────────────────────────────────────────── */
+.sidebar-head { padding: 12px 12px 10px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+.dist-select {
+  width: 100%; font-size: 13px; font-family: var(--font); font-weight: 500;
+  border: 1.5px solid var(--border);
+  background: var(--surface) url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23a89e94'/%3E%3C/svg%3E") no-repeat right 11px center;
+  border-radius: 10px; padding: 8px 30px 8px 12px; color: var(--text); appearance: none;
+  box-shadow: var(--shadow-inset);
+  transition: border-color .15s, box-shadow .15s;
+}
+.search-box {
+  margin-top: 8px; width: 100%; font-size: 13px; font-family: var(--font); font-weight: 500;
+  border: 1.5px solid var(--border); border-radius: 10px;
+  padding: 8px 10px 8px 34px;
+  background: var(--surface) url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5.5' cy='5.5' r='4' stroke='%23a89e94' stroke-width='1.5'/%3E%3Cpath d='M9 9l2.5 2.5' stroke='%23a89e94' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat 11px center;
+  color: var(--text); box-shadow: var(--shadow-inset);
+  transition: border-color .15s, box-shadow .15s;
+}
+.dist-select:focus, .search-box:focus {
+  outline: none; border-color: var(--udf-mid);
+  box-shadow: var(--shadow-inset), 0 0 0 3px rgba(37,99,235,.1);
+}
+
+/* ── Constituency list ────────────────────────────────────────────────────── */
+.con-list { flex: 1; overflow-y: auto; padding: 6px 0; }
+.con-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 14px 8px 13px; cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: background .1s, border-color .1s;
+}
+.con-item:hover { background: #f0ece5; }
+.con-item.active { background: var(--udf-xlight); border-left-color: var(--udf-mid); }
+.con-item.called-ldf { background: var(--ldf-xlight); border-left-color: var(--ldf-mid); }
+.con-item.called-udf { background: var(--udf-xlight); border-left-color: var(--udf-mid); }
+.con-item.called-nda { background: var(--nda-xlight); border-left-color: var(--nda-mid); }
+.con-item.active.called-ldf { background: var(--ldf-xlight); }
+.con-item.active.called-udf { background: #dbeafe; }
+.con-item.active.called-nda { background: var(--nda-xlight); }
+.con-no { font-family: var(--mono); font-size: 10px; color: var(--muted2); min-width: 22px; }
+.con-name { font-size: 13px; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 500; }
+.con-badge { font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 100px; flex-shrink: 0; letter-spacing: .03em; }
+.badge-ldf { background: var(--ldf-light); color: var(--ldf); }
+.badge-udf { background: var(--udf-light); color: var(--udf); }
+.badge-nda { background: var(--nda-light); color: var(--nda); }
+.badge-ind { background: var(--ind-light); color: var(--ind); }
+.badge-pending { background: var(--surface3); color: var(--muted2); }
+.badge-counting { background: var(--nda-xlight); color: var(--nda); font-weight: 700; }
+.badge-ready { background: var(--ldf-xlight); color: var(--ldf); font-weight: 700; }
+
+/* ── Main content ─────────────────────────────────────────────────────────── */
+.content { flex: 1; overflow-y: auto; padding: 24px; }
+.placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 14px; color: var(--muted); text-align: center; }
+.placeholder svg { opacity: .18; }
+.placeholder h3 { font-size: 17px; font-weight: 600; color: var(--muted); }
+.placeholder p { font-size: 13px; max-width: 270px; line-height: 1.65; }
+
+/* ── Entry header ─────────────────────────────────────────────────────────── */
+.entry-header { margin-bottom: 20px; }
+.entry-header h2 { font-size: 22px; font-weight: 700; letter-spacing: -.01em; color: var(--text); }
+.entry-meta { font-size: 12px; color: var(--muted); margin-top: 6px; display: flex; gap: 10px; flex-wrap: wrap; }
+.entry-meta span { display: flex; align-items: center; gap: 4px; }
+
+/* ── Cards / Panels ──────────────────────────────────────────────────────── */
+.card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px; margin-bottom: 16px;
+  box-shadow: var(--shadow);
+  transition: box-shadow .2s, border-color .2s;
+}
+.card:hover { box-shadow: var(--shadow-md); border-color: var(--border-mid); }
+.card-title {
+  font-size: 10px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted2); margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+}
+.card-title::before {
+  content: ''; display: inline-block; width: 3px; height: 13px;
+  background: var(--udf-mid); border-radius: 2px; flex-shrink: 0;
+}
+
+/* ── Booth controls ───────────────────────────────────────────────────────── */
+.booth-grid { display: grid; grid-template-columns: 1fr 1fr auto; gap: 12px; align-items: end; }
+.field label { display: block; font-size: 11px; font-weight: 700; letter-spacing: .05em; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; }
+.field input[type=number] {
+  width: 100%; font-size: 15px; font-family: var(--mono); font-weight: 500;
+  border: 1.5px solid var(--border); border-radius: var(--radius);
+  padding: 8px 11px; background: var(--surface2); color: var(--text);
+  box-shadow: var(--shadow-inset);
+  transition: border-color .15s, box-shadow .15s;
+}
+.field input:focus { outline: none; border-color: var(--udf-mid); box-shadow: var(--shadow-inset), 0 0 0 3px rgba(37,99,235,.1); }
+
+/* ── Toggle buttons ───────────────────────────────────────────────────────── */
+.round-btns { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.round-btn {
+  font-size: 12px; font-family: var(--font); font-weight: 600;
+  padding: 5px 13px; border: 1.5px solid var(--border);
+  border-radius: 100px; background: var(--surface); cursor: pointer; color: var(--muted);
+  transition: all .15s;
+  box-shadow: 0 1px 2px rgba(60,50,30,.05);
+}
+.round-btn:hover { background: var(--surface3); border-color: var(--border-mid); color: var(--text); }
+.round-btn.active {
+  background: var(--text); color: var(--surface);
+  border-color: var(--text);
+  box-shadow: 0 2px 6px rgba(28,24,20,.2);
+}
+
+/* ── Candidate rows ───────────────────────────────────────────────────────── */
+.cand-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; border-radius: var(--radius);
+  margin-bottom: 7px; background: var(--surface2);
+  border: 1.5px solid var(--border);
+  transition: background .12s, border-color .12s, box-shadow .12s;
+}
+.cand-row:hover { background: #eef3ff; border-color: #c7d7fa; box-shadow: 0 2px 8px rgba(37,99,235,.07); }
+.alliance-stripe { width: 4px; height: 38px; border-radius: 3px; flex-shrink: 0; }
+.cand-info { flex: 1; min-width: 0; }
+.cand-nm { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cand-party { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.cand-votes-inp {
+  width: 118px; font-size: 15px; font-family: var(--mono); font-weight: 600;
+  border: 1.5px solid var(--border); border-radius: var(--radius);
+  padding: 7px 11px; background: var(--surface); color: var(--text); text-align: right;
+  box-shadow: var(--shadow-inset);
+  transition: border-color .15s, box-shadow .15s;
+}
+.cand-votes-inp:focus { outline: none; border-color: var(--udf-mid); box-shadow: var(--shadow-inset), 0 0 0 3px rgba(37,99,235,.1); }
+.cand-pct { font-family: var(--mono); font-size: 12px; color: var(--muted); min-width: 40px; text-align: right; font-weight: 500; }
+
+/* ── Buttons ──────────────────────────────────────────────────────────────── */
+.action-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+.btn {
+  font-family: var(--font); font-size: 13px; font-weight: 600;
+  padding: 8px 18px; border-radius: var(--radius); cursor: pointer;
+  border: 1.5px solid var(--border); background: var(--surface2); color: var(--text);
+  transition: all .15s; letter-spacing: .01em;
+  box-shadow: 0 1px 3px rgba(60,50,30,.07);
+}
+.btn:hover { background: var(--surface3); border-color: var(--border-mid); box-shadow: 0 2px 6px rgba(60,50,30,.1); }
+.btn-primary {
+  background: linear-gradient(135deg, #1c1814 0%, #2c2520 100%);
+  color: #fff; border-color: #1c1814;
+  box-shadow: 0 1px 4px rgba(28,24,20,.25), 0 2px 10px rgba(28,24,20,.15);
+}
+.btn-primary:hover { background: linear-gradient(135deg, #2c2520 0%, #3c3530 100%); }
+.btn-success {
+  background: var(--ldf-grad); color: #fff; border-color: var(--ldf);
+  box-shadow: 0 1px 4px rgba(153,27,27,.3), 0 2px 10px rgba(153,27,27,.15);
+}
+.btn-success:hover { filter: brightness(1.08); }
+.btn-danger { background: #fff0f0; color: var(--accent); border-color: #fca5a5; }
+.btn-danger:hover { background: #fee2e2; }
+
+/* ── Prediction card ─────────────────────────────────────────────────────── */
+.pred-card { border-radius: var(--radius-xl); overflow: hidden; margin-top: 16px; border: 1.5px solid var(--border); box-shadow: var(--shadow-md); }
+.pred-banner { padding: 20px 22px; display: flex; gap: 16px; align-items: center; }
+.conf-circle { position: relative; width: 60px; height: 60px; flex-shrink: 0; }
+.conf-circle svg { transform: rotate(-90deg); }
+.conf-circle .conf-val { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 12px; font-weight: 700; }
+.pred-winner-name { font-size: 20px; font-weight: 700; letter-spacing: -.01em; line-height: 1.2; }
+.pred-meta { font-size: 12px; margin-top: 4px; opacity: .75; }
+.pred-margin { font-size: 13px; font-weight: 600; margin-top: 5px; }
+.call-indicator {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 9px; padding: 6px 10px; border-radius: var(--radius);
+  font-size: 11px; font-weight: 700; letter-spacing: .02em;
+  border: 1.5px solid var(--border);
+}
+.call-indicator span { font-weight: 500; color: var(--muted); letter-spacing: 0; }
+.call-ready { color: var(--ldf); border-color: rgba(153,27,27,.25); background: var(--ldf-xlight); }
+.call-called { color: var(--udf); border-color: rgba(37,99,235,.25); background: #eff6ff; }
+.call-early { color: var(--nda); border-color: rgba(234,88,12,.28); background: var(--nda-xlight); }
+.call-close { color: var(--accent); border-color: rgba(220,38,38,.25); background: #fff0f0; }
+.call-watch { color: var(--muted); }
+.pred-bars { padding: 16px 22px; border-top: 1px solid var(--border); background: var(--surface); }
+.bar-item { margin-bottom: 12px; }
+.bar-labels { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 5px; }
+.bar-name { font-weight: 600; }
+.bar-votes { font-family: var(--mono); color: var(--muted); }
+.bar-track { height: 9px; background: var(--surface2); border-radius: 6px; overflow: hidden; box-shadow: var(--shadow-inset); }
+.bar-fill { height: 100%; border-radius: 6px; transition: width .7s cubic-bezier(.4,0,.2,1); }
+.actual-row {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  padding: 11px 22px; background: var(--surface2);
+  border-top: 1px solid var(--border); font-size: 11px; color: var(--muted);
+}
+.actual-row .lbl { font-weight: 700; }
+
+/* ── Round table ──────────────────────────────────────────────────────────── */
+.round-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.round-table th { font-weight: 700; color: var(--muted); text-align: left; padding: 7px 10px; border-bottom: 2px solid var(--border); font-size: 10px; text-transform: uppercase; letter-spacing: .08em; background: var(--surface2); }
+.round-table td { padding: 7px 10px; border-bottom: 1px solid var(--border); font-family: var(--mono); }
+.round-table tr:last-child td { border-bottom: none; }
+.round-table tr:hover td { background: #f5f8ff; }
+.round-table .r-status-done { color: var(--ldf-mid); font-weight: 700; }
+.round-table .r-status-partial { color: var(--nda-mid); font-weight: 700; }
+.round-table .r-status-pending { color: var(--muted2); }
+
+/* ── Scoreboard ───────────────────────────────────────────────────────────── */
+.score-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 18px; }
+.score-box {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg); padding: 18px 20px; text-align: center;
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow .15s, transform .15s, border-color .15s;
+  position: relative; overflow: hidden;
+}
+.score-box::before {
+  content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 4px;
+  background: currentColor; opacity: .12;
+}
+.score-box:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.score-big {
+  font-size: 44px; font-weight: 700;
+  line-height: 1; letter-spacing: -.02em;
+}
+.score-lbl { font-size: 11px; font-weight: 700; color: var(--muted); margin-top: 6px; letter-spacing: .04em; text-transform: uppercase; }
+.majority-line { width: 2px; background: var(--accent); position: absolute; top: 0; bottom: 0; }
+.tally-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.tally-name { font-size: 12px; font-weight: 700; min-width: 36px; }
+.tally-track { flex: 1; height: 14px; background: var(--surface2); border-radius: 7px; overflow: hidden; position: relative; box-shadow: var(--shadow-inset); }
+.tally-fill { height: 100%; border-radius: 7px; transition: width .7s cubic-bezier(.4,0,.2,1); }
+.tally-num { font-family: var(--mono); font-size: 14px; font-weight: 700; min-width: 30px; text-align: right; }
+.results-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.results-table th { font-weight: 700; color: var(--muted); text-align: left; padding: 8px 9px; border-bottom: 2px solid var(--border); font-size: 10px; text-transform: uppercase; letter-spacing: .07em; background: var(--surface2); }
+.results-table td { padding: 8px 9px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.results-table tbody tr:hover td { background: #f5f8ff; }
+.results-table tr:last-child td { border-bottom: none; }
+
+/* ── Tabs ─────────────────────────────────────────────────────────────────── */
+.tab-bar {
+  display: flex; gap: 2px; border-bottom: 2px solid var(--border);
+  margin-bottom: 18px; overflow-x: auto; flex-shrink: 0;
+  padding: 0 2px;
+}
+.tab {
+  font-size: 13px; font-family: var(--font); font-weight: 500;
+  padding: 10px 16px; cursor: pointer;
+  color: var(--muted); border-bottom: 2px solid transparent;
+  margin-bottom: -2px; background: none;
+  border-top: none; border-left: none; border-right: none;
+  white-space: nowrap; transition: color .12s, background .12s;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.tab:hover { color: var(--text); background: var(--surface3); }
+.tab.active { color: var(--udf-mid); border-bottom-color: var(--udf-mid); font-weight: 700; background: var(--udf-xlight); }
+
+/* ── Progress strip ───────────────────────────────────────────────────────── */
+.progress-strip { display: flex; gap: 2px; height: 7px; border-radius: 5px; overflow: hidden; margin-top: 10px; box-shadow: var(--shadow-inset); }
+.progress-done { background: var(--ldf-grad); }
+.progress-counting { background: var(--nda-grad); }
+.progress-pending { background: var(--surface3); flex: 1; }
+
+/* ── Round chart ──────────────────────────────────────────────────────────── */
+.round-chart-wrap { overflow-x: auto; margin-bottom: 16px; }
+.round-chart { display: flex; align-items: flex-end; gap: 3px; height: 96px; padding: 4px 0; }
+.round-col { display: flex; flex-direction: column-reverse; align-items: center; gap: 1px; flex-shrink: 0; min-width: 22px; }
+.round-bar-seg { width: 100%; border-radius: 2px 2px 0 0; transition: opacity .15s; cursor: default; }
+.round-bar-seg:hover { opacity: .72; }
+.round-col-lbl { font-size: 9px; color: var(--muted2); font-family: var(--mono); margin-top: 3px; }
+.round-legend { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
+.round-legend-item { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 500; }
+.round-legend-dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+
+/* ── Round leads matrix ───────────────────────────────────────────────────── */
+.lead-chart { width: 100%; height: 240px; display: block; background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-xs); }
+.lead-chart text { font-family: var(--mono); font-size: 10px; fill: var(--muted); }
+.lead-chart-grid { stroke: var(--border); stroke-width: 1; }
+.lead-chart-line { fill: none; stroke-width: 2.5; }
+.lead-chart-point { stroke: var(--surface); stroke-width: 1.5; }
+.lead-summary { display: flex; gap: 10px; flex-wrap: wrap; margin: 10px 0 16px; }
+.lead-summary .score-chip { background: var(--surface); border: 1.5px solid var(--border); border-radius: 10px; padding: 8px 14px; box-shadow: var(--shadow-xs); }
+.lead-matrix-wrap { overflow: auto; max-height: calc(100vh - 220px); border: 1.5px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow-xs); }
+.lead-matrix { width: max-content; min-width: 100%; border-collapse: separate; border-spacing: 0; font-size: 12px; }
+.lead-matrix th, .lead-matrix td { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 6px 8px; white-space: nowrap; }
+.lead-matrix th { position: sticky; top: 0; z-index: 2; background: var(--surface2); color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .07em; font-weight: 700; }
+.lead-matrix .const-head, .lead-matrix .const-cell { position: sticky; left: 0; z-index: 3; min-width: 210px; max-width: 260px; }
+.lead-matrix .const-head { background: var(--surface2); }
+.lead-matrix .const-cell { background: var(--surface); cursor: pointer; transition: background .1s; }
+.lead-matrix tr:hover .const-cell { background: var(--udf-xlight); }
+.lead-cell { min-width: 48px; text-align: center; font-weight: 700; font-family: var(--mono); font-size: 11px; }
+.lead-cell.ldf { background: var(--ldf-xlight); color: var(--ldf); }
+.lead-cell.udf { background: var(--udf-xlight); color: var(--udf); }
+.lead-cell.nda { background: var(--nda-xlight); color: var(--nda); }
+.lead-cell.other { background: var(--ind-light); color: var(--ind); }
+.lead-cell.empty { background: #fafafa; color: var(--muted2); }
+.lead-district { color: var(--muted2); font-size: 10px; margin-left: 4px; }
+
+/* ── Utilities ────────────────────────────────────────────────────────────── */
+.tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 100px; letter-spacing: .03em; }
+.tag-pdf { background: #dbeafe; color: #1e40af; }
+.tag-est { background: #fef9c3; color: #713f12; }
+</style>
+</head>
+<body>
+<div class="shell">
+
+<!--  SIDEBAR  -->
+<aside class="sidebar">
+  <div class="sidebar-head">
+    <select class="dist-select" id="distSel" onchange="filterByDistrict(this.value)">
+      <option value="">All 14 districts</option>
+    </select>
+    <input class="search-box" id="searchBox" placeholder="Search constituency..." oninput="filterSearch(this.value)">
+  </div>
+  <div class="con-list" id="conList"></div>
+</aside>
+
+<!--  MAIN  -->
+<div class="main">
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="topbar-title">Kerala Election Live Predictor 2026</div>
+    <div class="live-badge"><span class="live-dot"></span>Results</div>
+    <div class="scoreboard-mini" id="topScoreboard"></div>
+  </header>
+
+  <!-- Tab bar -->
+  <div style="padding: 0 20px; background: var(--surface); border-bottom: 1px solid var(--border);">
+    <div class="tab-bar" id="mainTabs">
+      <button class="tab active" onclick="switchTab('entry',this)">Vote entry</button>
+      <button class="tab" onclick="switchTab('rounds',this)">Rounds</button>
+      <button class="tab" onclick="switchTab('round_leads',this)">Round leads</button>
+      <button class="tab" onclick="switchTab('scoreboard',this)">Scoreboard</button>
+      <button class="tab" onclick="switchTab('ldf_insights',this)">Insights</button>
+      <button class="tab" onclick="switchTab('nda_20plus',this)">NDA 20%+</button>
+      <button class="tab" onclick="switchTab('nda_allied',this)">NDA Allied (BDJS/TTP)</button>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="content" id="contentArea">
+    <div class="placeholder">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <rect x="8" y="12" width="32" height="24" rx="3" stroke="#a89e94" stroke-width="2"/>
+        <path d="M16 22h16M16 28h10" stroke="#a89e94" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <h3>Select a constituency</h3>
+      <p>Choose any of the 140 Kerala assembly constituencies from the left panel to begin entering vote counts.</p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<script>
+//  State 
+const state = {
+  constituencies: [],        // full list from API
+  constMap: {},              // no -> object
+  selected: null,            // currently open const no
+  liveData: {},              // no -> { boothsCounted, votes, prediction, status }
+  activeTab: 'entry',
+  ndaAlliedYear: 2021,
+  ndaThreshold: 20,
+  insightAlliance: 'ldf',
+  ldfInsightYear: 2021,
+  ldfInsightSort: 'pct_desc',
+  roundLeadsMode: 'cumulative',
+  distFilter: '',
+  searchFilter: '',
+};
+
+const ALLIANCE_COLORS = { ldf:'#991b1b', udf:'#1e40af', nda:'#9a3412', ind:'#4b5563' };
+const ALLIANCE_BG     = { ldf:'#fef2f2', udf:'#eff6ff', nda:'#fff7ed', ind:'#f3f4f6' };
+const ALLIANCE_LABELS = { ldf:'LDF', udf:'UDF', nda:'BJP', ind:'IND', other:'IND' };
+
+function displayPrediction(no) {
+  return state.liveData[no]?.prediction || eciPredRaw?.predictions?.[String(no)] || null;
+}
+
+function displayStatus(no) {
+  const ld = state.liveData[no];
+  if (ld?.status && ld.status !== 'pending') return ld.status;
+
+  const pred = eciPredRaw?.predictions?.[String(no)];
+  if (!pred) return ld?.status || 'pending';
+
+  const isDone = pred.is_called
+    || pred.call_status === 'called'
+    || pred.pct_counted >= 100
+    || (pred.tot_rounds && pred.cur_round >= pred.tot_rounds);
+  return isDone ? 'called' : 'counting';
+}
+
+//  Bootstrap 
+async function init() {
+  const res = await fetch('/api/constituencies');
+  state.constituencies = await res.json();
+  state.constituencies.forEach(c => {
+    state.constMap[c.no] = c;
+    state.liveData[c.no] = { boothsCounted: 0, votes: new Array(c.candidates.length).fill(0), prediction: null, status: 'pending' };
+  });
+  buildSidebar();
+  buildDistDropdown();
+  updateTopScoreboard();
+}
+
+//  Sidebar 
+function buildDistDropdown() {
+  const districts = [...new Set(state.constituencies.map(c => c.district))];
+  const sel = document.getElementById('distSel');
+  districts.forEach(d => {
+    const o = document.createElement('option');
+    o.value = d; o.textContent = d;
+    sel.appendChild(o);
+  });
+}
+
+function buildSidebar() {
+  const list = document.getElementById('conList');
+  list.innerHTML = '';
+  const q = state.searchFilter.toLowerCase();
+  const filtered = state.constituencies.filter(c => {
+    if (state.distFilter && c.district !== state.distFilter) return false;
+    if (q && !c.name.toLowerCase().includes(q) && !String(c.no).includes(q)) return false;
+    return true;
+  });
+  filtered.forEach(c => {
+    const p = displayPrediction(c.no);
+    const status = displayStatus(c.no);
+    const wa = p?.winner_alliance;
+    let badgeCls = 'badge-pending', badgeText = 'pending';
+    if (status === 'called') { badgeCls = `badge-${wa||'ind'}`; badgeText = ALLIANCE_LABELS[wa||'ind']; }
+    else if (p?.call_ready) { badgeCls = 'badge-ready'; badgeText = 'ready'; }
+    else if (status === 'counting') { badgeCls = 'badge-counting'; badgeText = 'partial'; }
+    const calledCls = status === 'called' ? `called-${wa}` : '';
+    const activeCls = state.selected === c.no ? 'active' : '';
+    const div = document.createElement('div');
+    div.className = `con-item ${calledCls} ${activeCls}`;
+    div.id = `si-${c.no}`;
+    div.onclick = () => openConst(c.no);
+    div.innerHTML = `<span class="con-no">${c.no}</span>
+      <span class="con-name">${c.name}</span>
+      <span class="con-badge ${badgeCls}">${badgeText}</span>`;
+    list.appendChild(div);
+  });
+}
+
+function filterByDistrict(d) { state.distFilter = d; buildSidebar(); }
+function filterSearch(q) { state.searchFilter = q; buildSidebar(); }
+
+function refreshSidebarItem(no) {
+  const el = document.getElementById(`si-${no}`);
+  if (!el) return;
+  const p = displayPrediction(no);
+  const status = displayStatus(no);
+  const wa = p?.winner_alliance;
+  let badgeCls = 'badge-pending', badgeText = 'pending';
+  if (status === 'called') { badgeCls = `badge-${wa||'ind'}`; badgeText = ALLIANCE_LABELS[wa||'ind']; }
+  else if (p?.call_ready) { badgeCls = 'badge-ready'; badgeText = 'ready'; }
+  else if (status === 'counting') { badgeCls = 'badge-counting'; badgeText = 'partial'; }
+  el.className = `con-item ${status==='called'?`called-${wa}`:''} ${state.selected===no?'active':''}`;
+  el.innerHTML = `<span class="con-no">${no}</span>
+    <span class="con-name">${state.constMap[no].name}</span>
+    <span class="con-badge ${badgeCls}">${badgeText}</span>`;
+}
+
+//  Open constituency 
+function openConst(no) {
+  state.selected = no;
+  document.querySelectorAll('.con-item').forEach(el => el.classList.remove('active'));
+  document.getElementById(`si-${no}`)?.classList.add('active');
+  renderCurrentTab();
+}
+
+//  Tab switching 
+function switchTab(tab, el) {
+  state.activeTab = tab;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  renderCurrentTab();
+}
+
+function renderCurrentTab() {
+  if (state.activeTab === 'scoreboard') { renderScoreboard(); return; }
+  if (state.activeTab === 'live')       { renderLiveTab();    return; }
+  if (state.activeTab === 'ldf_insights') { renderInsights(); return; }
+  if (state.activeTab === 'nda_20plus') { renderNdaTwentyPlus(); return; }
+  if (state.activeTab === 'nda_allied') { renderNdaAllied();  return; }
+  if (state.activeTab === 'round_leads') { renderRoundLeads(); return; }
+  if (!state.selected) {
+    document.getElementById('contentArea').innerHTML = `<div class="placeholder">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="12" width="32" height="24" rx="3" stroke="#a89e94" stroke-width="2"/><path d="M16 22h16M16 28h10" stroke="#a89e94" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <h3>Select a constituency</h3><p>Choose any constituency from the left panel to begin.</p></div>`;
+    return;
+  }
+  if (state.activeTab === 'entry') renderEntry();
+  else if (state.activeTab === 'rounds') renderRounds();
+}
+
+function effectiveTotalRounds(no) {
+  const c = state.constMap[no] || {};
+  const pred = eciPredRaw?.predictions?.[String(no)] || {};
+  const fromRoundRows = c.round_results_rounds || roundCache[no]?.rounds?.length || 0;
+  return Math.max(c.total_rounds || 1, pred.tot_rounds || 0, fromRoundRows || 0);
+}
+
+function boothsAtRound(no, roundNo) {
+  const c = state.constMap[no] || {};
+  const totalMain = c.total_main_booths || 0;
+  const totalRounds = effectiveTotalRounds(no);
+  if (!totalMain || !totalRounds) return roundNo * 14;
+  return Math.min(Math.ceil(roundNo * totalMain / totalRounds), totalMain);
+}
+
+function roundFromBooths(no, counted) {
+  const c = state.constMap[no] || {};
+  const totalMain = c.total_main_booths || 0;
+  const totalRounds = effectiveTotalRounds(no);
+  if (!counted || !totalMain || !totalRounds) return 0;
+  return Math.min(Math.ceil(counted / Math.max(1, Math.ceil(totalMain / totalRounds))), totalRounds);
+}
+
+//  Entry panel 
+function renderEntry() {
+  const no = state.selected;
+  const c = state.constMap[no];
+  const ld = state.liveData[no];
+  const totalMain = c.total_main_booths;
+  const totalRounds = effectiveTotalRounds(no);
+  const boothDerivedRounds = c.booth_derived_rounds || Math.ceil(totalMain / 14);
+  const extraRounds = Math.max(totalRounds - boothDerivedRounds, 0);
+  const counted = ld.boothsCounted;
+  const curRound = ld.currentRound || roundFromBooths(no, counted);
+
+  const vpEntry = votesPollRaw[String(no)] || {};
+  const electorate   = vpEntry.electorate    || 0;
+  const votesPolled  = vpEntry.votes_polled  || 0;
+  const turnoutPct   = vpEntry.turnout_pct   || 0;
+
+  // Vote-based % from ECI prediction (most accurate)
+  const eciPredEntry = eciPredRaw?.predictions?.[String(no)];
+  const votesCountedEci = eciPredEntry?.votes_counted || 0;
+  const votePct = votesPolled > 0 && votesCountedEci > 0
+    ? Math.min(Math.round(votesCountedEci / votesPolled * 100), 100)
+    : null;
+
+  // Booth-based % fallback
+  const boothPct = totalMain > 0 ? Math.round(counted / totalMain * 100) : 0;
+  // Use vote-based for the bar when available
+  const barPct = votePct !== null ? votePct : boothPct;
+
+  const electorateLine = electorate > 0
+    ? `<span>Electorate: ${electorate.toLocaleString()}  -  Turnout: ${turnoutPct}%  -  Polled: ${votesPolled.toLocaleString()}</span>`
+    : '';
+
+  let html = `<div class="entry-header">
+    <h2>${c.name}</h2>
+    <div class="entry-meta">
+      <span>${c.district}</span>
+      <span>Constituency #${no}</span>
+      <span>${c.has_pdf_data ? '<span class="tag tag-pdf">PDF data</span>' : '<span class="tag tag-est">Estimated</span>'}</span>
+      <span>${totalMain} main booths  -  ${totalRounds} rounds${extraRounds ? ` (${boothDerivedRounds} booth-derived + ${extraRounds} ECI)` : ''}</span>
+      ${electorateLine}
+    </div>
+  </div>`;
+
+  // Booth count + vote-based progress
+  const voteCountLine = votesPolled > 0 && votesCountedEci > 0
+    ? `<div style="font-size:12px;color:var(--muted);margin-top:4px;font-family:var(--mono)">${votesCountedEci.toLocaleString()} / ${votesPolled.toLocaleString()} votes  -  <strong>${votePct}%</strong></div>`
+    : '';
+
+  html += `<div class="card">
+    <div class="card-title">Counting progress</div>
+    <div class="booth-grid">
+      <div class="field">
+        <label>Main booths counted</label>
+        <input type="number" id="boothCnt" min="0" max="${totalMain}" value="${counted}"
+          oninput="onBoothChange(${no},this.value)">
+      </div>
+      <div class="field">
+        <label>of ${totalMain} main booths  -  Round ${curRound||'-'} of ${totalRounds}</label>
+        <div style="font-size:14px;font-weight:500;padding-top:6px;font-family:var(--mono)">${boothPct}% booths counted</div>
+        ${voteCountLine}
+      </div>
+    </div>
+    <div class="round-btns">`;
+  for (let r = 1; r <= totalRounds; r++) {
+    const active = curRound === r ? 'active' : '';
+    html += `<button class="round-btn ${active}" onclick="setRound(${no},${r})">R${r}</button>`;
+  }
+  html += `</div>`;
+
+  // Progress strip - vote-based when available, else booth-based
+  html += `<div class="progress-strip" style="margin-top:10px">
+    <div class="progress-done" style="flex:${barPct}"></div>
+    <div class="progress-pending" style="flex:${100-barPct}"></div>
+  </div></div>`;
+
+  // Candidates - pull allied data from ECI prediction if available
+  const eciPred = eciPredRaw?.predictions?.[String(no)];
+  const alliedMap = {};  // alliance -> {votes, names}
+  if (eciPred?.candidates_mapped) {
+    for (const [a, cm] of Object.entries(eciPred.candidates_mapped)) {
+      if (cm.allied_votes > 0) alliedMap[a] = { votes: cm.allied_votes, names: cm.allied_names || [] };
+    }
+  }
+
+  html += `<div class="card">
+    <div class="card-title">Votes per candidate (running total)</div>`;
+  const totalV = ld.votes.reduce((a, b) => a + b, 0);
+  c.candidates.forEach((cand, i) => {
+    const pctV = totalV > 0 ? Math.round(ld.votes[i] / totalV * 100) : 0;
+    const col = ALLIANCE_COLORS[cand.alliance] || '#888';
+    const allied = alliedMap[cand.alliance];
+    html += `<div class="cand-row">
+      <div class="alliance-stripe" style="background:${col}"></div>
+      <div class="cand-info">
+        <div class="cand-nm">${cand.name}</div>
+        <div class="cand-party">${cand.party}  -  <span class="tag badge-${cand.alliance}" style="font-size:9px">${ALLIANCE_LABELS[cand.alliance]||'IND'}</span>
+          ${allied ? `<span style="font-size:10px;color:var(--muted);margin-left:4px">+ ${allied.names.join(', ')} (allied)</span>` : ''}
+        </div>
+      </div>
+      <input class="cand-votes-inp" type="number" id="vi_${no}_${i}" min="0"
+        value="${ld.votes[i] || ''}" placeholder="0"
+        oninput="onVoteChange(${no},${i},this.value)">
+      <div class="cand-pct" id="vp_${no}_${i}">${pctV > 0 ? pctV+'%' : ''}</div>
+    </div>`;
+  });
+  html += `</div>`;
+
+  // Actions
+  html += `<div class="action-row">
+    <button class="btn btn-primary" onclick="runPredict(${no})">Predict winner -></button>
+    <button class="btn btn-success" onclick="markCalled(${no})"> Mark as called</button>
+    <button class="btn btn-danger" onclick="resetConst(${no})">Reset</button>
+  </div>`;
+
+  // Prediction result
+  if (ld.prediction) {
+    html += renderPrediction(no);
+  }
+
+  document.getElementById('contentArea').innerHTML = html;
+}
+
+function renderPrediction(no) {
+  const c = state.constMap[no];
+  const ld = state.liveData[no];
+  const p = ld.prediction;
+  const cands = c.candidates;
+  const wa = p.winner_alliance;
+  const winner = cands[p.winner_idx] || cands[0];
+  const col = ALLIANCE_COLORS[wa];
+  const confColor = p.confidence >= 75 ? '#16a34a' : p.confidence >= 50 ? '#d97706' : '#c94040';
+  const projectionMethod = p.formula?.projection_method || '';
+  const isFinalCount = projectionMethod === 'final_count';
+  const marginLabel = isFinalCount ? 'Margin' : 'Projected margin';
+  const methodLabel = isFinalCount ? 'final counted result' : (p.used_pdf_pattern ? 'historical pattern applied' : 'Linear projection');
+  const callStatus = p.call_status || (isFinalCount ? 'called' : 'watching');
+  const callClass = callStatus === 'called' ? 'call-called'
+    : callStatus === 'ready_to_call' ? 'call-ready'
+    : callStatus === 'too_early' ? 'call-early'
+    : callStatus === 'too_close' ? 'call-close'
+    : 'call-watch';
+  const callLabel = p.call_label || (isFinalCount ? 'Called' : 'Watching Trend');
+  const callConfidence = p.call_confidence || (isFinalCount ? 'Final' : 'Medium');
+  const callReason = p.call_reason || '';
+  const r = 24, circ = 2 * Math.PI * r;
+  const dashArr = (p.confidence / 100) * circ;
+
+  let html = `<div class="pred-card">
+    <div class="pred-banner" style="background:${ALLIANCE_BG[wa]}">
+      <div class="conf-circle">
+        <svg width="56" height="56" viewBox="0 0 56 56">
+          <circle cx="28" cy="28" r="${r}" fill="none" stroke="${col}22" stroke-width="5"/>
+          <circle cx="28" cy="28" r="${r}" fill="none" stroke="${col}" stroke-width="5"
+            stroke-dasharray="${dashArr.toFixed(1)} ${circ.toFixed(1)}" stroke-linecap="round"/>
+        </svg>
+        <div class="conf-val" style="color:${col}">${p.confidence}%</div>
+      </div>
+      <div>
+        <div class="pred-winner-name" style="color:${col}">${winner.name}</div>
+        <div class="pred-meta">${winner.party}  -  <span class="tag badge-${wa}">${ALLIANCE_LABELS[wa]}</span></div>
+        <div class="pred-margin" style="color:${col}">${marginLabel}: <strong>${p.margin.toLocaleString()}</strong> votes</div>
+        <div class="pred-meta">${p.pct_counted}% votes counted${p.votes_polled ? ` (${(p.votes_counted||0).toLocaleString()} / ${p.votes_polled.toLocaleString()})` : ''}  -  ${methodLabel}</div>
+        <div class="call-indicator ${callClass}">${callLabel} <span>${callConfidence}${callReason ? ` - ${callReason}` : ''}</span></div>
+      </div>
+    </div>
+    <div class="pred-bars">`;
+
+  const sortedIdx = p.projected.map((v,i)=>({v,i})).sort((a,b)=>b.v-a.v);
+  const maxProj = p.projected[sortedIdx[0].i];
+  // Pull allied info from the raw ECI prediction
+  const eciPredForBar = eciPredRaw?.predictions?.[String(no)];
+  sortedIdx.forEach(({v, i}) => {
+    const cand = cands[i];
+    const alliance = ['ldf','udf','nda'][i];
+    const cm = eciPredForBar?.candidates_mapped?.[alliance];
+    const alliedV = cm?.allied_votes || 0;
+    const alliedNm = cm?.allied_names || [];
+    const pctS = p.total_projected > 0 ? (v/p.total_projected*100).toFixed(1) : 0;
+    const barW = maxProj > 0 ? (v/maxProj*100).toFixed(1) : 0;
+    const iw = i === p.winner_idx;
+    const alliedNote = alliedV > 0
+      ? `<span style="font-size:10px;color:var(--muted)"> incl. ${alliedNm.join(', ')} +${alliedV.toLocaleString()}</span>`
+      : '';
+    html += `<div class="bar-item">
+      <div class="bar-labels">
+        <span class="bar-name" style="color:${ALLIANCE_COLORS[cand.alliance]}">${iw?'* ':''}${cand.name} <span style="font-weight:400;color:var(--muted);font-size:11px">${cand.party}</span>${alliedNote}</span>
+        <span class="bar-votes">${v.toLocaleString()}  -  ${pctS}%</span>
+      </div>
+      <div class="bar-track"><div class="bar-fill" style="width:${barW}%;background:${ALLIANCE_COLORS[cand.alliance]}"></div></div>
+    </div>`;
+  });
+
+  const refRow = (year, actualKey, partyKey) => {
+    let row = `<div class="actual-row"><span class="lbl">${year} ref:</span>`;
+    let shown = 0;
+    cands.forEach(cand => {
+      const votes = cand[actualKey] || 0;
+      const party = cand[partyKey] || cand.party || '';
+      if (votes > 0) {
+        row += `<span style="color:${ALLIANCE_COLORS[cand.alliance]}">${party} <strong>${votes.toLocaleString()}</strong></span>`;
+        shown++;
+      }
+    });
+    return shown ? row + `</div>` : '';
+  };
+  const refRows = [
+    ['2011',    'actual2011',   'party2011'],
+    ['2016',    'actual2016',   'party2016'],
+    ['2019 LS', 'actual2019ls', 'party2019ls'],
+    ['2021',    'actual2021',   'party2021'],
+    ['2024 LS', 'actual2024ls', 'party2024ls'],
+  ].map(([label, actualKey, partyKey]) => refRow(label, actualKey, partyKey)).join('');
+  html += `</div>${refRows}`;
+
+  //  Formula breakdown 
+  const vc  = p.votes_counted || 0;
+  const vp  = p.votes_polled  || 0;
+  const f   = p.formula       || {};
+  const vs  = ld.lastVotes    || ld.votes;   // votes at prediction time
+  if (vc > 0 && vp > 0) {
+    const pctExact  = (vc / vp * 100).toFixed(2);
+    const remaining = vp - vc;
+
+    let formulaHtml = '';
+    if (f.projection_method === 'final_count') {
+      formulaHtml = `
+        <div style="margin-bottom:8px;line-height:1.8;font-size:12px">
+          <strong>Counting complete</strong><br>
+          The result is using counted ECI totals directly. No historical pattern or linear scaling is applied.
+        </div>
+        <table style="border-collapse:collapse;width:100%;font-size:11px">
+          <thead><tr style="color:var(--muted);background:var(--bg2)">
+            <th style="text-align:left;padding:4px 6px">Candidate</th>
+            <th style="text-align:right;padding:4px 6px">Counted total</th>
+          </tr></thead>
+          <tbody>${cands.map((cand, i) => `
+            <tr style="border-top:1px solid var(--border)">
+              <td style="font-weight:500;color:${ALLIANCE_COLORS[cand.alliance]};padding:4px 6px">${cand.name.split(' ').slice(-2).join(' ')}</td>
+              <td style="font-family:var(--mono);text-align:right;padding:4px 6px;font-weight:600;color:${ALLIANCE_COLORS[cand.alliance]}">${(p.projected[i] || 0).toLocaleString()}</td>
+            </tr>`).join('')}</tbody>
+        </table>`;
+
+    } else if (p.used_pdf_pattern && f.share_2021_early) {
+      const historyYears = f.history_years?.length ? f.history_years.join('/') : '2021';
+      const patternLabel = f.history_years?.length > 1 ? `${historyYears} average` : `${historyYears} pattern`;
+      const primaryYear = f.history_years?.includes(2021) ? 2021 : (f.history_years?.[f.history_years.length - 1] || 2021);
+      const weightLabel = f.history_weights
+        ? f.history_years.map(y => `${y}:${f.history_weights[String(y)] ?? 1}`).join(', ')
+        : '';
+      const candRows = cands.map((cand, i) => {
+        const vi       = vs[i] || 0;
+        const proj     = p.projected[i] || 0;
+        const fromRem  = f.proj_from_remaining?.[i] ?? (proj - vi);
+        const col      = ALLIANCE_COLORS[cand.alliance];
+        const nm       = cand.name.split(' ').slice(-2).join(' ');
+        const histEarly = f.share_2021_early?.[i]     ?? '-';
+        const s26      = f.share_2026?.[i]            ?? '-';
+        const dlt      = f.delta?.[i]                 ?? '-';
+        const histRem  = f.share_remaining_2021?.[i]  ?? '-';
+        const sadj     = f.adj_remaining?.[i]         ?? '-';
+        const dltCol   = typeof dlt === 'number' ? (dlt >= 0 ? '#16a34a' : '#c94040') : '';
+        const sign     = typeof dlt === 'number' && dlt >= 0 ? '+' : '';
+        return `<tr style="border-top:1px solid var(--border)">
+          <td style="font-weight:500;color:${col};padding:4px 6px;">${nm}</td>
+          <td style="font-family:var(--mono);text-align:right;padding:4px 6px;">${vi.toLocaleString()}</td>
+          <td style="font-family:var(--mono);text-align:right;padding:4px 6px;color:var(--muted)">${histEarly}%</td>
+          <td style="font-family:var(--mono);text-align:right;padding:4px 6px;">${s26}%</td>
+          <td style="font-family:var(--mono);text-align:right;padding:4px 6px;color:${dltCol};font-weight:500">${sign}${dlt}pp</td>
+          <td style="font-family:var(--mono);text-align:right;padding:4px 6px;color:var(--muted)">${histRem}%</td>
+          <td style="font-family:var(--mono);text-align:right;padding:4px 6px;color:var(--muted)">${sadj}%</td>
+          <td style="font-family:var(--mono);text-align:right;padding:4px 6px;color:var(--muted)">${fromRem.toLocaleString()}</td>
+          <td style="font-family:var(--mono);text-align:right;padding:4px 6px;font-weight:600;color:${col}">${proj.toLocaleString()}</td>
+        </tr>`;
+      }).join('');
+
+      formulaHtml = `
+        <div style="margin-bottom:10px;line-height:1.8;font-size:12px">
+          <strong>Step 1 - % counted</strong><br>
+          &nbsp;&nbsp;${vc.toLocaleString()} / ${vp.toLocaleString()} = <strong>${pctExact}%</strong>
+          &nbsp;&nbsp; Remaining: <strong>${remaining.toLocaleString()} votes</strong>
+          &nbsp;&nbsp; Trend weight: <strong>${f.trend_weight ?? f.damp ?? '-'}</strong>
+          <span style="color:var(--muted)">(${f.trend_weight_rule || 'R1=0.90, R2=0.95, R3+=1.00'})</span><br>
+
+          <strong>Step 2 - historical booths at same ${pctExact}% point</strong><br>
+          &nbsp;&nbsp;Using ${patternLabel}; reference volume shown from ${primaryYear}:
+          ${(f.total_2021_early||0).toLocaleString()} early votes of ${(f.total_2021_all||0).toLocaleString()} total
+          -> weighted early shares per candidate (column "hist early%")${weightLabel ? `; weights ${weightLabel}` : ''}<br>
+
+          <strong>Step 3 - Swing</strong> = 2026 share - historical early average<br>
+
+          <strong>Step 4 - historical remaining average</strong> (from booths not yet counted at same point)<br>
+
+          <strong>Step 5 - Adjusted remaining share</strong> = historical remaining average + swing x trend weight<br>
+
+          <strong>Step 6 - Projected remaining</strong> = adj. share x ${remaining.toLocaleString()}<br>
+          <strong>Step 7 - Final</strong> = actual counted + projected remaining
+        </div>
+        <div style="overflow-x:auto">
+        <table style="border-collapse:collapse;width:100%;font-size:11px">
+          <thead><tr style="color:var(--muted);background:var(--bg2)">
+            <th style="text-align:left;padding:4px 6px">Candidate</th>
+            <th style="text-align:right;padding:4px 6px">Counted</th>
+            <th style="text-align:right;padding:4px 6px">Hist early%</th>
+            <th style="text-align:right;padding:4px 6px">2026 share%</th>
+            <th style="text-align:right;padding:4px 6px">Swing</th>
+            <th style="text-align:right;padding:4px 6px">Hist rem%</th>
+            <th style="text-align:right;padding:4px 6px">Adj rem%</th>
+            <th style="text-align:right;padding:4px 6px">Proj. remaining</th>
+            <th style="text-align:right;padding:4px 6px">Final</th>
+          </tr></thead>
+          <tbody>${candRows}</tbody>
+          <tfoot><tr style="border-top:2px solid var(--border);font-weight:600">
+            <td style="padding:4px 6px;color:var(--muted)">Total</td>
+            <td style="font-family:var(--mono);text-align:right;padding:4px 6px">${vc.toLocaleString()}</td>
+            <td colspan="5"></td>
+            <td style="font-family:var(--mono);text-align:right;padding:4px 6px">${remaining.toLocaleString()}</td>
+            <td style="font-family:var(--mono);text-align:right;padding:4px 6px">${vp.toLocaleString()}</td>
+          </tr></tfoot>
+        </table></div>`;
+
+    } else {
+      //  Linear fallback (no booth data for this constituency) 
+      const multiplier = (vp / vc).toFixed(4);
+      const candRows = cands.map((cand, i) => {
+        const vi = vs[i] || 0;
+        const proj = p.projected[i] || 0;
+        const col = ALLIANCE_COLORS[cand.alliance];
+        return `<tr style="border-top:1px solid var(--border)">
+          <td style="font-weight:500;color:${col};padding:4px 6px">${cand.name.split(' ').slice(-2).join(' ')}</td>
+          <td style="font-family:var(--mono);text-align:right;padding:4px 6px">${vi.toLocaleString()}</td>
+          <td style="font-family:var(--mono);text-align:right;padding:4px 6px;color:var(--muted)">x ${multiplier}</td>
+          <td style="font-family:var(--mono);text-align:right;padding:4px 6px;font-weight:600;color:${col}">${proj.toLocaleString()}</td>
+        </tr>`;
+      }).join('');
+      formulaHtml = `
+        <div style="margin-bottom:8px;line-height:1.8;font-size:12px">
+          <strong>No historical booth data</strong> for this constituency - using linear scale.<br>
+          Scale factor = ${vp.toLocaleString()} / ${vc.toLocaleString()} = <strong>${multiplier}x</strong>
+          &nbsp;(assumes each candidate's current share holds for all remaining votes)
+        </div>
+        <table style="border-collapse:collapse;width:100%;font-size:11px">
+          <thead><tr style="color:var(--muted);background:var(--bg2)">
+            <th style="text-align:left;padding:4px 6px">Candidate</th>
+            <th style="text-align:right;padding:4px 6px">Counted</th>
+            <th style="text-align:right;padding:4px 6px">x factor</th>
+            <th style="text-align:right;padding:4px 6px">Projected</th>
+          </tr></thead>
+          <tbody>${candRows}</tbody>
+        </table>`;
+    }
+
+    html += `<details style="margin:10px 16px 12px;font-size:12px">
+      <summary style="cursor:pointer;color:var(--muted);user-select:none;padding:4px 0;list-style:none;display:flex;align-items:center;gap:6px">
+        <span style="font-size:10px">&#9654;</span>
+        How calculated (${f.projection_method === 'final_count' ? 'final counted result' : (p.used_pdf_pattern ? 'historical booth pattern' : 'linear - no historical booth data')})
+      </summary>
+      <div style="margin-top:8px;padding:12px;background:var(--bg2);border-radius:6px">
+        ${formulaHtml}
+      </div>
+    </details>`;
+  }
+
+  html += `</div>`;
+  return html;
+}
+
+//  Rounds tab fallback (no ECI data) 
+function renderRoundsFallback() {
+  const no = state.selected;
+  const c = state.constMap[no];
+  const ld = state.liveData[no];
+  const counted = ld.boothsCounted;
+  const totalMain = c.total_main_booths;
+  const totalRounds = effectiveTotalRounds(no);
+
+  let html = `<div class="card">
+    <div class="card-title">${c.name} - round breakdown</div>
+    <table class="round-table">
+      <thead><tr><th>Round</th><th>Main booths</th><th>Aux booths</th><th>Status</th>`;
+  c.candidates.forEach(cand => {
+    html += `<th style="color:${ALLIANCE_COLORS[cand.alliance]}">${cand.name.split(' ').pop()}</th>`;
+  });
+  html += `<th>Round total</th></tr></thead><tbody>`;
+
+  for (let r = 1; r <= totalRounds; r++) {
+    const bStart = (r-1)*14 + 1;
+    const bEnd   = Math.min(r*14, totalMain);
+    const done   = bEnd <= counted;
+    const partial = bStart <= counted && bEnd > counted;
+    const statusCls = done ? 'r-status-done' : partial ? 'r-status-partial' : 'r-status-pending';
+    const statusLabel = done ? ' done' : partial ? 'partial' : 'pending pending';
+    html += `<tr>
+      <td>Round ${r}</td>
+      <td>${bStart}-${bEnd}</td>
+      <td style="color:var(--muted)">included</td>
+      <td class="${statusCls}">${statusLabel}</td>`;
+    c.candidates.forEach(() => html += `<td>-</td>`);
+    html += `<td>-</td></tr>`;
+  }
+
+  html += `</tbody></table>
+    <p style="font-size:11px;color:var(--muted);margin-top:10px">
+      Each round = 14 main booths. Auxiliary booths (1A, 2A...) counted within their parent round but do not increment the main booth counter.
+    </p></div>`;
+
+  document.getElementById('contentArea').innerHTML = html;
+}
+
+//  Scoreboard 
+function renderScoreboard() {
+  const all = state.constituencies;
+  const called = all.filter(c => state.liveData[c.no]?.status === 'called');
+  const counting = all.filter(c => state.liveData[c.no]?.status === 'counting');
+  const tally = { ldf: 0, udf: 0, nda: 0, ind: 0 };
+  called.forEach(c => {
+    const waRaw = state.liveData[c.no]?.prediction?.called_winner_alliance
+      || state.liveData[c.no]?.prediction?.winner_alliance
+      || c.winner2021;
+    const wa = ['ldf','udf','nda'].includes(waRaw) ? waRaw : 'ind';
+    tally[wa] = (tally[wa]||0) + 1;
+  });
+  const maxT = Math.max(...Object.values(tally), 1);
+
+  let html = `<div class="score-grid">
+    <div class="score-box" style="border-color:${ALLIANCE_COLORS.ldf}44">
+      <div class="score-big" style="color:${ALLIANCE_COLORS.ldf}">${tally.ldf}</div>
+      <div class="score-lbl">LDF seats</div>
+    </div>
+    <div class="score-box" style="border-color:${ALLIANCE_COLORS.udf}44">
+      <div class="score-big" style="color:${ALLIANCE_COLORS.udf}">${tally.udf}</div>
+      <div class="score-lbl">UDF seats</div>
+    </div>
+    <div class="score-box" style="border-color:${ALLIANCE_COLORS.nda}44">
+      <div class="score-big" style="color:${ALLIANCE_COLORS.nda}">${tally.nda}</div>
+      <div class="score-lbl">NDA seats</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Alliance tally - majority is 71</div>`;
+
+  ['ldf','udf','nda'].forEach(a => {
+    const seats = tally[a];
+    const barW = (seats/140*100).toFixed(1);
+    const maj = (71/140*100).toFixed(1);
+    html += `<div class="tally-bar-row">
+      <div class="tally-name" style="color:${ALLIANCE_COLORS[a]}">${ALLIANCE_LABELS[a]}</div>
+      <div class="tally-track">
+        <div class="tally-fill" style="width:${barW}%;background:${ALLIANCE_COLORS[a]}"></div>
+        <div class="majority-line" style="left:${maj}%"></div>
+      </div>
+      <div class="tally-num">${seats}</div>
+    </div>`;
+  });
+
+  html += `<div style="font-size:11px;color:var(--muted);margin-top:8px">${called.length} of 140 called  -  ${counting.length} counting  -  ${140-called.length-counting.length} pending</div>
+  </div>`;
+
+  if (called.length > 0) {
+    html += `<div class="card">
+      <div class="card-title">Called results</div>
+      <table class="results-table">
+        <thead><tr><th>#</th><th>Constituency</th><th>District</th><th>Winner</th><th>Alliance</th><th>Confidence</th></tr></thead>
+        <tbody>`;
+    called.forEach(c => {
+      const ld = state.liveData[c.no];
+      const waRaw = ld.prediction?.called_winner_alliance || ld.prediction?.winner_alliance || c.winner2021;
+      const wa = ['ldf','udf','nda'].includes(waRaw) ? waRaw : 'ind';
+      const wi = ld.prediction?.winner_idx ?? 0;
+      const wCand = c.candidates[wi];
+      const conf = ld.prediction?.confidence ?? '-';
+      const winnerName = ld.prediction?.called_winner_name || wCand?.name || '-';
+      html += `<tr>
+        <td style="font-family:var(--mono)">${c.no}</td>
+        <td style="font-weight:500">${c.name}</td>
+        <td style="color:var(--muted)">${c.district}</td>
+        <td>${winnerName}</td>
+        <td><span class="tag badge-${wa}">${ALLIANCE_LABELS[wa]||wa}</span></td>
+        <td style="font-family:var(--mono)">${conf}%</td>
+      </tr>`;
+    });
+    html += `</tbody></table></div>`;
+  }
+
+  document.getElementById('contentArea').innerHTML = html;
+}
+
+//  Top scoreboard 
+function updateTopScoreboard() {
+  const rawTotal = eciPredRaw?.total_active || 0;
+  if (rawTotal > 0) {
+    const isFinal = (eciPredRaw.called_count || 0) >= rawTotal;
+    const rawTally = isFinal
+      ? (eciPredRaw.called_tally || eciPredRaw.seat_tally)
+      : eciPredRaw.seat_tally;
+    if (rawTally) {
+      document.getElementById('topScoreboard').innerHTML = ['ldf','udf','nda'].map(a =>
+        `<div class="score-chip">
+          <div class="dot" style="background:${ALLIANCE_COLORS[a]}"></div>
+          <span style="color:${ALLIANCE_COLORS[a]};font-weight:600">${ALLIANCE_LABELS[a]}</span>
+          <span class="num">${rawTally[a] || 0}</span>
+        </div>`).join('');
+      return;
+    }
+  }
+
+  const tally = { ldf: 0, udf: 0, nda: 0 };
+  state.constituencies.forEach(c => {
+    if (displayStatus(c.no) === 'called') {
+      const pred = displayPrediction(c.no);
+      const wa = pred?.called_winner_alliance
+        || pred?.winner_alliance
+        || c.winner2021;
+      if (tally[wa] !== undefined) tally[wa]++;
+    }
+  });
+  document.getElementById('topScoreboard').innerHTML = ['ldf','udf','nda'].map(a =>
+    `<div class="score-chip">
+      <div class="dot" style="background:${ALLIANCE_COLORS[a]}"></div>
+      <span style="color:${ALLIANCE_COLORS[a]};font-weight:600">${ALLIANCE_LABELS[a]}</span>
+      <span class="num">${tally[a]}</span>
+    </div>`).join('');
+}
+
+//  Event handlers 
+function onBoothChange(no, val) {
+  state.liveData[no].boothsCounted = parseInt(val)||0;
+  state.liveData[no].currentRound = null;
+  state.liveData[no].status = 'counting';
+}
+
+async function setRound(no, r) {
+  const c  = state.liveData[no];
+  const cm = state.constMap[no];
+
+  // Update booth count
+  c.boothsCounted = boothsAtRound(no, r);
+  c.currentRound = r;
+  c.status = 'counting';
+  const boothInput = document.getElementById('boothCnt');
+  if (boothInput) boothInput.value = c.boothsCounted;
+
+  // Round button active state
+  document.querySelectorAll('.round-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', i + 1 === r);
+  });
+
+  //  Fill vote inputs from round_results at round r 
+  // Fetch round data (uses cache from Rounds tab if already loaded)
+  let rd = roundCache[no];
+  if (!rd) {
+    try {
+      const res = await fetch(`/api/round_results/${no}`);
+      if (res.ok) { rd = await res.json(); roundCache[no] = rd; }
+    } catch (_) {}
+  }
+  if (!rd || !rd.rounds || !rd.rounds.length) return;
+
+  // Find the round entry (rounds are sorted by round number)
+  const roundEntry = rd.rounds.find(rr => rr.round === r) || rd.rounds[r - 1];
+  if (!roundEntry) return;
+  const cumul = roundEntry.cumulative;
+
+  // Progress strip + vote count line - use vote-based % when available
+  const totalCumul = cumul.reduce((a, b) => a + b, 0);
+  const vpPoll = votesPollRaw[String(no)]?.votes_polled || 0;
+  const boothPctR = cm.total_main_booths > 0 ? Math.round(c.boothsCounted / cm.total_main_booths * 100) : 0;
+  const votePctR  = vpPoll > 0 ? Math.min(Math.round(totalCumul / vpPoll * 100), 100) : null;
+  const barPctR   = votePctR !== null ? votePctR : boothPctR;
+
+  // Update booth% label
+  const roundLabel = document.querySelector('.booth-grid .field:nth-child(2) label');
+  if (roundLabel) roundLabel.textContent = `of ${cm.total_main_booths} main booths  Round ${r} of ${effectiveTotalRounds(no)}`;
+  const boothLabel = document.querySelector('.booth-grid .field:nth-child(2) div:first-child');
+  if (boothLabel) boothLabel.textContent = `${boothPctR}% booths counted`;
+
+  // Update or create vote count line
+  const fieldDiv = document.querySelector('.booth-grid .field:nth-child(2)');
+  if (fieldDiv) {
+    let vLine = fieldDiv.querySelector('.vote-count-line');
+    if (vpPoll > 0) {
+      if (!vLine) { vLine = document.createElement('div'); vLine.className = 'vote-count-line'; fieldDiv.appendChild(vLine); }
+      vLine.style.cssText = 'font-size:12px;color:var(--muted);margin-top:4px;font-family:var(--mono)';
+      vLine.innerHTML = `${totalCumul.toLocaleString()} / ${vpPoll.toLocaleString()} votes  -  <strong>${votePctR}%</strong>`;
+    }
+  }
+
+  const prog = document.querySelector('.progress-strip');
+  if (prog) prog.innerHTML =
+    `<div class="progress-done" style="flex:${barPctR}"></div><div class="progress-pending" style="flex:${100-barPctR}"></div>`;
+
+  // Map ECI candidate indices -> alliance slot indices
+  // Use prediction's candidates_mapped to know which ECI name belongs to which alliance
+  const pred = eciPredRaw?.predictions?.[String(no)];
+  const alliances = ['ldf', 'udf', 'nda'];
+
+  alliances.forEach((alliance, slotIdx) => {
+    const eciName = pred?.candidates_mapped?.[alliance]?.eci_name;
+    if (!eciName || eciName === '?') return;
+
+    // Find this candidate's index in round_results.candidates
+    // Use exact match first to avoid prefix collisions (e.g. SHANAVAS A A vs SHANAVAS PADHOOR)
+    const normStr = s => s.toLowerCase().replace(/[.\s]/g, '');
+    const findCandIdx = (name) => {
+      const t = normStr(name);
+      let i = rd.candidates.findIndex(nm => normStr(nm) === t);
+      if (i >= 0) return i;
+      i = rd.candidates.findIndex(nm => { const n=normStr(nm); return n.includes(t)||t.includes(n); });
+      if (i >= 0) return i;
+      return rd.candidates.findIndex(nm => normStr(nm).includes(t.slice(0, 10)));
+    };
+    const eciIdx = findCandIdx(eciName);
+    if (eciIdx < 0 || eciIdx >= cumul.length) return;
+
+    let v = cumul[eciIdx] || 0;
+
+    // Add allied candidate votes at this round too
+    const alliedNames = pred?.candidates_mapped?.[alliance]?.allied_names || [];
+    alliedNames.forEach(alliedEciName => {
+      const alliedIdx = findCandIdx(alliedEciName);
+      if (alliedIdx >= 0 && alliedIdx < cumul.length) v += cumul[alliedIdx] || 0;
+    });
+
+    // Update state and DOM
+    state.liveData[no].votes[slotIdx] = v;
+    const inp = document.getElementById(`vi_${no}_${slotIdx}`);
+    if (inp) inp.value = v || '';
+  });
+
+  // Refresh vote percentages
+  const totalV = state.liveData[no].votes.reduce((a, b) => a + b, 0);
+  cm.candidates.forEach((_, i) => {
+    const el = document.getElementById(`vp_${no}_${i}`);
+    if (el) el.textContent = totalV > 0
+      ? Math.round(state.liveData[no].votes[i] / totalV * 100) + '%' : '';
+  });
+}
+
+function onVoteChange(no, idx, val) {
+  state.liveData[no].votes[idx] = parseInt(val)||0;
+  state.liveData[no].status = 'counting';
+  // live pct update
+  const totalV = state.liveData[no].votes.reduce((a,b)=>a+b,0);
+  state.constMap[no].candidates.forEach((_, i) => {
+    const el = document.getElementById(`vp_${no}_${i}`);
+    if (el) el.textContent = totalV > 0 ? Math.round(state.liveData[no].votes[i]/totalV*100)+'%' : '';
+  });
+}
+
+async function runPredict(no) {
+  const ld = state.liveData[no];
+  const c = state.constMap[no];
+  const res = await fetch('/api/predict', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      const_no: no,
+      booths_counted: ld.boothsCounted || 14,
+      total_main_booths: c.total_main_booths,
+      total_rounds: effectiveTotalRounds(no),
+      current_round: ld.currentRound || null,
+      votes: ld.votes,
+    })
+  });
+  if (!res.ok) { alert('Enter vote counts first.'); return; }
+  const pred = await res.json();
+  if (pred.error) { alert(pred.error); return; }
+  if (!pred.votes_polled && votesPollRaw[String(no)]) {
+    pred.votes_polled = votesPollRaw[String(no)].votes_polled;
+  }
+  ld.prediction = pred;
+  ld.lastVotes  = [...ld.votes]; // snapshot of votes at prediction time
+  ld.status = 'counting';
+  refreshSidebarItem(no);
+  renderEntry();
+}
+
+function markCalled(no) {
+  const ld = state.liveData[no];
+  if (!ld.prediction) { runPredict(no).then(() => { ld.status = 'called'; refreshSidebarItem(no); updateTopScoreboard(); renderEntry(); }); return; }
+  ld.status = 'called';
+  refreshSidebarItem(no);
+  updateTopScoreboard();
+  renderEntry();
+}
+
+function markAllCalled() {
+  const preds = eciPredRaw?.predictions || {};
+  let count = 0;
+  state.constituencies.forEach(c => {
+    const ld = state.liveData[c.no];
+    const pred = preds[String(c.no)];
+    if (!pred) return;
+    ld.status = 'called';
+    // Ensure prediction is in local state
+    if (!ld.prediction) {
+      const projected = ['ldf','udf','nda'].map(a => pred.projected?.[a] || 0);
+      const winnerIdx = ['ldf','udf','nda'].indexOf(pred.winner_alliance);
+      ld.prediction = {
+        projected,
+        total_projected: projected.reduce((a,b)=>a+b,0),
+        winner_idx:      Math.max(winnerIdx, 0),
+        winner_alliance: pred.winner_alliance,
+        margin:          pred.margin,
+        confidence:      pred.confidence,
+        call_status:     pred.call_status,
+        call_label:      pred.call_label,
+        call_confidence: pred.call_confidence,
+        call_ready:      pred.call_ready,
+        call_reason:     pred.call_reason,
+        pct_counted:     pred.pct_counted,
+        used_pdf_pattern: false,
+        booth_info:      { scaling: 1 },
+      };
+    }
+    refreshSidebarItem(c.no);
+    count++;
+  });
+  updateTopScoreboard();
+  renderCurrentTab();
+  console.log(`Marked ${count} constituencies as called.`);
+}
+
+function resetConst(no) {
+  const c = state.constMap[no];
+  state.liveData[no] = { boothsCounted:0, votes: new Array(c.candidates.length).fill(0), prediction:null, status:'pending' };
+  refreshSidebarItem(no);
+  updateTopScoreboard();
+  renderEntry();
+}
+
+//  ECI Live Data 
+let eciLiveRaw   = {};   // const_no_str -> ECI scraped data
+let eciPredRaw   = {};   // from /api/live_predictions (predict_from_eci output)
+let votesPollRaw = {};   // const_no_str -> {electorate, votes_polled, turnout_pct, ...}
+async function fetchECILive() {
+  try {
+    const [r1, r2, r3] = await Promise.all([
+      fetch('/api/live_results'),
+      fetch('/api/live_predictions'),
+      fetch('/api/votes_polled'),
+    ]);
+    if (r1.ok) eciLiveRaw   = await r1.json();
+    if (r2.ok) eciPredRaw   = await r2.json();
+    if (r3.ok) votesPollRaw = await r3.json();
+
+    const preds = eciPredRaw.predictions || {};
+    syncPredictionsToState(preds);
+    updateTopScoreboard();
+    renderCurrentTab();
+  } catch (e) { /* offline — ignore */ }
+}
+
+function syncPredictionsToState(preds) {
+  // Push ECI predictions into state.liveData so sidebar & scoreboard update
+  for (const [cnoStr, p] of Object.entries(preds)) {
+    const cno = parseInt(cnoStr);
+    const ld  = state.liveData[cno];
+    if (!ld) continue;
+
+    const c = state.constMap[cno];
+    if (!c) continue;
+
+    // Fill votes in LDF/UDF/NDA order
+    const votes = ['ldf','udf','nda'].map(a => p.live_votes?.[a] || 0);
+    ld.votes = votes;
+
+    // Estimate booths counted
+    const total_main = c.total_main_booths || 200;
+    const tot_rounds = Math.max(p.tot_rounds || 0, c.total_rounds || 1);
+    c.total_rounds = tot_rounds;
+    ld.currentRound = p.cur_round || ld.currentRound || null;
+    ld.boothsCounted = boothsAtRound(cno, p.cur_round || 0);
+
+    const isDone = p.is_called || p.pct_counted >= 100 || p.cur_round >= p.tot_rounds;
+    if (isDone) ld.status = 'called';
+    else if (ld.status === 'pending') ld.status = 'counting';
+
+    // Inject prediction in app format
+    const projected = ['ldf','udf','nda'].map(a => p.projected?.[a] || 0);
+    const winnerIdx = ['ldf','udf','nda'].indexOf(p.winner_alliance);
+    ld.prediction = {
+      projected,
+      total_projected: projected.reduce((a,b)=>a+b,0),
+      winner_idx:      Math.max(winnerIdx, 0),
+      winner_alliance: p.winner_alliance,
+      margin:          p.margin,
+      confidence:      p.confidence,
+      call_status:     p.call_status,
+      call_label:      p.call_label,
+      call_confidence: p.call_confidence,
+      call_ready:      p.call_ready,
+      call_reason:     p.call_reason,
+      pct_counted:     p.pct_counted,
+      votes_counted:   p.votes_counted,
+      votes_polled:    p.votes_polled || votesPollRaw[String(cno)]?.votes_polled,
+      used_pdf_pattern: p.used_pattern,
+      formula:         p.formula || {},
+      booth_info:      { scaling: 1 },
+      eci_names:       ['ldf','udf','nda'].map(a => p.candidates_mapped?.[a]?.eci_name || ''),
+    };
+
+    refreshSidebarItem(cno);
+  }
+}
+
+function normalizeName(s) {
+  return (s||'').toLowerCase().replace(/[.\s]/g,'');
+}
+
+function matchECICandsToApp(eciCands, appCands) {
+  return appCands.map(ac => {
+    const anNorm = normalizeName(ac.name);
+    const apNorm = normalizeName(ac.party);
+    let best = -1, bestScore = 0;
+    eciCands.forEach((ec, j) => {
+      const enNorm = normalizeName(ec.name);
+      const epNorm = normalizeName(ec.party);
+      let score = 0;
+      const aLast = anNorm.slice(-5);
+      const eLast = enNorm.slice(-5);
+      if (aLast && eLast && aLast === eLast) score += 6;
+      if (apNorm && epNorm && (apNorm.slice(0,4) === epNorm.slice(0,4))) score += 4;
+      if (score > bestScore) { bestScore = score; best = j; }
+    });
+    return best;
+  });
+}
+
+//  ECI Live tab 
+function renderLiveTab() {
+  const preds = eciPredRaw.predictions || {};
+  const isFinal = (eciPredRaw.called_count || 0) >= (eciPredRaw.total_active || 0) && (eciPredRaw.total_active || 0) > 0;
+  const tally = isFinal
+    ? (eciPredRaw.called_tally || eciPredRaw.seat_tally || { ldf:0, udf:0, nda:0 })
+    : (eciPredRaw.seat_tally || { ldf:0, udf:0, nda:0 });
+  const total  = eciPredRaw.total_active || 0;
+
+  if (total === 0) {
+    document.getElementById('contentArea').innerHTML = `
+      <div class="placeholder">
+        <h3>No predictions yet</h3>
+        <p>Run <code>python eci_scraper.py</code> to fetch live ECI data,<br>
+           then click <strong>Refresh ECI</strong> above.<br>
+           The cron job will auto-refresh every 5 minutes.</p>
+      </div>`;
+    return;
+  }
+
+  //  Tally cards 
+  const majority = 71;
+  let html = `<div class="score-grid">
+    <div class="score-box" style="border-color:${ALLIANCE_COLORS.ldf}55;background:${ALLIANCE_COLORS.ldf}08">
+      <div class="score-big" style="color:${ALLIANCE_COLORS.ldf}">${tally.ldf||0}</div>
+      <div class="score-lbl">LDF leading</div>
+    </div>
+    <div class="score-box" style="border-color:${ALLIANCE_COLORS.udf}55;background:${ALLIANCE_COLORS.udf}08">
+      <div class="score-big" style="color:${ALLIANCE_COLORS.udf}">${tally.udf||0}</div>
+      <div class="score-lbl">UDF leading</div>
+    </div>
+    <div class="score-box" style="border-color:${ALLIANCE_COLORS.nda}55;background:${ALLIANCE_COLORS.nda}08">
+      <div class="score-big" style="color:${ALLIANCE_COLORS.nda}">${tally.nda||0}</div>
+      <div class="score-lbl">NDA leading</div>
+    </div>
+  </div>`;
+
+  //  Tally bar 
+  html += `<div class="card" style="margin-bottom:14px">
+    <div class="card-title">${isFinal ? 'Final called seat tally' : 'Projected seat tally'} (${total} of 140 counted)</div>`;
+  ['ldf','udf','nda'].forEach(a => {
+    const seats = tally[a]||0;
+    const barW  = (seats/140*100).toFixed(1);
+    const majPct = (majority/140*100).toFixed(1);
+    html += `<div class="tally-bar-row">
+      <div class="tally-name" style="color:${ALLIANCE_COLORS[a]}">${ALLIANCE_LABELS[a]}</div>
+      <div class="tally-track">
+        <div class="tally-fill" style="width:${barW}%;background:${ALLIANCE_COLORS[a]}"></div>
+        <div class="majority-line" style="left:${majPct}%"></div>
+      </div>
+      <div class="tally-num">${seats}</div>
+    </div>`;
+  });
+  html += `<div style="font-size:11px;color:var(--muted);margin-top:6px">
+    Majority line at 71 seats${tally.other ? `  -  Other/IND: ${tally.other}` : ''}  -  Last updated: ${eciPredRaw.generated_at ? new Date(eciPredRaw.generated_at).toLocaleTimeString() : '-'}
+  </div></div>`;
+
+  //  Constituency table 
+  const sorted = Object.values(preds).sort((a, b) => b.cur_round - a.cur_round);
+
+  //  Upsets banner 
+  const upsets = sorted.filter(p => p.is_upset);
+  if (upsets.length > 0) {
+    html += `<div class="card" style="border-color:var(--nda-mid);background:var(--nda-xlight)">
+      <div class="card-title" style="color:var(--nda)">! Pattern-based upset alerts - ${upsets.length} seat(s)</div>
+      <p style="font-size:12px;color:var(--nda);margin-bottom:10px">
+        These seats have a different current ECI leader vs what historical booth patterns project as the final winner.
+        Higher rounds = more reliable.
+      </p>
+      <table class="results-table">
+        <thead><tr>
+          <th>#</th><th>Constituency</th><th>District</th><th>Round</th>
+          <th>ECI currently leading</th><th>Pattern predicts</th><th>Conf</th>
+        </tr></thead><tbody>`;
+    upsets.forEach(p => {
+      const ecila = p.eci_lead_alliance;
+      const wa    = p.winner_alliance;
+      html += `<tr onclick="openConst(${p.const_no})" style="cursor:pointer;background:var(--nda-xlight)">
+        <td style="font-family:var(--mono)">${p.const_no}</td>
+        <td style="font-weight:600">${p.name}</td>
+        <td style="font-size:11px;color:var(--muted)">${p.district}</td>
+        <td style="font-family:var(--mono)">${p.cur_round}/${p.tot_rounds}</td>
+        <td>
+          <span class="tag badge-${ecila}">${ALLIANCE_LABELS[ecila]||ecila}</span>
+          <span style="font-size:11px;color:var(--muted);margin-left:4px">${p.eci_leader_name||''}</span>
+        </td>
+        <td>
+          <span class="tag badge-${wa}">${ALLIANCE_LABELS[wa]||wa}</span>
+          <span style="font-size:11px;color:var(--muted);margin-left:4px">${p.winner_name||''}</span>
+        </td>
+        <td style="font-family:var(--mono);color:var(--nda);font-weight:600">${p.confidence}%</td>
+      </tr>`;
+    });
+    html += `</tbody></table></div>`;
+  }
+
+  //  Full table 
+  html += `<div class="card">
+    <div class="card-title">All active constituencies - ${sorted.length} results</div>
+    <table class="results-table">
+      <thead><tr>
+        <th>#</th><th>Constituency</th><th>District</th>
+        <th>Round</th><th>Predicted winner</th><th>Alliance</th>
+        <th style="text-align:right">LDF</th>
+        <th style="text-align:right">UDF</th>
+        <th style="text-align:right">NDA</th>
+        <th style="text-align:right">Margin</th><th>Conf</th>
+      </tr></thead>
+      <tbody>`;
+
+  sorted.forEach(p => {
+    const wa    = isFinal ? (p.called_winner_alliance || p.winner_alliance) : p.winner_alliance;
+    const conf  = p.confidence;
+    const displayAlliance = ['ldf','udf','nda'].includes(wa) ? wa : 'ind';
+    const confColor = conf >= 70 ? ALLIANCE_COLORS[displayAlliance] : ALLIANCE_COLORS.nda;
+    const lv    = p.live_votes || {};
+    const upset = p.is_upset;
+    const rowBg = upset ? 'background:var(--nda-xlight)' : '';
+    const winnerName = isFinal ? (p.called_winner_name || p.winner_name || '-') : (p.winner_name || '-');
+    const winnerParty = isFinal ? (p.called_winner_party || p.winner_party || '') : (p.winner_party || '');
+
+    html += `<tr onclick="openConst(${p.const_no})" style="cursor:pointer;${rowBg}">
+      <td style="font-family:var(--mono);color:var(--muted)">${p.const_no}</td>
+      <td style="font-weight:500">${upset ? '! ' : ''}${p.name}</td>
+      <td style="color:var(--muted);font-size:11px">${p.district}</td>
+      <td style="font-family:var(--mono)">${p.cur_round}/${p.tot_rounds}</td>
+      <td>${winnerName} <span style="font-size:10px;color:var(--muted)">${winnerParty}</span></td>
+      <td><span class="tag badge-${displayAlliance}">${ALLIANCE_LABELS[displayAlliance]||displayAlliance}</span>
+          ${p.used_pattern ? '<span style="font-size:9px;color:var(--muted);margin-left:3px">^</span>' : ''}</td>
+      <td style="font-family:var(--mono);text-align:right;color:${ALLIANCE_COLORS.ldf}">${(lv.ldf||0).toLocaleString()}</td>
+      <td style="font-family:var(--mono);text-align:right;color:${ALLIANCE_COLORS.udf}">${(lv.udf||0).toLocaleString()}</td>
+      <td style="font-family:var(--mono);text-align:right;color:${ALLIANCE_COLORS.nda}">${(lv.nda||0).toLocaleString()}</td>
+      <td style="font-family:var(--mono);text-align:right;font-weight:500">${p.margin.toLocaleString()}</td>
+      <td style="font-family:var(--mono);color:${confColor}">${conf}%</td>
+    </tr>`;
+  });
+
+  html += `</tbody></table>
+    <p style="font-size:11px;color:var(--muted);margin-top:8px">
+      ^ = historical booth pattern used &nbsp; - &nbsp; ! = pattern predicts different winner than ECI leader
+    </p></div>`;
+  document.getElementById('contentArea').innerHTML = html;
+}
+
+//  Round results cache 
+const roundCache = {};
+let roundLeadsCache = null;
+
+//  Rounds tab - fetches per-round data from /api/round_results 
+async function renderRounds() {
+  const no = state.selected;
+  const c  = state.constMap[no];
+  const area = document.getElementById('contentArea');
+
+  // Show loading state immediately
+  area.innerHTML = `<div class="card"><div class="card-title">${c.name} - Round-wise votes</div>
+    <p style="color:var(--muted);font-size:13px">Loading round data...</p></div>`;
+
+  // Fetch (or use cache)
+  let rd = roundCache[no];
+  if (!rd) {
+    try {
+      const res = await fetch(`/api/round_results/${no}`);
+      if (!res.ok) { renderRoundsFallback(); return; }
+      rd = await res.json();
+      roundCache[no] = rd;
+    } catch (e) {
+      renderRoundsFallback();
+      return;
+    }
+  }
+
+  const candidates = rd.candidates || [];
+  const parties    = rd.parties    || [];
+  const rounds     = rd.rounds     || [];
+  const totals     = rd.total      || [];
+  const n          = candidates.length;
+
+  if (!rounds.length) { renderRoundsFallback(); return; }
+
+  //  Assign colors per candidate 
+  // Try to match to app alliance; fallback to a distinct palette
+  const PALETTE = ['#1a4d8c','#0f766e','#9a3412','#7c3aed','#2d6a4f','#b45309','#be123c','#1d4ed8','#991b1b','#6d28d9'];
+  const appCands = c.candidates || [];
+
+  function candColor(ci) {
+    // Try to match by name fragment
+    const ecName = candidates[ci].toLowerCase();
+    for (const ac of appCands) {
+      const acWords = ac.name.toLowerCase().split(' ').filter(w => w.length > 3);
+      if (acWords.some(w => ecName.includes(w))) {
+        return ALLIANCE_COLORS[ac.alliance] || PALETTE[ci % PALETTE.length];
+      }
+    }
+    return PALETTE[ci % PALETTE.length];
+  }
+
+  const colors = candidates.map((_, ci) => candColor(ci));
+
+  //  Build stacked bar chart 
+  const maxRoundTotal = Math.max(...rounds.map(r => r.increment.reduce((a,b)=>a+b,0)), 1);
+
+  let chartHtml = `<div class="round-legend">`;
+  candidates.forEach((nm, ci) => {
+    const label = nm.split(' ').slice(-2).join(' '); // last 2 words
+    chartHtml += `<span class="round-legend-item">
+      <span class="round-legend-dot" style="background:${colors[ci]}"></span>
+      <span>${label}</span>
+      <span style="color:var(--muted);font-size:11px">${parties[ci] || ''}</span>
+    </span>`;
+  });
+  chartHtml += `</div><div class="round-chart-wrap"><div class="round-chart">`;
+
+  rounds.forEach(rr => {
+    const inc   = rr.increment;
+    const total = inc.reduce((a, b) => a + b, 0);
+    const scale = total > 0 ? (total / maxRoundTotal) : 0;
+    const barH  = Math.round(scale * 76);  // max 76px
+
+    chartHtml += `<div class="round-col" title="R${rr.round}: ${inc.map((v,ci)=>candidates[ci].split(' ').pop()+' '+v.toLocaleString()).join(' | ')}">`;
+    // Stack segments bottom-to-top (column-reverse in CSS handles visual order)
+    candidates.forEach((_, ci) => {
+      const segH = total > 0 ? Math.round(inc[ci] / total * barH) : 0;
+      if (segH > 0) {
+        chartHtml += `<div class="round-bar-seg" style="height:${segH}px;background:${colors[ci]}"></div>`;
+      }
+    });
+    chartHtml += `<span class="round-col-lbl">R${rr.round}</span></div>`;
+  });
+
+  chartHtml += `</div></div>`;
+
+  //  Build round-by-round table 
+  const has2021 = rounds.length && rounds[0].share_2021 !== undefined;
+
+  let tableHtml = `<div style="overflow-x:auto"><table class="round-table">
+    <thead><tr>
+      <th>Round</th>`;
+
+  // Top-3 candidates by total vote (show top 3 + "others" to keep table readable)
+  const TOP = 4;
+  const sortedIdx = [...Array(n).keys()].sort((a, b) => (totals[b]||0) - (totals[a]||0));
+  const showIdx   = sortedIdx.slice(0, TOP);
+  const hasOthers = n > TOP;
+
+  showIdx.forEach(ci => {
+    const shortName = candidates[ci].split(' ').slice(-2).join(' ');
+    tableHtml += `<th style="color:${colors[ci]}">${shortName}<br>
+      <span style="font-weight:400;color:var(--muted);font-size:10px">${parties[ci]||''}</span></th>`;
+  });
+  if (hasOthers) tableHtml += `<th>Others</th>`;
+  tableHtml += `<th>Round total</th><th>Leader (cumul.)</th>`;
+
+  // 2021 comparison columns
+  if (has2021) {
+    tableHtml += `
+      <th style="color:var(--ldf);border-left:2px solid var(--border)">LDF<br>
+        <span style="font-weight:400;color:var(--muted);font-size:10px">26% / 21% / delta</span></th>
+      <th style="color:var(--udf)">UDF<br>
+        <span style="font-weight:400;color:var(--muted);font-size:10px">26% / 21% / delta</span></th>
+      <th style="color:var(--nda)">NDA<br>
+        <span style="font-weight:400;color:var(--muted);font-size:10px">26% / 21% / delta</span></th>`;
+  }
+  tableHtml += `</tr></thead><tbody>`;
+
+  const cumul = new Array(n).fill(0);
+
+  rounds.forEach(rr => {
+    const inc = rr.increment.length === n ? rr.increment : new Array(n).fill(0);
+    inc.forEach((v, ci) => { cumul[ci] += v; });
+
+    const roundTotal = inc.reduce((a, b) => a + b, 0);
+    const othersInc  = hasOthers ? sortedIdx.slice(TOP).reduce((s, ci) => s + (inc[ci]||0), 0) : 0;
+
+    const leadCi  = cumul.indexOf(Math.max(...cumul));
+    const sorted2 = [...cumul].sort((a,b) => b-a);
+    const margin  = sorted2[0] - (sorted2[1]||0);
+
+    tableHtml += `<tr>
+      <td style="color:var(--muted)">R${rr.round}<br><span style="font-size:10px">${rr.pct != null ? rr.pct+'%' : ''}</span></td>`;
+
+    showIdx.forEach(ci => {
+      const v = inc[ci] || 0;
+      const isLead = cumul.indexOf(Math.max(...cumul)) === ci;
+      tableHtml += `<td style="${isLead ? `font-weight:600;color:${colors[ci]}` : ''}">${v > 0 ? v.toLocaleString() : '-'}</td>`;
+    });
+
+    if (hasOthers) tableHtml += `<td style="color:var(--muted)">${othersInc > 0 ? othersInc.toLocaleString() : '-'}</td>`;
+
+    tableHtml += `<td style="font-weight:500">${roundTotal > 0 ? roundTotal.toLocaleString() : '-'}</td>
+      <td style="color:${colors[leadCi]};font-weight:500">
+        ${candidates[leadCi].split(' ').pop()} +${margin.toLocaleString()}
+      </td>`;
+
+    // 2021 comparison cells
+    if (has2021 && rr.share_2021) {
+      ['ldf', 'udf', 'nda'].forEach((a, ai) => {
+        const s26  = rr.share_2026?.[a] ?? '-';
+        const s21  = rr.share_2021[a] ?? '-';
+        const d    = rr.delta?.[a];
+        const dStr = d != null ? (d >= 0 ? `+${d}` : `${d}`) : '';
+        const dCol = d == null ? '' : (d > 0 ? '#16a34a' : d < 0 ? '#dc2626' : 'var(--muted)');
+        const border = ai === 0 ? 'border-left:2px solid var(--border);' : '';
+        tableHtml += `<td style="${border}font-size:12px;white-space:nowrap">
+          <span style="font-weight:600">${s26}%</span>
+          <span style="color:var(--muted)"> / ${s21}%</span>
+          ${dStr ? `<span style="color:${dCol};font-weight:600"> ${dStr}</span>` : ''}
+        </td>`;
+      });
+    }
+
+    tableHtml += `</tr>`;
+  });
+
+  // Totals row
+  tableHtml += `<tr style="background:var(--surface2);font-weight:600"><td>Total</td>`;
+  showIdx.forEach(ci => {
+    tableHtml += `<td>${(totals[ci]||0).toLocaleString()}</td>`;
+  });
+  if (hasOthers) {
+    const othersTotal = sortedIdx.slice(TOP).reduce((s, ci) => s + (totals[ci]||0), 0);
+    tableHtml += `<td>${othersTotal.toLocaleString()}</td>`;
+  }
+  const grandTotal  = totals.reduce((a, b) => a + b, 0);
+  const finalLeadCi = totals.indexOf(Math.max(...totals));
+  const finalSorted = [...totals].sort((a,b)=>b-a);
+
+  // Final 2021 comparison (full result)
+  const lastRound = rounds[rounds.length - 1];
+  tableHtml += `<td>${grandTotal.toLocaleString()}</td>
+    <td style="color:${colors[finalLeadCi]};font-weight:600">
+      ${candidates[finalLeadCi].split(' ').pop()} +${(finalSorted[0]-(finalSorted[1]||0)).toLocaleString()}
+    </td>`;
+  if (has2021 && lastRound?.share_2021) {
+    ['ldf', 'udf', 'nda'].forEach((a, ai) => {
+      const s26 = lastRound.share_2026?.[a] ?? '-';
+      const s21 = lastRound.share_2021[a] ?? '-';
+      const d   = lastRound.delta?.[a];
+      const dStr = d != null ? (d >= 0 ? `+${d}` : `${d}`) : '';
+      const dCol = d == null ? '' : (d > 0 ? '#16a34a' : d < 0 ? '#dc2626' : 'var(--muted)');
+      const border = ai === 0 ? 'border-left:2px solid var(--border);' : '';
+      tableHtml += `<td style="${border}font-size:12px;white-space:nowrap">
+        <span style="font-weight:600">${s26}%</span>
+        <span style="color:var(--muted)"> / ${s21}%</span>
+        ${dStr ? `<span style="color:${dCol};font-weight:600"> ${dStr}</span>` : ''}
+      </td>`;
+    });
+  }
+  tableHtml += `</tr></tbody></table></div>`;
+
+  const fetchedAt = rd.fetched_at ? new Date(rd.fetched_at).toLocaleString() : 'cached';
+
+  area.innerHTML = `<div class="card">
+    <div class="card-title">${c.name} - Round-wise ECI vote data</div>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:12px">
+      ${rounds.length} rounds  -  ${n} candidates  -  Source: results.eci.gov.in  -  ${fetchedAt}
+    </p>
+    ${chartHtml}
+    ${tableHtml}
+  </div>`;
+}
+
+//  Round leads matrix - all constituencies by round
+async function renderRoundLeads() {
+  const area = document.getElementById('contentArea');
+  area.innerHTML = `<div class="card"><div class="card-title">Round leads</div>
+    <p style="color:var(--muted);font-size:13px">Loading...</p></div>`;
+
+  if (!roundLeadsCache) {
+    try {
+      const res = await fetch('/api/round_leads_matrix');
+      if (!res.ok) throw new Error('failed');
+      roundLeadsCache = await res.json();
+    } catch (e) {
+      area.innerHTML = `<div class="card"><div class="card-title">Round leads</div>
+        <p style="color:var(--muted);font-size:13px">Round lead data is not available.</p></div>`;
+      return;
+    }
+  }
+
+  const data = roundLeadsCache;
+  const mode = state.roundLeadsMode || 'cumulative';
+  const isCumul = mode === 'cumulative';
+  const maxRound = data.max_round || 0;
+  const rounds = Array.from({length: maxRound}, (_, i) => i + 1);
+  const parties = ['ldf', 'udf', 'nda'];
+
+  // Build round-only tally (exclude carried entries)
+  function roundOnlyTally() {
+    const t = {};
+    rounds.forEach(r => { t[r] = {ldf:0, udf:0, nda:0, other:0}; });
+    (data.rows || []).forEach(row => {
+      (row.rounds || []).forEach(rr => {
+        if (rr.carried) return;
+        const a = parties.includes(rr.alliance) ? rr.alliance : 'other';
+        if (t[rr.round]) t[rr.round][a]++;
+      });
+    });
+    return t;
+  }
+
+  const tallyByRound = isCumul
+    ? Object.fromEntries(rounds.map(r => [r, data.tally_by_round?.[String(r)] || {}]))
+    : roundOnlyTally();
+
+  // ── Chart ────────────────────────────────────────────────────────────────
+  const chartW = Math.max(760, maxRound * 42);
+  const chartH = 240;
+  const pad = { l: 42, r: 18, t: 16, b: 32 };
+  const innerW = chartW - pad.l - pad.r;
+  const innerH = chartH - pad.t - pad.b;
+  const yMax = 140;
+  const xFor = r => pad.l + ((r - 1) / Math.max(maxRound - 1, 1)) * innerW;
+  const yFor = v => pad.t + innerH - (v / yMax) * innerH;
+
+  let svg = `<div style="overflow-x:auto"><svg class="lead-chart" viewBox="0 0 ${chartW} ${chartH}" style="min-width:${chartW}px">`;
+  [0, 35, 70, 105, 140].forEach(yv => {
+    const y = yFor(yv);
+    svg += `<line class="lead-chart-grid" x1="${pad.l}" y1="${y}" x2="${chartW - pad.r}" y2="${y}"></line>
+      <text x="8" y="${y + 3}">${yv}</text>`;
+  });
+  rounds.forEach(r => {
+    if (r === 1 || r === maxRound || r % 2 === 0) {
+      svg += `<text x="${xFor(r) - 8}" y="${chartH - 10}">R${r}</text>`;
+    }
+  });
+  parties.forEach(a => {
+    const points = rounds.map(r => {
+      const v = tallyByRound[r]?.[a] || 0;
+      return `${xFor(r).toFixed(1)},${yFor(v).toFixed(1)}`;
+    }).join(' ');
+    svg += `<polyline class="lead-chart-line" stroke="${ALLIANCE_COLORS[a]}" points="${points}"></polyline>`;
+    rounds.forEach(r => {
+      const v = tallyByRound[r]?.[a] || 0;
+      svg += `<circle class="lead-chart-point" cx="${xFor(r)}" cy="${yFor(v)}" r="3" fill="${ALLIANCE_COLORS[a]}">
+        <title>R${r} ${ALLIANCE_LABELS[a]}: ${v}</title></circle>`;
+    });
+  });
+  svg += `</svg></div>`;
+
+  // ── Summary chips ─────────────────────────────────────────────────────────
+  const lastTally = tallyByRound[maxRound] || {};
+  const counted = (lastTally.ldf||0)+(lastTally.udf||0)+(lastTally.nda||0);
+  const otherCount = isCumul ? Math.max(0, 140 - counted) : (lastTally.other||0);
+  let summary = `<div class="lead-summary">`;
+  parties.forEach(a => {
+    summary += `<span class="score-chip"><span class="dot" style="background:${ALLIANCE_COLORS[a]}"></span>
+      <span>${ALLIANCE_LABELS[a]}</span><span class="num">${lastTally[a] || 0}</span></span>`;
+  });
+  if (otherCount > 0) {
+    summary += `<span class="score-chip"><span class="dot" style="background:${ALLIANCE_COLORS.ind}"></span>
+      <span>IND</span><span class="num">${otherCount}</span></span>`;
+  }
+  const total = counted + otherCount;
+  summary += `<span style="font-size:11px;color:var(--muted);align-self:center;margin-left:4px">
+    ${isCumul ? `= ${total} seats at R${maxRound}` : `= ${total} constituencies active at R${maxRound}`}
+  </span>`;
+  summary += `</div>`;
+
+  // ── Matrix ────────────────────────────────────────────────────────────────
+  let table = `<div class="lead-matrix-wrap"><table class="lead-matrix"><thead><tr>
+    <th class="const-head">Constituency</th>`;
+  rounds.forEach(r => { table += `<th>R${r}</th>`; });
+  table += `</tr></thead><tbody>`;
+
+  (data.rows || []).forEach(row => {
+    const byRound = {};
+    (row.rounds || []).forEach(rr => { byRound[rr.round] = rr; });
+    table += `<tr><td class="const-cell" onclick="openConst(${row.const_no})">
+      <span style="font-family:var(--mono);color:var(--muted)">${String(row.const_no).padStart(3,'0')}</span>
+      ${row.name}<span class="lead-district">${row.district || ''}</span>
+    </td>`;
+    rounds.forEach(r => {
+      const rr = byRound[r];
+      // In Round Only mode, treat carried entries as empty
+      if (!rr || (!isCumul && rr.carried)) {
+        table += `<td class="lead-cell empty">-</td>`;
+        return;
+      }
+      const a = parties.includes(rr.alliance) ? rr.alliance : 'other';
+      const dimStyle = (!isCumul && rr.carried) ? '' : '';
+      table += `<td class="lead-cell ${a}" title="${row.name} R${r}: ${rr.leader_name} (${rr.leader_party}) ${Number(rr.votes||0).toLocaleString()}">
+        ${ALLIANCE_LABELS[a] || 'IND'}
+      </td>`;
+    });
+    table += `</tr>`;
+  });
+  table += `</tbody></table></div>`;
+
+  // ── Toggle ────────────────────────────────────────────────────────────────
+  const toggle = `<div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
+    <span style="font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.05em;text-transform:uppercase">View</span>
+    <button class="round-btn ${isCumul ? 'active' : ''}"
+      onclick="state.roundLeadsMode='cumulative';renderRoundLeads()">Cumulative</button>
+    <button class="round-btn ${!isCumul ? 'active' : ''}"
+      onclick="state.roundLeadsMode='round_only';renderRoundLeads()">Round Only</button>
+    <span style="font-size:11px;color:var(--muted);margin-left:6px">
+      ${isCumul
+        ? 'Seats leading after each cumulative round (carries forward when constituency finishes)'
+        : 'Seats leading in each individual round only — matrix empty once constituency completes'
+      }
+    </span>
+  </div>`;
+
+  area.innerHTML = `<div class="card">
+    <div class="card-title">Round-by-round leading alliance</div>
+    ${toggle}
+    ${svg}
+    ${summary}
+    ${table}
+  </div>`;
+}
+
+//  Insights tab - statewide vote changes against historical baselines (LDF / UDF / NDA)
+function renderInsights() {
+  const preds = eciPredRaw?.predictions || {};
+  const alliance = state.insightAlliance || 'ldf';
+  const baseYear = state.ldfInsightYear || 2021;
+  const sortKey = state.ldfInsightSort || 'pct_desc';
+  const allianceLabel = ALLIANCE_LABELS[alliance] || alliance.toUpperCase();
+  const allianceColor = ALLIANCE_COLORS[alliance] || ALLIANCE_COLORS.ldf;
+  const allianceBg   = ALLIANCE_BG[alliance]    || ALLIANCE_BG.ldf;
+
+  const pct = (part, total) => total > 0 ? part / total * 100 : null;
+  const cleanName = name => (name || '-').replace(/^(ADV\.|DR\.|ADVOCATE|SHRI|SMT\.)\s*/i, '').trim().split(/\s+/).slice(-2).join(' ');
+  const deltaColor = v => v == null ? 'var(--muted)' : v >= 0 ? '#16a34a' : '#dc2626';
+  const voteDelta = v => v == null ? '-' : `${v >= 0 ? '+' : ''}${Math.round(v).toLocaleString()}`;
+  const pctDelta  = v => v == null ? '-' : `${v >= 0 ? '+' : ''}${v.toFixed(1)} pp`;
+
+  function yearVotes(c, year) {
+    const key = `actual${year}`;
+    const out = {};
+    ['ldf', 'udf', 'nda'].forEach(a => out[a] = c.candidates.find(x => x.alliance === a)?.[key] || 0);
+    out.total = out.ldf + out.udf + out.nda;
+    return out;
+  }
+  const YEAR_LABELS = { 2021:'2021', 2016:'2016', 2011:'2011', '2019ls':'2019 LS', '2024ls':'2024 LS' };
+
+  let rows = state.constituencies.map(c => {
+    const pred = preds[String(c.no)];
+    // Use actual2026 from candidate data (sums all alliance candidates) — not live_votes which can miss multi-candidate alliances
+    const get2026 = a => c.candidates.find(x => x.alliance === a)?.actual2026 ?? 0;
+    const votes26 = get2026(alliance);
+    const total26  = get2026('ldf') + get2026('udf') + get2026('nda');
+    const base = yearVotes(c, baseYear);
+    const pct26  = pct(votes26, total26);
+    const pctBase = pct(base[alliance], base.total);
+    const ranked = ['ldf','udf','nda'].map(a=>({a,votes:get2026(a)})).sort((a,b)=>b.votes-a.votes);
+    return {
+      no: c.no, name: c.name, district: c.district,
+      candName:  c.candidates.find(x => x.alliance === alliance)?.name || '',
+      candParty: c.candidates.find(x => x.alliance === alliance)?.party || '',
+      baseParty: c.candidates.find(x => x.alliance === alliance)?.[`party${baseYear}`] || '',
+      votes26, votesBase: base[alliance], pct26, pctBase,
+      voteChange: total26 > 0 && base.total > 0 ? votes26 - base[alliance] : null,
+      pctChange:  pct26 != null && pctBase != null ? pct26 - pctBase : null,
+      winnerAlliance: pred?.called_winner_alliance || pred?.winner_alliance || ranked[0]?.a,
+      winnerName:     pred?.called_winner_name     || pred?.winner_name     || ALLIANCE_LABELS[ranked[0]?.a],
+      hasData: total26 > 0 && base.total > 0,
+    };
+  }).filter(r => r.hasData);
+
+  const sorters = {
+    pct_desc:        (a,b) => (b.pctChange   ?? -999)       - (a.pctChange   ?? -999),
+    pct_asc:         (a,b) => (a.pctChange   ?? 999)        - (b.pctChange   ?? 999),
+    votes_desc:      (a,b) => (b.voteChange  ?? -999999999) - (a.voteChange  ?? -999999999),
+    votes_asc:       (a,b) => (a.voteChange  ?? 999999999)  - (b.voteChange  ?? 999999999),
+    share_desc:      (a,b) => (b.pct26       ?? 0)          - (a.pct26       ?? 0),
+    votes_2026_desc: (a,b) => b.votes26 - a.votes26,
+    number:          (a,b) => a.no - b.no,
+  };
+  rows.sort(sorters[sortKey] || sorters.pct_desc);
+
+  const avg = key => rows.length ? rows.reduce((s,r)=>s+(r[key] ?? 0),0)/rows.length : null;
+  const maxAbsPct      = Math.max(1, ...rows.map(r => Math.abs(r.pctChange || 0)));
+  const totalVoteChange = rows.reduce((s,r)=>s+(r.voteChange || 0),0);
+  const avgPctChange   = avg('pctChange');
+  const gained = rows.filter(r => (r.pctChange || 0) > 0).length;
+  const lost   = rows.filter(r => (r.pctChange || 0) < 0).length;
+
+  const alliancePicker = ['ldf','udf','nda'].map(a => {
+    const lbl = ALLIANCE_LABELS[a] || a.toUpperCase();
+    const col  = ALLIANCE_COLORS[a];
+    const isActive = a === alliance;
+    const style = isActive ? '' : `border-color:${col};color:${col}`;
+    return `<button class="round-btn ${isActive ? 'active' : ''}" style="${style}" onclick="state.insightAlliance='${a}';renderInsights()">${lbl}</button>`;
+  }).join('');
+
+  let html = `<div class="card" style="margin-bottom:14px;border-color:${allianceColor}44;background:${allianceBg}44">
+    <div style="display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px">
+      <div class="card-title" style="margin-bottom:0">${allianceLabel} vote change insights — ${YEAR_LABELS[baseYear]||baseYear} vs 2026</div>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+        <span style="font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.05em;text-transform:uppercase">Alliance</span>
+        ${alliancePicker}
+        <span style="font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-left:4px">vs</span>
+        <button class="round-btn ${baseYear === 2021 ? 'active' : ''}" onclick="state.ldfInsightYear=2021;renderInsights()">2021</button>
+        <button class="round-btn ${baseYear === 2016 ? 'active' : ''}" onclick="state.ldfInsightYear=2016;renderInsights()">2016</button>
+        <button class="round-btn ${baseYear === 2011 ? 'active' : ''}" onclick="state.ldfInsightYear=2011;renderInsights()">2011</button>
+        <button class="round-btn ${baseYear === '2019ls' ? 'active' : ''}" onclick="state.ldfInsightYear='2019ls';renderInsights()">2019 LS</button>
+        <button class="round-btn ${baseYear === '2024ls' ? 'active' : ''}" onclick="state.ldfInsightYear='2024ls';renderInsights()">2024 LS</button>
+        <select class="dist-select" style="width:auto;min-width:190px" onchange="state.ldfInsightSort=this.value;renderInsights()">
+          <option value="pct_desc" ${sortKey==='pct_desc'?'selected':''}>Share gain high to low</option>
+          <option value="pct_asc" ${sortKey==='pct_asc'?'selected':''}>Share loss high to low</option>
+          <option value="votes_desc" ${sortKey==='votes_desc'?'selected':''}>Vote gain high to low</option>
+          <option value="votes_asc" ${sortKey==='votes_asc'?'selected':''}>Vote loss high to low</option>
+          <option value="share_desc" ${sortKey==='share_desc'?'selected':''}>2026 ${allianceLabel}% high to low</option>
+          <option value="votes_2026_desc" ${sortKey==='votes_2026_desc'?'selected':''}>2026 ${allianceLabel} votes high to low</option>
+          <option value="number" ${sortKey==='number'?'selected':''}>Constituency number</option>
+        </select>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px">
+      <div class="score-box"><div class="score-big" style="color:${allianceColor}">${rows.length}</div><div class="score-lbl">Seats compared</div></div>
+      <div class="score-box"><div class="score-big" style="font-size:26px;color:${deltaColor(avgPctChange)}">${pctDelta(avgPctChange)}</div><div class="score-lbl">Avg ${allianceLabel} share change</div></div>
+      <div class="score-box"><div class="score-big" style="font-size:26px;color:${deltaColor(totalVoteChange)}">${voteDelta(totalVoteChange)}</div><div class="score-lbl">Total ${allianceLabel} vote change</div></div>
+      <div class="score-box"><div class="score-big" style="font-size:26px;color:${allianceColor}">${gained} / ${lost}</div><div class="score-lbl">Share gain / loss seats</div></div>
+    </div>
+    <p style="font-size:11px;color:var(--muted)">Vote share uses LDF + UDF + NDA alliance totals for each year. Final 2026 values come from ECI round totals.</p>
+  </div>`;
+
+  html += `<div class="card"><div class="card-title">${allianceLabel} — all 140 seats sorted by selected metric</div>
+    <div style="overflow-x:auto"><table class="results-table"><thead><tr>
+      <th>#</th><th>Constituency</th><th>${allianceLabel} candidate</th>
+      <th style="text-align:right">${YEAR_LABELS[baseYear]||baseYear} votes</th><th style="text-align:right">2026 votes</th><th style="text-align:right">Vote change</th>
+      <th style="min-width:220px">${allianceLabel} share change</th><th style="text-align:right">${YEAR_LABELS[baseYear]||baseYear}%</th><th style="text-align:right">2026%</th><th>Winner</th>
+    </tr></thead><tbody>`;
+
+  rows.forEach(r => {
+    const barW = Math.max(4, Math.abs(r.pctChange || 0) / maxAbsPct * 100);
+    const positive = (r.pctChange || 0) >= 0;
+    html += `<tr onclick="openConst(${r.no})" style="cursor:pointer">
+      <td style="font-family:var(--mono);color:var(--muted)">${r.no}</td>
+      <td style="font-weight:500">${r.name}<br><span style="font-size:10px;color:var(--muted);font-weight:400">${r.district}</span></td>
+      <td style="font-size:12px;font-weight:500">${r.candName}<br><span style="font-size:10px;color:var(--muted);font-weight:400">2026 ${r.candParty || '-'} — ${YEAR_LABELS[baseYear]||baseYear} ${r.baseParty || '-'}</span></td>
+      <td style="font-family:var(--mono);text-align:right;color:var(--muted)">${r.votesBase.toLocaleString()}</td>
+      <td style="font-family:var(--mono);text-align:right;font-weight:600;color:${allianceColor}">${r.votes26.toLocaleString()}</td>
+      <td style="font-family:var(--mono);text-align:right;font-weight:600;color:${deltaColor(r.voteChange)}">${voteDelta(r.voteChange)}</td>
+      <td><div style="display:flex;align-items:center;gap:8px"><div class="bar-track" style="height:12px;min-width:150px"><div class="bar-fill" style="width:${barW.toFixed(1)}%;background:${positive ? '#16a34a' : '#dc2626'}"></div></div><span style="font-family:var(--mono);font-weight:600;color:${deltaColor(r.pctChange)}">${pctDelta(r.pctChange)}</span></div></td>
+      <td style="font-family:var(--mono);text-align:right;color:var(--muted)">${r.pctBase != null ? r.pctBase.toFixed(1)+'%' : '-'}</td>
+      <td style="font-family:var(--mono);text-align:right;font-weight:600">${r.pct26 != null ? r.pct26.toFixed(1)+'%' : '-'}</td>
+      <td><span class="tag badge-${r.winnerAlliance}">${ALLIANCE_LABELS[r.winnerAlliance] || r.winnerAlliance}</span> <span style="font-size:11px">${cleanName(r.winnerName)}</span></td>
+    </tr>`;
+  });
+  html += `</tbody></table></div></div>`;
+  document.getElementById('contentArea').innerHTML = html;
+}
+
+//  NDA 20%+ tab - statewide seats filtered by 2026 NDA vote share
+function renderNdaTwentyPlus() {
+  const preds = eciPredRaw?.predictions || {};
+  const threshold = state.ndaThreshold || 20;
+
+  function pct(part, total) {
+    return total > 0 ? part / total * 100 : null;
+  }
+  function refPct(c, year) {
+    const key = year === 2016 ? 'actual2016' : 'actual2021';
+    const ldf = c.candidates.find(x => x.alliance === 'ldf')?.[key] || 0;
+    const udf = c.candidates.find(x => x.alliance === 'udf')?.[key] || 0;
+    const nda = c.candidates.find(x => x.alliance === 'nda')?.[key] || 0;
+    return pct(nda, ldf + udf + nda);
+  }
+  function cleanWinnerName(name) {
+    return (name || '-').replace(/^(ADV\.|DR\.|ADVOCATE|SHRI|SMT\.)\s*/i, '').trim().split(/\s+/).slice(-2).join(' ');
+  }
+
+  const rows = state.constituencies.map(c => {
+    const p = preds[String(c.no)];
+    const lv = p?.live_votes || {};
+    const ldf = lv.ldf || 0, udf = lv.udf || 0, nda = lv.nda || 0;
+    const total = ldf + udf + nda;
+    const ndaPct = pct(nda, total);
+    const ranked = [
+      { a: 'ldf', votes: ldf },
+      { a: 'udf', votes: udf },
+      { a: 'nda', votes: nda },
+    ].sort((a, b) => b.votes - a.votes);
+    const ref2016 = refPct(c, 2016);
+    const ref2021 = refPct(c, 2021);
+    return {
+      no: c.no, name: c.name, district: c.district,
+      ndaName: c.candidates.find(x => x.alliance === 'nda')?.name || '',
+      ndaParty: c.candidates.find(x => x.alliance === 'nda')?.party || '',
+      nda, total, ndaPct,
+      winnerAlliance: p?.called_winner_alliance || p?.winner_alliance || ranked[0]?.a,
+      winnerName: p?.called_winner_name || p?.winner_name || ALLIANCE_LABELS[ranked[0]?.a],
+      secondAlliance: ranked[1]?.a || 'other',
+      secondVotes: ranked[1]?.votes || 0,
+      change2016: ref2016 != null && ndaPct != null ? ndaPct - ref2016 : null,
+      change2021: ref2021 != null && ndaPct != null ? ndaPct - ref2021 : null,
+      hasData: total > 0 && ndaPct != null,
+    };
+  }).filter(r => r.hasData && r.ndaPct >= threshold)
+    .sort((a, b) => b.ndaPct - a.ndaPct);
+
+  const avgVal = key => rows.length ? rows.reduce((s, r) => s + (r[key] ?? 0), 0) / rows.length : null;
+  const avgKnown = key => {
+    const known = rows.filter(r => r[key] != null);
+    return known.length ? known.reduce((s, r) => s + r[key], 0) / known.length : null;
+  };
+  const chg = v => v == null ? '-' : `${v >= 0 ? '+' : ''}${v.toFixed(1)} pp`;
+  const chgCol = v => v == null ? 'var(--muted)' : v >= 0 ? '#16a34a' : '#dc2626';
+
+  const avgNda = avgVal('ndaPct');
+  const avgChange2016 = avgKnown('change2016');
+  const avgChange2021 = avgKnown('change2021');
+
+  let html = `<div class="card" style="margin-bottom:14px;border-color:${ALLIANCE_COLORS.nda}44;background:${ALLIANCE_COLORS.nda}08">
+    <div style="display:flex;align-items:center;gap:16px;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px">
+      <div class="card-title" style="margin-bottom:0">NDA vote share seats - 2026 final results</div>
+      <div style="display:flex;align-items:center;gap:10px;min-width:300px">
+        <span style="font-size:12px;color:var(--muted)">Threshold</span>
+        <input type="range" min="20" max="50" step="5" value="${threshold}" oninput="state.ndaThreshold=parseInt(this.value,10);renderNdaTwentyPlus()" style="flex:1;accent-color:${ALLIANCE_COLORS.nda}">
+        <span style="font-family:var(--mono);font-weight:600;color:${ALLIANCE_COLORS.nda};min-width:38px">${threshold}%</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px">
+      <div class="score-box"><div class="score-big" style="color:${ALLIANCE_COLORS.nda}">${rows.length}</div><div class="score-lbl">Seats at/above ${threshold}%</div></div>
+      <div class="score-box"><div class="score-big" style="font-size:28px;color:${ALLIANCE_COLORS.nda}">${avgNda != null ? avgNda.toFixed(1)+'%' : '-'}</div><div class="score-lbl">Avg 2026 NDA%</div></div>
+      <div class="score-box"><div class="score-big" style="font-size:26px;color:${chgCol(avgChange2016)}">${chg(avgChange2016)}</div><div class="score-lbl">Avg vs 2016</div></div>
+      <div class="score-box"><div class="score-big" style="font-size:26px;color:${chgCol(avgChange2021)}">${chg(avgChange2021)}</div><div class="score-lbl">Avg vs 2021</div></div>
+    </div>
+    <p style="font-size:11px;color:var(--muted)">Sorted high to low by 2026 NDA vote share. Percentages use LDF + UDF + NDA alliance totals.</p>
+  </div>`;
+
+  if (!rows.length) {
+    html += `<div class="placeholder"><h3>No seats at this threshold</h3><p>Move the slider lower to include more constituencies.</p></div>`;
+    document.getElementById('contentArea').innerHTML = html;
+    return;
+  }
+
+  const maxPct = Math.max(...rows.map(r => r.ndaPct), threshold);
+  html += `<div class="card"><div class="card-title">Seats sorted by NDA share</div>
+    <div style="overflow-x:auto"><table class="results-table">
+      <thead><tr>
+        <th>#</th><th>Constituency</th><th>NDA candidate</th>
+        <th style="min-width:220px">2026 NDA%</th>
+        <th style="text-align:right">NDA votes</th><th>Winner</th><th>Second</th>
+        <th style="text-align:right">vs 2021</th><th style="text-align:right">vs 2016</th>
+      </tr></thead><tbody>`;
+
+  rows.forEach(r => {
+    const barW = Math.max(4, r.ndaPct / maxPct * 100);
+    html += `<tr onclick="openConst(${r.no})" style="cursor:pointer">
+      <td style="font-family:var(--mono);color:var(--muted)">${r.no}</td>
+      <td style="font-weight:500">${r.name}<br><span style="font-size:10px;color:var(--muted);font-weight:400">${r.district}</span></td>
+      <td style="font-size:12px;font-weight:500">${r.ndaName}<br><span style="font-size:10px;color:var(--muted);font-weight:400">${r.ndaParty}</span></td>
+      <td><div style="display:flex;align-items:center;gap:8px"><div class="bar-track" style="height:12px;min-width:150px"><div class="bar-fill" style="width:${barW.toFixed(1)}%;background:${ALLIANCE_COLORS.nda}"></div></div><span style="font-family:var(--mono);font-weight:600;color:${ALLIANCE_COLORS.nda}">${r.ndaPct.toFixed(1)}%</span></div></td>
+      <td style="font-family:var(--mono);text-align:right">${r.nda.toLocaleString()}</td>
+      <td><span class="tag badge-${r.winnerAlliance}">${ALLIANCE_LABELS[r.winnerAlliance] || r.winnerAlliance}</span> <span style="font-size:11px">${cleanWinnerName(r.winnerName)}</span></td>
+      <td><span class="tag badge-${r.secondAlliance}">${ALLIANCE_LABELS[r.secondAlliance] || r.secondAlliance}</span> <span style="font-family:var(--mono);font-size:11px;color:var(--muted)">${r.secondVotes.toLocaleString()}</span></td>
+      <td style="font-family:var(--mono);text-align:right;font-weight:600;color:${chgCol(r.change2021)}">${chg(r.change2021)}</td>
+      <td style="font-family:var(--mono);text-align:right;font-weight:600;color:${chgCol(r.change2016)}">${chg(r.change2016)}</td>
+    </tr>`;
+  });
+  html += `</tbody></table></div></div>`;
+  document.getElementById('contentArea').innerHTML = html;
+}
+
+//  NDA Allied tab (BDJS / TTP seats) - final vote counts 
+function renderNdaAllied() {
+  const baselineYear = state.ndaAlliedYear || 2021;
+  const actualKey = baselineYear === 2016 ? 'actual2016' : 'actual2021';
+  const partyKey = baselineYear === 2016 ? 'party2016' : 'party2021';
+
+  function isAllied(party) {
+    const p = (party || '').toUpperCase().trim();
+    return p === 'BDJS' || p === 'TTP' || p.includes('TWENTY');
+  }
+  function partyLabel(party) {
+    const p = (party || '').toUpperCase().trim();
+    if (p === 'BDJS') return 'BDJS';
+    if (p === 'TTP' || p.includes('TWENTY')) return 'TTP';
+    return p;
+  }
+
+  const allRows = [];
+  state.constituencies.forEach(c => {
+    const ndaCand = c.candidates.find(ca => ca.alliance === 'nda');
+    if (!ndaCand || !isAllied(ndaCand.party)) return;
+
+    const ldfCand = c.candidates.find(ca => ca.alliance === 'ldf');
+    const udfCand = c.candidates.find(ca => ca.alliance === 'udf');
+
+    // Historical baseline vote counts
+    const ndaBase = ndaCand[actualKey] || 0;
+    const ldfBase = ldfCand?.[actualKey] || 0;
+    const udfBase = udfCand?.[actualKey] || 0;
+    const totBase = ldfBase + udfBase + ndaBase;
+    const ndaBasePct = totBase > 0 ? ndaBase / totBase * 100 : null;
+
+    // 2026 final vote counts from ECI
+    const pred = eciPredRaw?.predictions?.[String(c.no)];
+    let ldf26 = 0, udf26 = 0, nda26 = 0;
+    let winnerAlliance = null, winnerName = null, winnerParty = null, margin = null;
+
+    if (pred) {
+      const lv = pred.live_votes || {};
+      ldf26 = lv.ldf || 0;
+      udf26 = lv.udf || 0;
+      nda26 = lv.nda || 0;
+      winnerAlliance = pred.winner_alliance;
+      winnerName = pred.winner_name || '';
+      winnerParty = pred.winner_party || '';
+      margin = pred.margin || 0;
+    }
+
+    const tot26 = ldf26 + udf26 + nda26;
+    const nda26Pct = tot26 > 0 ? nda26 / tot26 * 100 : null;
+    const change = (ndaBasePct != null && nda26Pct != null) ? nda26Pct - ndaBasePct : null;
+
+    allRows.push({
+      no: c.no, name: c.name, district: c.district,
+      party: partyLabel(ndaCand.party),
+      ndaName: ndaCand.name || '-',
+      baselineYear,
+      baseParty: ndaCand[partyKey] || ndaCand.party || '',
+      ldfBase, udfBase, ndaBase, totBase, ndaBasePct,
+      ldf26, udf26, nda26, tot26, nda26Pct, change,
+      winnerAlliance, winnerName, winnerParty, margin,
+      hasData: tot26 > 0,
+    });
+  });
+
+  if (allRows.length === 0) {
+    document.getElementById('contentArea').innerHTML = `
+      <div class="placeholder">
+        <h3>No BDJS / Twenty20 seats found</h3>
+        <p>Candidate data may not be loaded. Check that candidates_2026.json is populated.</p>
+      </div>`;
+    return;
+  }
+
+  function avg(rows, key) {
+    const v = rows.filter(r => r[key] != null);
+    return v.length ? v.reduce((s, r) => s + r[key], 0) / v.length : null;
+  }
+
+  const byParty = {
+    BDJS: allRows.filter(r => r.party === 'BDJS'),
+    TTP:  allRows.filter(r => r.party === 'TTP'),
+  };
+
+  function renderGroup(partyKey, fullName) {
+    const rows = byParty[partyKey];
+    if (!rows?.length) return '';
+
+    // Sort by change ascending (biggest drop first); no-data seats at end
+    const sorted = [...rows].sort((a, b) => {
+      if (!a.hasData && !b.hasData) return a.no - b.no;
+      if (!a.hasData) return 1;
+      if (!b.hasData) return -1;
+      return (a.change ?? 0) - (b.change ?? 0);
+    });
+
+    const withData = sorted.filter(r => r.hasData);
+    const avgBase = avg(withData, 'ndaBasePct');
+    const avg26 = avg(withData, 'nda26Pct');
+    const avgChg = avgBase != null && avg26 != null ? avg26 - avgBase : null;
+    const ndaWins = sorted.filter(r => r.winnerAlliance === 'nda').length;
+    const ldfWins = sorted.filter(r => r.winnerAlliance === 'ldf').length;
+    const udfWins = sorted.filter(r => r.winnerAlliance === 'udf').length;
+
+    let g = `<div class="card" style="margin-bottom:14px">
+      <div class="card-title">${partyKey} - ${fullName}  -  ${rows.length} seats</div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:12px;font-size:13px">
+        <div><span style="color:var(--muted)">Winners: </span>
+          <strong style="color:${ALLIANCE_COLORS.ldf}">LDF ${ldfWins}</strong> &nbsp;
+          <strong style="color:${ALLIANCE_COLORS.udf}">UDF ${udfWins}</strong> &nbsp;
+          <strong style="color:${ALLIANCE_COLORS.nda}">NDA ${ndaWins}</strong>
+        </div>
+        ${avgChg != null ? `<div><span style="color:var(--muted)">Avg NDA vote delta:</span>
+          <strong style="color:${avgChg >= 0 ? '#16a34a' : '#dc2626'}">&nbsp;${avgChg >= 0 ? '+' : ''}${avgChg.toFixed(1)} pp</strong>
+          <span style="color:var(--muted);font-size:11px"> (${withData.length} seats)</span></div>` : ''}
+      </div>
+      <div style="overflow-x:auto"><table class="results-table">
+        <thead><tr>
+          <th>#</th><th>Constituency</th><th>NDA Candidate</th>
+          <th style="text-align:right">${baselineYear} NDA votes</th>
+          <th style="text-align:right">${baselineYear} NDA%</th>
+          <th style="text-align:right">2026 NDA votes</th>
+          <th style="text-align:right">2026 NDA%</th>
+          <th style="text-align:right">Change</th>
+          <th>Winner</th><th>Alliance  -  Margin</th>
+        </tr></thead><tbody>`;
+
+    sorted.forEach(r => {
+      const chgStr = r.change != null
+        ? (r.change >= 0 ? `+${r.change.toFixed(1)}` : r.change.toFixed(1)) + ' pp'
+        : '-';
+      const chgCol = r.change == null ? 'var(--muted)'
+        : r.change >= 0 ? '#16a34a' : '#dc2626';
+      const wa = r.winnerAlliance;
+      const wName = r.winnerName
+        ? r.winnerName.replace(/^(ADV\.|DR\.|ADVOCATE|SHRI|SMT\.)\s*/i, '').trim()
+            .split(/\s+/).slice(-2).join(' ')
+        : '-';
+      const wPartyShort = (r.winnerParty || '')
+        .replace('Indian National Congress','INC')
+        .replace('Communist Party of India (Marxist)','CPI(M)')
+        .replace('Communist Party of India','CPI')
+        .replace('Indian Union Muslim League','IUML')
+        .replace('Bharatiya Janata Party','BJP')
+        .replace('Kerala Congress (M)','KC(M)')
+        .replace('Kerala Congress','KC');
+
+      g += `<tr onclick="openConst(${r.no})" style="cursor:pointer">
+        <td style="font-family:var(--mono);color:var(--muted)">${r.no}</td>
+        <td style="font-weight:500">${r.name}</td>
+        <td style="font-size:12px;font-weight:500">${r.ndaName}<br><span style="font-size:10px;color:var(--muted);font-weight:400">${baselineYear}: ${r.baseParty || '-'}</span></td>
+        <td style="font-family:var(--mono);text-align:right;color:var(--muted)">${r.ndaBase.toLocaleString()}</td>
+        <td style="font-family:var(--mono);text-align:right;color:var(--muted)">${r.ndaBasePct != null ? r.ndaBasePct.toFixed(1)+'%' : '-'}</td>
+        <td style="font-family:var(--mono);text-align:right;font-weight:500;color:${ALLIANCE_COLORS.nda}">${r.hasData ? r.nda26.toLocaleString() : '-'}</td>
+        <td style="font-family:var(--mono);text-align:right">${r.nda26Pct != null ? r.nda26Pct.toFixed(1)+'%' : '-'}</td>
+        <td style="font-family:var(--mono);text-align:right;font-weight:600;color:${chgCol}">${chgStr}</td>
+        <td style="font-size:12px;font-weight:500;white-space:nowrap">${wName} <span style="font-size:10px;color:var(--muted);font-weight:400">${wPartyShort}</span></td>
+        <td style="white-space:nowrap">${wa ? `<span class="tag badge-${wa}">${ALLIANCE_LABELS[wa]||wa}</span>` : '-'} <span style="font-size:10px;color:var(--muted)">${r.margin ? '+'+r.margin.toLocaleString() : ''}</span></td>
+      </tr>`;
+    });
+
+    if (withData.length > 0) {
+      const avgChgStr = avgChg != null ? (avgChg >= 0 ? `+${avgChg.toFixed(1)}` : avgChg.toFixed(1)) + ' pp' : '-';
+      const avgChgCol = avgChg == null ? 'var(--muted)' : avgChg >= 0 ? '#16a34a' : '#dc2626';
+      const avgNdaBase = avg(withData, 'ndaBase');
+      const avgNda26 = avg(withData, 'nda26');
+      g += `<tr style="background:var(--surface2);font-weight:600;font-size:12px">
+        <td colspan="3" style="color:var(--muted)">Average - ${withData.length} seats</td>
+        <td style="font-family:var(--mono);text-align:right;color:var(--muted)">${avgNdaBase != null ? Math.round(avgNdaBase).toLocaleString() : '-'}</td>
+        <td style="font-family:var(--mono);text-align:right;color:var(--muted)">${avgBase != null ? avgBase.toFixed(1)+'%' : '-'}</td>
+        <td style="font-family:var(--mono);text-align:right;color:${ALLIANCE_COLORS.nda}">${avgNda26 != null ? Math.round(avgNda26).toLocaleString() : '-'}</td>
+        <td style="font-family:var(--mono);text-align:right">${avg26 != null ? avg26.toFixed(1)+'%' : '-'}</td>
+        <td style="font-family:var(--mono);text-align:right;color:${avgChgCol}">${avgChgStr}</td>
+        <td colspan="2"></td>
+      </tr>`;
+    }
+
+    g += `</tbody></table></div></div>`;
+    return g;
+  }
+
+  // Overall summary
+  const withData = allRows.filter(r => r.hasData);
+  const overallAvgBase = avg(withData, 'ndaBasePct');
+  const overallAvg26 = avg(withData, 'nda26Pct');
+  const overallChg   = overallAvgBase != null && overallAvg26 != null ? overallAvg26 - overallAvgBase : null;
+  const totalNdaWins = allRows.filter(r => r.winnerAlliance === 'nda').length;
+  const totalLdfWins = allRows.filter(r => r.winnerAlliance === 'ldf').length;
+  const totalUdfWins = allRows.filter(r => r.winnerAlliance === 'udf').length;
+
+  let html = `<div class="card" style="margin-bottom:14px;border-color:${ALLIANCE_COLORS.nda}44;background:${ALLIANCE_COLORS.nda}08">
+    <div style="display:flex;align-items:center;gap:12px;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap">
+      <div class="card-title" style="margin-bottom:0">NDA allied seats - BDJS (${byParty.BDJS?.length||0}) + TTP / Twenty20 (${byParty.TTP?.length||0})  -  ${baselineYear} vs 2026</div>
+      <div style="display:flex;gap:4px">
+        <button class="round-btn ${baselineYear === 2016 ? 'active' : ''}" onclick="state.ndaAlliedYear=2016;renderNdaAllied()">2016</button>
+        <button class="round-btn ${baselineYear === 2021 ? 'active' : ''}" onclick="state.ndaAlliedYear=2021;renderNdaAllied()">2021</button>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px">
+      <div class="score-box">
+        <div class="score-big" style="color:${ALLIANCE_COLORS.ldf}">${totalLdfWins}</div>
+        <div class="score-lbl">LDF won</div>
+      </div>
+      <div class="score-box">
+        <div class="score-big" style="color:${ALLIANCE_COLORS.udf}">${totalUdfWins}</div>
+        <div class="score-lbl">UDF won</div>
+      </div>
+      <div class="score-box">
+        <div class="score-big" style="color:${ALLIANCE_COLORS.nda}">${totalNdaWins}</div>
+        <div class="score-lbl">NDA won</div>
+      </div>
+      <div class="score-box">
+        <div class="score-big" style="font-size:26px;color:${overallChg == null ? 'var(--muted)' : overallChg >= 0 ? '#16a34a' : '#dc2626'}">
+          ${overallChg != null ? (overallChg >= 0 ? '+' : '') + overallChg.toFixed(1) + 'pp' : '-'}
+        </div>
+        <div class="score-lbl">Avg NDA vote change</div>
+      </div>
+    </div>
+    <p style="font-size:11px;color:var(--muted)">
+      Final counts from ECI  -  ${baselineYear}% from official ${baselineYear} results  -  2026% from final ECI vote totals  -  Sorted by largest NDA decline first
+    </p>
+  </div>`;
+
+  html += renderGroup('BDJS', 'Bharath Dharma Jana Sena');
+  html += renderGroup('TTP',  'Twenty20 Party');
+
+  document.getElementById('contentArea').innerHTML = html;
+}
+
+init().then(() => fetchECILive());
+</script>
+</body>
+</html>
+
+
+

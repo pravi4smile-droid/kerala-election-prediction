@@ -1,0 +1,315 @@
+{
+  "const_no": 100,
+  "name": "KANJIRAPPALLY",
+  "source_year": 2026,
+  "winner_alliance_2026": "udf",
+  "candidates": [
+    "DR. N. JAYARAJ",
+    "ADV. GEORGE KURIAN",
+    "THAMPI KAVUMPADAM",
+    "RONY K BABY"
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "DR. N. JAYARAJ",
+      "party": "KC(M)",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 49823,
+      "vote_pct_2026": "37.69"
+    },
+    {
+      "index": 1,
+      "name": "ADV. GEORGE KURIAN",
+      "party": "BJP",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 26423,
+      "vote_pct_2026": "19.99"
+    },
+    {
+      "index": 2,
+      "name": "THAMPI KAVUMPADAM",
+      "party": "Bahujan Samaj Party",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 682,
+      "vote_pct_2026": "0.52"
+    },
+    {
+      "index": 3,
+      "name": "RONY K BABY",
+      "party": "INC",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 55260,
+      "vote_pct_2026": "41.80"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        3136,
+        2086,
+        43,
+        2944
+      ],
+      "cumulative": [
+        3136,
+        2086,
+        43,
+        2944
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        3087,
+        1873,
+        59,
+        4533
+      ],
+      "cumulative": [
+        6223,
+        3959,
+        102,
+        7477
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        4031,
+        801,
+        41,
+        6237
+      ],
+      "cumulative": [
+        10254,
+        4760,
+        143,
+        13714
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        3569,
+        1781,
+        34,
+        4102
+      ],
+      "cumulative": [
+        13823,
+        6541,
+        177,
+        17816
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        3767,
+        2456,
+        32,
+        3024
+      ],
+      "cumulative": [
+        17590,
+        8997,
+        209,
+        20840
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        3653,
+        3790,
+        49,
+        3013
+      ],
+      "cumulative": [
+        21243,
+        12787,
+        258,
+        23853
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        3402,
+        1824,
+        64,
+        3233
+      ],
+      "cumulative": [
+        24645,
+        14611,
+        322,
+        27086
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        3796,
+        2393,
+        40,
+        3488
+      ],
+      "cumulative": [
+        28441,
+        17004,
+        362,
+        30574
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        3266,
+        1419,
+        46,
+        3854
+      ],
+      "cumulative": [
+        31707,
+        18423,
+        408,
+        34428
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        3167,
+        1677,
+        37,
+        3517
+      ],
+      "cumulative": [
+        34874,
+        20100,
+        445,
+        37945
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        3498,
+        960,
+        43,
+        3669
+      ],
+      "cumulative": [
+        38372,
+        21060,
+        488,
+        41614
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        4202,
+        1698,
+        40,
+        4242
+      ],
+      "cumulative": [
+        42574,
+        22758,
+        528,
+        45856
+      ]
+    },
+    {
+      "round": 13,
+      "increment": [
+        3263,
+        2166,
+        44,
+        3512
+      ],
+      "cumulative": [
+        45837,
+        24924,
+        572,
+        49368
+      ]
+    },
+    {
+      "round": 14,
+      "increment": [
+        2548,
+        807,
+        66,
+        4217
+      ],
+      "cumulative": [
+        48385,
+        25731,
+        638,
+        53585
+      ]
+    },
+    {
+      "round": 15,
+      "increment": [
+        1247,
+        468,
+        41,
+        1374
+      ],
+      "cumulative": [
+        49632,
+        26199,
+        679,
+        54959
+      ]
+    },
+    {
+      "round": 16,
+      "increment": [
+        191,
+        224,
+        3,
+        301
+      ],
+      "cumulative": [
+        49823,
+        26423,
+        682,
+        55260
+      ]
+    }
+  ],
+  "total": [
+    49823,
+    26423,
+    682,
+    55260
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 177500,
+    "male": 86142,
+    "female": 91358,
+    "votes_polled": 132344,
+    "turnout_pct": 74.56,
+    "confirmed": false,
+    "male_polled": 64227,
+    "female_polled": 68117
+  },
+  "booth_count": 200,
+  "district": "Kottayam"
+}

@@ -1,0 +1,284 @@
+{
+  "const_no": 17,
+  "name": "MANANTHAVADY",
+  "source_year": 2026,
+  "winner_alliance_2026": "udf",
+  "candidates": [
+    "USHA VIJAYAN",
+    "O R KELU",
+    "P SHYAMRAJ"
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "USHA VIJAYAN",
+      "party": "INC",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 76089,
+      "vote_pct_2026": "47.20"
+    },
+    {
+      "index": 1,
+      "name": "O R KELU",
+      "party": "CPI(M)",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 65724,
+      "vote_pct_2026": "40.77"
+    },
+    {
+      "index": 2,
+      "name": "P SHYAMRAJ",
+      "party": "BJP",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 19385,
+      "vote_pct_2026": "12.03"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        4369,
+        3625,
+        1314
+      ],
+      "cumulative": [
+        4369,
+        3625,
+        1314
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        3945,
+        3777,
+        1468
+      ],
+      "cumulative": [
+        8314,
+        7402,
+        2782
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        3574,
+        4100,
+        1485
+      ],
+      "cumulative": [
+        11888,
+        11502,
+        4267
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        3470,
+        5321,
+        1002
+      ],
+      "cumulative": [
+        15358,
+        16823,
+        5269
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        3863,
+        4984,
+        1049
+      ],
+      "cumulative": [
+        19221,
+        21807,
+        6318
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        3839,
+        4506,
+        1160
+      ],
+      "cumulative": [
+        23060,
+        26313,
+        7478
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        3709,
+        3254,
+        1097
+      ],
+      "cumulative": [
+        26769,
+        29567,
+        8575
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        4860,
+        3979,
+        1111
+      ],
+      "cumulative": [
+        31629,
+        33546,
+        9686
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        5106,
+        3506,
+        872
+      ],
+      "cumulative": [
+        36735,
+        37052,
+        10558
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        5242,
+        3853,
+        1131
+      ],
+      "cumulative": [
+        41977,
+        40905,
+        11689
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        4005,
+        3197,
+        1243
+      ],
+      "cumulative": [
+        45982,
+        44102,
+        12932
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        5375,
+        3581,
+        813
+      ],
+      "cumulative": [
+        51357,
+        47683,
+        13745
+      ]
+    },
+    {
+      "round": 13,
+      "increment": [
+        4977,
+        4045,
+        1040
+      ],
+      "cumulative": [
+        56334,
+        51728,
+        14785
+      ]
+    },
+    {
+      "round": 14,
+      "increment": [
+        5324,
+        3472,
+        895
+      ],
+      "cumulative": [
+        61658,
+        55200,
+        15680
+      ]
+    },
+    {
+      "round": 15,
+      "increment": [
+        4579,
+        3105,
+        821
+      ],
+      "cumulative": [
+        66237,
+        58305,
+        16501
+      ]
+    },
+    {
+      "round": 16,
+      "increment": [
+        5533,
+        4087,
+        1226
+      ],
+      "cumulative": [
+        71770,
+        62392,
+        17727
+      ]
+    },
+    {
+      "round": 17,
+      "increment": [
+        4319,
+        3332,
+        1658
+      ],
+      "cumulative": [
+        76089,
+        65724,
+        19385
+      ]
+    }
+  ],
+  "total": [
+    76089,
+    65724,
+    19385
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 205415,
+    "male": 101260,
+    "female": 104155,
+    "votes_polled": 162072,
+    "turnout_pct": 78.9,
+    "confirmed": false,
+    "male_polled": 79894,
+    "female_polled": 82178
+  },
+  "booth_count": 237,
+  "district": "Wayanad"
+}

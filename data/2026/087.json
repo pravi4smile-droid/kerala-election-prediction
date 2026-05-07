@@ -1,0 +1,405 @@
+{
+  "const_no": 87,
+  "name": "KOTHAMANGALAM",
+  "source_year": 2026,
+  "winner_alliance_2026": "udf",
+  "candidates": [
+    "ANTONY JOHN",
+    "SHIBU THECKUMPURAM",
+    "AJI NARAYANAN",
+    "FINTO XAVIER",
+    "ROY ARACKAL",
+    "SHIBU KALLEKKATTU",
+    "SHIBU CHALAKATTU"
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "ANTONY JOHN",
+      "party": "CPI(M)",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 55568,
+      "vote_pct_2026": "40.93"
+    },
+    {
+      "index": 1,
+      "name": "SHIBU THECKUMPURAM",
+      "party": "KEC",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 71958,
+      "vote_pct_2026": "53.00"
+    },
+    {
+      "index": 2,
+      "name": "AJI NARAYANAN",
+      "party": "BDJS",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 6917,
+      "vote_pct_2026": "5.10"
+    },
+    {
+      "index": 3,
+      "name": "FINTO XAVIER",
+      "party": "Rashtravadi Janata Party",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 136,
+      "vote_pct_2026": "0.10"
+    },
+    {
+      "index": 4,
+      "name": "ROY ARACKAL",
+      "party": "Social Democratic Party Of India",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 698,
+      "vote_pct_2026": "0.51"
+    },
+    {
+      "index": 5,
+      "name": "SHIBU KALLEKKATTU",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 292,
+      "vote_pct_2026": "0.22"
+    },
+    {
+      "index": 6,
+      "name": "SHIBU CHALAKATTU",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 190,
+      "vote_pct_2026": "0.14"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        4284,
+        5498,
+        785,
+        43,
+        38,
+        36,
+        8
+      ],
+      "cumulative": [
+        4284,
+        5498,
+        785,
+        43,
+        38,
+        36,
+        8
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        3699,
+        5241,
+        506,
+        13,
+        31,
+        19,
+        16
+      ],
+      "cumulative": [
+        7983,
+        10739,
+        1291,
+        56,
+        69,
+        55,
+        24
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        3657,
+        4602,
+        519,
+        5,
+        9,
+        18,
+        14
+      ],
+      "cumulative": [
+        11640,
+        15341,
+        1810,
+        61,
+        78,
+        73,
+        38
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        3134,
+        3403,
+        321,
+        7,
+        12,
+        29,
+        13
+      ],
+      "cumulative": [
+        14774,
+        18744,
+        2131,
+        68,
+        90,
+        102,
+        51
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        3729,
+        5704,
+        482,
+        6,
+        3,
+        23,
+        12
+      ],
+      "cumulative": [
+        18503,
+        24448,
+        2613,
+        74,
+        93,
+        125,
+        63
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        3631,
+        5452,
+        351,
+        9,
+        10,
+        22,
+        18
+      ],
+      "cumulative": [
+        22134,
+        29900,
+        2964,
+        83,
+        103,
+        147,
+        81
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        3559,
+        5417,
+        549,
+        6,
+        20,
+        22,
+        14
+      ],
+      "cumulative": [
+        25693,
+        35317,
+        3513,
+        89,
+        123,
+        169,
+        95
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        4139,
+        4644,
+        717,
+        12,
+        31,
+        19,
+        13
+      ],
+      "cumulative": [
+        29832,
+        39961,
+        4230,
+        101,
+        154,
+        188,
+        108
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        5502,
+        5807,
+        199,
+        3,
+        179,
+        10,
+        12
+      ],
+      "cumulative": [
+        35334,
+        45768,
+        4429,
+        104,
+        333,
+        198,
+        120
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        4882,
+        5762,
+        542,
+        7,
+        147,
+        15,
+        17
+      ],
+      "cumulative": [
+        40216,
+        51530,
+        4971,
+        111,
+        480,
+        213,
+        137
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        4222,
+        5327,
+        643,
+        6,
+        23,
+        11,
+        11
+      ],
+      "cumulative": [
+        44438,
+        56857,
+        5614,
+        117,
+        503,
+        224,
+        148
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        4139,
+        6273,
+        237,
+        6,
+        156,
+        20,
+        13
+      ],
+      "cumulative": [
+        48577,
+        63130,
+        5851,
+        123,
+        659,
+        244,
+        161
+      ]
+    },
+    {
+      "round": 13,
+      "increment": [
+        4033,
+        5999,
+        533,
+        5,
+        31,
+        28,
+        20
+      ],
+      "cumulative": [
+        52610,
+        69129,
+        6384,
+        128,
+        690,
+        272,
+        181
+      ]
+    },
+    {
+      "round": 14,
+      "increment": [
+        2958,
+        2829,
+        533,
+        8,
+        8,
+        20,
+        9
+      ],
+      "cumulative": [
+        55568,
+        71958,
+        6917,
+        136,
+        698,
+        292,
+        190
+      ]
+    }
+  ],
+  "total": [
+    55568,
+    71958,
+    6917,
+    136,
+    698,
+    292,
+    190
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 171968,
+    "male": 84604,
+    "female": 87364,
+    "votes_polled": 137196,
+    "turnout_pct": 79.78,
+    "confirmed": false,
+    "male_polled": 67497,
+    "female_polled": 69699
+  },
+  "booth_count": 191,
+  "district": "Ernakulam"
+}

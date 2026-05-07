@@ -1,0 +1,255 @@
+{
+  "const_no": 51,
+  "name": "SHORNUR",
+  "source_year": 2026,
+  "winner_alliance_2026": "ldf",
+  "candidates": [
+    "P.MAMMIKUTTY",
+    "ADV. SANKU.T.DAS",
+    "P.HARIGOVINDAN",
+    "ABOOBACKER"
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "P.MAMMIKUTTY",
+      "party": "CPI(M)",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 69446,
+      "vote_pct_2026": "44.29"
+    },
+    {
+      "index": 1,
+      "name": "ADV. SANKU.T.DAS",
+      "party": "BJP",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 32822,
+      "vote_pct_2026": "20.93"
+    },
+    {
+      "index": 2,
+      "name": "P.HARIGOVINDAN",
+      "party": "INC",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 53277,
+      "vote_pct_2026": "33.98"
+    },
+    {
+      "index": 3,
+      "name": "ABOOBACKER",
+      "party": "Social Democratic Party Of India",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 1258,
+      "vote_pct_2026": "0.80"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        5297,
+        1561,
+        6806,
+        52
+      ],
+      "cumulative": [
+        5297,
+        1561,
+        6806,
+        52
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        5699,
+        1858,
+        5908,
+        153
+      ],
+      "cumulative": [
+        10996,
+        3419,
+        12714,
+        205
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        6261,
+        2176,
+        4870,
+        57
+      ],
+      "cumulative": [
+        17257,
+        5595,
+        17584,
+        262
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        6443,
+        1869,
+        4427,
+        93
+      ],
+      "cumulative": [
+        23700,
+        7464,
+        22011,
+        355
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        6074,
+        2289,
+        4987,
+        57
+      ],
+      "cumulative": [
+        29774,
+        9753,
+        26998,
+        412
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        5877,
+        2321,
+        5139,
+        161
+      ],
+      "cumulative": [
+        35651,
+        12074,
+        32137,
+        573
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        5810,
+        1865,
+        4960,
+        150
+      ],
+      "cumulative": [
+        41461,
+        13939,
+        37097,
+        723
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        5996,
+        2936,
+        4478,
+        97
+      ],
+      "cumulative": [
+        47457,
+        16875,
+        41575,
+        820
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        6070,
+        3449,
+        3758,
+        144
+      ],
+      "cumulative": [
+        53527,
+        20324,
+        45333,
+        964
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        4566,
+        4484,
+        3268,
+        234
+      ],
+      "cumulative": [
+        58093,
+        24808,
+        48601,
+        1198
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        6783,
+        4416,
+        2946,
+        36
+      ],
+      "cumulative": [
+        64876,
+        29224,
+        51547,
+        1234
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        4570,
+        3598,
+        1730,
+        24
+      ],
+      "cumulative": [
+        69446,
+        32822,
+        53277,
+        1258
+      ]
+    }
+  ],
+  "total": [
+    69446,
+    32822,
+    53277,
+    1258
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 199620,
+    "male": 97386,
+    "female": 102232,
+    "votes_polled": 160494,
+    "turnout_pct": 80.4,
+    "confirmed": false,
+    "male_polled": 78298,
+    "female_polled": 82195
+  },
+  "booth_count": 224,
+  "district": "Palakkad"
+}

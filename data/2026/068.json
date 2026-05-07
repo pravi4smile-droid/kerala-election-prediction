@@ -1,0 +1,284 @@
+{
+  "const_no": 68,
+  "name": "NATTIKA",
+  "source_year": 2026,
+  "winner_alliance_2026": "ldf",
+  "candidates": [
+    "GEETHAGOPI",
+    "C.C. MUKUNDAN",
+    "ADV. SUNIL LALOOR"
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "GEETHAGOPI",
+      "party": "CPI",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 58121,
+      "vote_pct_2026": "37.75"
+    },
+    {
+      "index": 1,
+      "name": "C.C. MUKUNDAN",
+      "party": "BJP",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 44727,
+      "vote_pct_2026": "29.05"
+    },
+    {
+      "index": 2,
+      "name": "ADV. SUNIL LALOOR",
+      "party": "INC",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 51097,
+      "vote_pct_2026": "33.19"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        3843,
+        2984,
+        2938
+      ],
+      "cumulative": [
+        3843,
+        2984,
+        2938
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        4197,
+        2363,
+        3750
+      ],
+      "cumulative": [
+        8040,
+        5347,
+        6688
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        3271,
+        2616,
+        2734
+      ],
+      "cumulative": [
+        11311,
+        7963,
+        9422
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        3450,
+        3241,
+        3578
+      ],
+      "cumulative": [
+        14761,
+        11204,
+        13000
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        3467,
+        2566,
+        3290
+      ],
+      "cumulative": [
+        18228,
+        13770,
+        16290
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        2968,
+        3097,
+        3472
+      ],
+      "cumulative": [
+        21196,
+        16867,
+        19762
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        4506,
+        2601,
+        2620
+      ],
+      "cumulative": [
+        25702,
+        19468,
+        22382
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        3350,
+        2639,
+        3104
+      ],
+      "cumulative": [
+        29052,
+        22107,
+        25486
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        4095,
+        2973,
+        2506
+      ],
+      "cumulative": [
+        33147,
+        25080,
+        27992
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        4236,
+        2555,
+        2960
+      ],
+      "cumulative": [
+        37383,
+        27635,
+        30952
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        3380,
+        2627,
+        3240
+      ],
+      "cumulative": [
+        40763,
+        30262,
+        34192
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        3482,
+        2666,
+        2984
+      ],
+      "cumulative": [
+        44245,
+        32928,
+        37176
+      ]
+    },
+    {
+      "round": 13,
+      "increment": [
+        3867,
+        2559,
+        2920
+      ],
+      "cumulative": [
+        48112,
+        35487,
+        40096
+      ]
+    },
+    {
+      "round": 14,
+      "increment": [
+        3271,
+        2928,
+        3080
+      ],
+      "cumulative": [
+        51383,
+        38415,
+        43176
+      ]
+    },
+    {
+      "round": 15,
+      "increment": [
+        2597,
+        3249,
+        4184
+      ],
+      "cumulative": [
+        53980,
+        41664,
+        47360
+      ]
+    },
+    {
+      "round": 16,
+      "increment": [
+        3933,
+        2855,
+        3512
+      ],
+      "cumulative": [
+        57913,
+        44519,
+        50872
+      ]
+    },
+    {
+      "round": 17,
+      "increment": [
+        208,
+        208,
+        225
+      ],
+      "cumulative": [
+        58121,
+        44727,
+        51097
+      ]
+    }
+  ],
+  "total": [
+    58121,
+    44727,
+    51097
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 203427,
+    "male": 97846,
+    "female": 105580,
+    "votes_polled": 156822,
+    "turnout_pct": 77.09,
+    "confirmed": false,
+    "male_polled": 75429,
+    "female_polled": 81392
+  },
+  "booth_count": 225,
+  "district": "Thrissur"
+}

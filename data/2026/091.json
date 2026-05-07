@@ -1,0 +1,330 @@
+{
+  "const_no": 91,
+  "name": "IDUKKI",
+  "source_year": 2026,
+  "winner_alliance_2026": "udf",
+  "candidates": [
+    "SHIJO ANTONY",
+    "ROY K PAULOSE",
+    "ROSHY AUGUSTINE",
+    "ADV. PRATHEESH PRABHA"
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "SHIJO ANTONY",
+      "party": "Bahujan Samaj Party",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 964,
+      "vote_pct_2026": "0.77"
+    },
+    {
+      "index": 1,
+      "name": "ROY K PAULOSE",
+      "party": "INC",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 69476,
+      "vote_pct_2026": "55.23"
+    },
+    {
+      "index": 2,
+      "name": "ROSHY AUGUSTINE",
+      "party": "KC(M)",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 46048,
+      "vote_pct_2026": "36.61"
+    },
+    {
+      "index": 3,
+      "name": "ADV. PRATHEESH PRABHA",
+      "party": "BDJS",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 9307,
+      "vote_pct_2026": "7.40"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        77,
+        4212,
+        3015,
+        684
+      ],
+      "cumulative": [
+        77,
+        4212,
+        3015,
+        684
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        46,
+        3991,
+        2715,
+        557
+      ],
+      "cumulative": [
+        123,
+        8203,
+        5730,
+        1241
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        97,
+        4709,
+        3119,
+        852
+      ],
+      "cumulative": [
+        220,
+        12912,
+        8849,
+        2093
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        80,
+        4964,
+        3058,
+        626
+      ],
+      "cumulative": [
+        300,
+        17876,
+        11907,
+        2719
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        85,
+        5668,
+        2975,
+        603
+      ],
+      "cumulative": [
+        385,
+        23544,
+        14882,
+        3322
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        44,
+        5275,
+        3170,
+        520
+      ],
+      "cumulative": [
+        429,
+        28819,
+        18052,
+        3842
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        65,
+        4583,
+        2943,
+        413
+      ],
+      "cumulative": [
+        494,
+        33402,
+        20995,
+        4255
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        65,
+        4714,
+        2840,
+        351
+      ],
+      "cumulative": [
+        559,
+        38116,
+        23835,
+        4606
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        46,
+        5021,
+        3688,
+        788
+      ],
+      "cumulative": [
+        605,
+        43137,
+        27523,
+        5394
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        56,
+        4348,
+        2791,
+        803
+      ],
+      "cumulative": [
+        661,
+        47485,
+        30314,
+        6197
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        53,
+        3950,
+        2774,
+        511
+      ],
+      "cumulative": [
+        714,
+        51435,
+        33088,
+        6708
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        75,
+        4205,
+        3096,
+        605
+      ],
+      "cumulative": [
+        789,
+        55640,
+        36184,
+        7313
+      ]
+    },
+    {
+      "round": 13,
+      "increment": [
+        56,
+        4482,
+        3334,
+        531
+      ],
+      "cumulative": [
+        845,
+        60122,
+        39518,
+        7844
+      ]
+    },
+    {
+      "round": 14,
+      "increment": [
+        55,
+        4931,
+        3711,
+        836
+      ],
+      "cumulative": [
+        900,
+        65053,
+        43229,
+        8680
+      ]
+    },
+    {
+      "round": 15,
+      "increment": [
+        54,
+        3860,
+        2408,
+        529
+      ],
+      "cumulative": [
+        954,
+        68913,
+        45637,
+        9209
+      ]
+    },
+    {
+      "round": 16,
+      "increment": [
+        8,
+        265,
+        218,
+        68
+      ],
+      "cumulative": [
+        962,
+        69178,
+        45855,
+        9277
+      ]
+    },
+    {
+      "round": 17,
+      "increment": [
+        2,
+        298,
+        193,
+        30
+      ],
+      "cumulative": [
+        964,
+        69476,
+        46048,
+        9307
+      ]
+    }
+  ],
+  "total": [
+    964,
+    69476,
+    46048,
+    9307
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 167822,
+    "male": 83076,
+    "female": 84746,
+    "votes_polled": 129458,
+    "turnout_pct": 77.14,
+    "confirmed": false,
+    "male_polled": 64085,
+    "female_polled": 65373
+  },
+  "booth_count": 207,
+  "district": "Idukki"
+}

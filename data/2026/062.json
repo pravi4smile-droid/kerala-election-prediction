@@ -1,0 +1,300 @@
+{
+  "const_no": 62,
+  "name": "KUNNAMKULAM",
+  "source_year": 2026,
+  "winner_alliance_2026": "ldf",
+  "candidates": [
+    "P T AJAY MOHAN",
+    "A C MOIDEEN",
+    "RAJEEV K S",
+    "K R RAJIN"
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "P T AJAY MOHAN",
+      "party": "INC",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 64008,
+      "vote_pct_2026": "42.47"
+    },
+    {
+      "index": 1,
+      "name": "A C MOIDEEN",
+      "party": "CPI(M)",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 68693,
+      "vote_pct_2026": "45.57"
+    },
+    {
+      "index": 2,
+      "name": "RAJEEV K S",
+      "party": "Aam Aadmi Party",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 1020,
+      "vote_pct_2026": "0.68"
+    },
+    {
+      "index": 3,
+      "name": "K R RAJIN",
+      "party": "BDJS",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 17005,
+      "vote_pct_2026": "11.28"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        4364,
+        4851,
+        50,
+        1132
+      ],
+      "cumulative": [
+        4364,
+        4851,
+        50,
+        1132
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        4412,
+        4636,
+        53,
+        1141
+      ],
+      "cumulative": [
+        8776,
+        9487,
+        103,
+        2273
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        4503,
+        5567,
+        46,
+        1166
+      ],
+      "cumulative": [
+        13279,
+        15054,
+        149,
+        3439
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        4344,
+        4738,
+        50,
+        1197
+      ],
+      "cumulative": [
+        17623,
+        19792,
+        199,
+        4636
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        4512,
+        4826,
+        59,
+        1063
+      ],
+      "cumulative": [
+        22135,
+        24618,
+        258,
+        5699
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        3501,
+        4409,
+        95,
+        1559
+      ],
+      "cumulative": [
+        25636,
+        29027,
+        353,
+        7258
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        3852,
+        4113,
+        74,
+        977
+      ],
+      "cumulative": [
+        29488,
+        33140,
+        427,
+        8235
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        3524,
+        4960,
+        82,
+        1394
+      ],
+      "cumulative": [
+        33012,
+        38100,
+        509,
+        9629
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        4314,
+        4798,
+        103,
+        1508
+      ],
+      "cumulative": [
+        37326,
+        42898,
+        612,
+        11137
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        4364,
+        4284,
+        39,
+        861
+      ],
+      "cumulative": [
+        41690,
+        47182,
+        651,
+        11998
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        4553,
+        4783,
+        58,
+        973
+      ],
+      "cumulative": [
+        46243,
+        51965,
+        709,
+        12971
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        5000,
+        4697,
+        75,
+        1020
+      ],
+      "cumulative": [
+        51243,
+        56662,
+        784,
+        13991
+      ]
+    },
+    {
+      "round": 13,
+      "increment": [
+        4341,
+        4632,
+        113,
+        1148
+      ],
+      "cumulative": [
+        55584,
+        61294,
+        897,
+        15139
+      ]
+    },
+    {
+      "round": 14,
+      "increment": [
+        4546,
+        4293,
+        69,
+        1130
+      ],
+      "cumulative": [
+        60130,
+        65587,
+        966,
+        16269
+      ]
+    },
+    {
+      "round": 15,
+      "increment": [
+        3878,
+        3106,
+        54,
+        736
+      ],
+      "cumulative": [
+        64008,
+        68693,
+        1020,
+        17005
+      ]
+    }
+  ],
+  "total": [
+    64008,
+    68693,
+    1020,
+    17005
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 196839,
+    "male": 95639,
+    "female": 101199,
+    "votes_polled": 151743,
+    "turnout_pct": 77.09,
+    "confirmed": false,
+    "male_polled": 73728,
+    "female_polled": 78014
+  },
+  "booth_count": 206,
+  "district": "Thrissur"
+}

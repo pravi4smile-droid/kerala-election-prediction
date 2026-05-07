@@ -1,0 +1,325 @@
+{
+  "const_no": 124,
+  "name": "KOLLAM",
+  "source_year": 2026,
+  "winner_alliance_2026": "udf",
+  "candidates": [
+    "S. JAYAMOHAN",
+    "DR. PRATHAP KUMAR N",
+    "ADV. BINDHU KRISHNA",
+    "ADV. SINU.L.R",
+    "MYLODE SUDHAN"
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "S. JAYAMOHAN",
+      "party": "CPI(M)",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 45730,
+      "vote_pct_2026": "36.09"
+    },
+    {
+      "index": 1,
+      "name": "DR. PRATHAP KUMAR N",
+      "party": "BJP",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 18252,
+      "vote_pct_2026": "14.40"
+    },
+    {
+      "index": 2,
+      "name": "ADV. BINDHU KRISHNA",
+      "party": "INC",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 62298,
+      "vote_pct_2026": "49.17"
+    },
+    {
+      "index": 3,
+      "name": "ADV. SINU.L.R",
+      "party": "Aam Aadmi Party",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 288,
+      "vote_pct_2026": "0.23"
+    },
+    {
+      "index": 4,
+      "name": "MYLODE SUDHAN",
+      "party": "Bahujan Samaj Party",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 144,
+      "vote_pct_2026": "0.11"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        4150,
+        1178,
+        4626,
+        11,
+        17
+      ],
+      "cumulative": [
+        4150,
+        1178,
+        4626,
+        11,
+        17
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        3993,
+        1207,
+        5046,
+        20,
+        12
+      ],
+      "cumulative": [
+        8143,
+        2385,
+        9672,
+        31,
+        29
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        3821,
+        1472,
+        4248,
+        21,
+        12
+      ],
+      "cumulative": [
+        11964,
+        3857,
+        13920,
+        52,
+        41
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        3842,
+        1298,
+        4470,
+        21,
+        13
+      ],
+      "cumulative": [
+        15806,
+        5155,
+        18390,
+        73,
+        54
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        3280,
+        1190,
+        4727,
+        28,
+        4
+      ],
+      "cumulative": [
+        19086,
+        6345,
+        23117,
+        101,
+        58
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        3060,
+        1626,
+        4778,
+        18,
+        3
+      ],
+      "cumulative": [
+        22146,
+        7971,
+        27895,
+        119,
+        61
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        3672,
+        1465,
+        4986,
+        17,
+        11
+      ],
+      "cumulative": [
+        25818,
+        9436,
+        32881,
+        136,
+        72
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        2849,
+        1700,
+        3919,
+        18,
+        4
+      ],
+      "cumulative": [
+        28667,
+        11136,
+        36800,
+        154,
+        76
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        3545,
+        615,
+        5497,
+        32,
+        13
+      ],
+      "cumulative": [
+        32212,
+        11751,
+        42297,
+        186,
+        89
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        2749,
+        766,
+        4771,
+        19,
+        7
+      ],
+      "cumulative": [
+        34961,
+        12517,
+        47068,
+        205,
+        96
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        2581,
+        2119,
+        3566,
+        18,
+        9
+      ],
+      "cumulative": [
+        37542,
+        14636,
+        50634,
+        223,
+        105
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        2733,
+        1200,
+        4033,
+        26,
+        6
+      ],
+      "cumulative": [
+        40275,
+        15836,
+        54667,
+        249,
+        111
+      ]
+    },
+    {
+      "round": 13,
+      "increment": [
+        3792,
+        1494,
+        5179,
+        28,
+        23
+      ],
+      "cumulative": [
+        44067,
+        17330,
+        59846,
+        277,
+        134
+      ]
+    },
+    {
+      "round": 14,
+      "increment": [
+        1663,
+        922,
+        2452,
+        11,
+        10
+      ],
+      "cumulative": [
+        45730,
+        18252,
+        62298,
+        288,
+        144
+      ]
+    }
+  ],
+  "total": [
+    45730,
+    18252,
+    62298,
+    288,
+    144
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 164541,
+    "male": 79254,
+    "female": 85285,
+    "votes_polled": 126367,
+    "turnout_pct": 76.8,
+    "confirmed": false,
+    "male_polled": 60867,
+    "female_polled": 65499
+  },
+  "booth_count": 190,
+  "district": "Kollam"
+}

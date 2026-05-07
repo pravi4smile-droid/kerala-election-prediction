@@ -1,0 +1,245 @@
+{
+  "const_no": 117,
+  "name": "CHAVARA",
+  "source_year": 2026,
+  "winner_alliance_2026": "udf",
+  "candidates": [
+    "K.R.RAJESH",
+    "SHIBU BABY JOHN",
+    "DR.SUJITH VIJAYANPILLAI"
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "K.R.RAJESH",
+      "party": "BJP",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 10832,
+      "vote_pct_2026": "7.85"
+    },
+    {
+      "index": 1,
+      "name": "SHIBU BABY JOHN",
+      "party": "RSP",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 72688,
+      "vote_pct_2026": "52.65"
+    },
+    {
+      "index": 2,
+      "name": "DR.SUJITH VIJAYANPILLAI",
+      "party": "IND",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 54546,
+      "vote_pct_2026": "39.51"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        509,
+        6319,
+        4504
+      ],
+      "cumulative": [
+        509,
+        6319,
+        4504
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        656,
+        6825,
+        4842
+      ],
+      "cumulative": [
+        1165,
+        13144,
+        9346
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        706,
+        5944,
+        3851
+      ],
+      "cumulative": [
+        1871,
+        19088,
+        13197
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        670,
+        5305,
+        4391
+      ],
+      "cumulative": [
+        2541,
+        24393,
+        17588
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        853,
+        5526,
+        4501
+      ],
+      "cumulative": [
+        3394,
+        29919,
+        22089
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        760,
+        5761,
+        3926
+      ],
+      "cumulative": [
+        4154,
+        35680,
+        26015
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        987,
+        5723,
+        4691
+      ],
+      "cumulative": [
+        5141,
+        41403,
+        30706
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        699,
+        5534,
+        4945
+      ],
+      "cumulative": [
+        5840,
+        46937,
+        35651
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        811,
+        4832,
+        3947
+      ],
+      "cumulative": [
+        6651,
+        51769,
+        39598
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        765,
+        4603,
+        3075
+      ],
+      "cumulative": [
+        7416,
+        56372,
+        42673
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        500,
+        5054,
+        2709
+      ],
+      "cumulative": [
+        7916,
+        61426,
+        45382
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        915,
+        4952,
+        3434
+      ],
+      "cumulative": [
+        8831,
+        66378,
+        48816
+      ]
+    },
+    {
+      "round": 13,
+      "increment": [
+        1353,
+        4481,
+        4059
+      ],
+      "cumulative": [
+        10184,
+        70859,
+        52875
+      ]
+    },
+    {
+      "round": 14,
+      "increment": [
+        648,
+        1829,
+        1671
+      ],
+      "cumulative": [
+        10832,
+        72688,
+        54546
+      ]
+    }
+  ],
+  "total": [
+    10832,
+    72688,
+    54546
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 178798,
+    "male": 87070,
+    "female": 91726,
+    "votes_polled": 137317,
+    "turnout_pct": 76.8,
+    "confirmed": false,
+    "male_polled": 66870,
+    "female_polled": 70446
+  },
+  "booth_count": 188,
+  "district": "Kollam"
+}

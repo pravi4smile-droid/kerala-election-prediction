@@ -1,0 +1,403 @@
+{
+  "const_no": 44,
+  "name": "TANUR",
+  "source_year": 2026,
+  "winner_alliance_2026": "udf",
+  "candidates": [
+    "DEEPA PUZHAKKAL",
+    "P K NAVAS",
+    "P P NAVAS S/o KUNHIMUHAMED",
+    "MUHAMMED SAMEER NARUNGEL PARAMBIL HOUSE",
+    "MOHAMED SAMEER T THIRUTHIYIL HOUSE",
+    "SAMEER T"
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "DEEPA PUZHAKKAL",
+      "party": "BJP",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 13531,
+      "vote_pct_2026": "7.93"
+    },
+    {
+      "index": 1,
+      "name": "P K NAVAS",
+      "party": "IUML",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 91406,
+      "vote_pct_2026": "53.57"
+    },
+    {
+      "index": 2,
+      "name": "P P NAVAS S/o KUNHIMUHAMED",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 495,
+      "vote_pct_2026": "0.29"
+    },
+    {
+      "index": 3,
+      "name": "MUHAMMED SAMEER NARUNGEL PARAMBIL HOUSE",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 359,
+      "vote_pct_2026": "0.21"
+    },
+    {
+      "index": 4,
+      "name": "MOHAMED SAMEER T THIRUTHIYIL HOUSE",
+      "party": "IND",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 64464,
+      "vote_pct_2026": "37.78"
+    },
+    {
+      "index": 5,
+      "name": "SAMEER T",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 368,
+      "vote_pct_2026": "0.22"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        2531,
+        5114,
+        31,
+        21,
+        3291,
+        22
+      ],
+      "cumulative": [
+        2531,
+        5114,
+        31,
+        21,
+        3291,
+        22
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        2150,
+        5707,
+        24,
+        29,
+        3441,
+        20
+      ],
+      "cumulative": [
+        4681,
+        10821,
+        55,
+        50,
+        6732,
+        42
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        1050,
+        6500,
+        36,
+        18,
+        4223,
+        25
+      ],
+      "cumulative": [
+        5731,
+        17321,
+        91,
+        68,
+        10955,
+        67
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        505,
+        7822,
+        33,
+        30,
+        4145,
+        31
+      ],
+      "cumulative": [
+        6236,
+        25143,
+        124,
+        98,
+        15100,
+        98
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        807,
+        4718,
+        18,
+        23,
+        4401,
+        22
+      ],
+      "cumulative": [
+        7043,
+        29861,
+        142,
+        121,
+        19501,
+        120
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        1067,
+        5198,
+        19,
+        24,
+        4232,
+        25
+      ],
+      "cumulative": [
+        8110,
+        35059,
+        161,
+        145,
+        23733,
+        145
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        565,
+        5701,
+        31,
+        30,
+        4138,
+        21
+      ],
+      "cumulative": [
+        8675,
+        40760,
+        192,
+        175,
+        27871,
+        166
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        579,
+        6088,
+        33,
+        23,
+        4023,
+        20
+      ],
+      "cumulative": [
+        9254,
+        46848,
+        225,
+        198,
+        31894,
+        186
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        1073,
+        6059,
+        32,
+        23,
+        4918,
+        23
+      ],
+      "cumulative": [
+        10327,
+        52907,
+        257,
+        221,
+        36812,
+        209
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        1008,
+        6382,
+        36,
+        24,
+        4497,
+        17
+      ],
+      "cumulative": [
+        11335,
+        59289,
+        293,
+        245,
+        41309,
+        226
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        272,
+        5528,
+        33,
+        23,
+        4127,
+        30
+      ],
+      "cumulative": [
+        11607,
+        64817,
+        326,
+        268,
+        45436,
+        256
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        414,
+        6543,
+        31,
+        15,
+        4745,
+        34
+      ],
+      "cumulative": [
+        12021,
+        71360,
+        357,
+        283,
+        50181,
+        290
+      ]
+    },
+    {
+      "round": 13,
+      "increment": [
+        476,
+        5254,
+        40,
+        25,
+        5762,
+        24
+      ],
+      "cumulative": [
+        12497,
+        76614,
+        397,
+        308,
+        55943,
+        314
+      ]
+    },
+    {
+      "round": 14,
+      "increment": [
+        379,
+        7063,
+        41,
+        26,
+        3760,
+        23
+      ],
+      "cumulative": [
+        12876,
+        83677,
+        438,
+        334,
+        59703,
+        337
+      ]
+    },
+    {
+      "round": 15,
+      "increment": [
+        573,
+        7329,
+        55,
+        24,
+        4336,
+        31
+      ],
+      "cumulative": [
+        13449,
+        91006,
+        493,
+        358,
+        64039,
+        368
+      ]
+    },
+    {
+      "round": 16,
+      "increment": [
+        82,
+        400,
+        2,
+        1,
+        425,
+        0
+      ],
+      "cumulative": [
+        13531,
+        91406,
+        495,
+        359,
+        64464,
+        368
+      ]
+    }
+  ],
+  "total": [
+    13531,
+    91406,
+    495,
+    359,
+    64464,
+    368
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 214101,
+    "male": 108077,
+    "female": 106020,
+    "votes_polled": 170853,
+    "turnout_pct": 79.8,
+    "confirmed": false,
+    "male_polled": 86245,
+    "female_polled": 84604
+  },
+  "booth_count": 211,
+  "district": "Malappuram"
+}

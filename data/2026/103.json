@@ -1,0 +1,468 @@
+{
+  "const_no": 103,
+  "name": "CHERTHALA",
+  "source_year": 2026,
+  "winner_alliance_2026": "ldf",
+  "candidates": [
+    "P. PRASAD",
+    "K.R. RAJENDRA PRASAD",
+    "ADV. T.P. ANANTHARAJ",
+    "NANDAKUMAR",
+    "A.P. PRASAD S/O PURUSHOTHAMAN",
+    "RAJENDRA PRASAD S/O PRABHAKARAN",
+    "ADV. SONNYMON K .MATHEW"
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "P. PRASAD",
+      "party": "CPI",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 81713,
+      "vote_pct_2026": "48.62"
+    },
+    {
+      "index": 1,
+      "name": "K.R. RAJENDRA PRASAD",
+      "party": "INC",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 67363,
+      "vote_pct_2026": "40.08"
+    },
+    {
+      "index": 2,
+      "name": "ADV. T.P. ANANTHARAJ",
+      "party": "BDJS",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 17747,
+      "vote_pct_2026": "10.56"
+    },
+    {
+      "index": 3,
+      "name": "NANDAKUMAR",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 451,
+      "vote_pct_2026": "0.27"
+    },
+    {
+      "index": 4,
+      "name": "A.P. PRASAD S/O PURUSHOTHAMAN",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 363,
+      "vote_pct_2026": "0.22"
+    },
+    {
+      "index": 5,
+      "name": "RAJENDRA PRASAD S/O PRABHAKARAN",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 245,
+      "vote_pct_2026": "0.15"
+    },
+    {
+      "index": 6,
+      "name": "ADV. SONNYMON K .MATHEW",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 190,
+      "vote_pct_2026": "0.11"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        5238,
+        5572,
+        1129,
+        36,
+        17,
+        11,
+        13
+      ],
+      "cumulative": [
+        5238,
+        5572,
+        1129,
+        36,
+        17,
+        11,
+        13
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        5473,
+        4503,
+        1159,
+        21,
+        26,
+        11,
+        6
+      ],
+      "cumulative": [
+        10711,
+        10075,
+        2288,
+        57,
+        43,
+        22,
+        19
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        4869,
+        4219,
+        867,
+        21,
+        21,
+        20,
+        15
+      ],
+      "cumulative": [
+        15580,
+        14294,
+        3155,
+        78,
+        64,
+        42,
+        34
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        4624,
+        4619,
+        936,
+        31,
+        21,
+        9,
+        12
+      ],
+      "cumulative": [
+        20204,
+        18913,
+        4091,
+        109,
+        85,
+        51,
+        46
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        6036,
+        3557,
+        1424,
+        29,
+        29,
+        20,
+        15
+      ],
+      "cumulative": [
+        26240,
+        22470,
+        5515,
+        138,
+        114,
+        71,
+        61
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        4450,
+        3829,
+        1411,
+        31,
+        16,
+        25,
+        10
+      ],
+      "cumulative": [
+        30690,
+        26299,
+        6926,
+        169,
+        130,
+        96,
+        71
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        4676,
+        4227,
+        1512,
+        25,
+        11,
+        15,
+        9
+      ],
+      "cumulative": [
+        35366,
+        30526,
+        8438,
+        194,
+        141,
+        111,
+        80
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        5282,
+        3649,
+        1144,
+        27,
+        20,
+        18,
+        17
+      ],
+      "cumulative": [
+        40648,
+        34175,
+        9582,
+        221,
+        161,
+        129,
+        97
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        4010,
+        4408,
+        669,
+        23,
+        19,
+        9,
+        17
+      ],
+      "cumulative": [
+        44658,
+        38583,
+        10251,
+        244,
+        180,
+        138,
+        114
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        4419,
+        4502,
+        876,
+        17,
+        24,
+        16,
+        6
+      ],
+      "cumulative": [
+        49077,
+        43085,
+        11127,
+        261,
+        204,
+        154,
+        120
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        4287,
+        3192,
+        1620,
+        18,
+        26,
+        10,
+        13
+      ],
+      "cumulative": [
+        53364,
+        46277,
+        12747,
+        279,
+        230,
+        164,
+        133
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        4938,
+        4497,
+        1169,
+        29,
+        26,
+        18,
+        8
+      ],
+      "cumulative": [
+        58302,
+        50774,
+        13916,
+        308,
+        256,
+        182,
+        141
+      ]
+    },
+    {
+      "round": 13,
+      "increment": [
+        5905,
+        4052,
+        1177,
+        34,
+        20,
+        15,
+        16
+      ],
+      "cumulative": [
+        64207,
+        54826,
+        15093,
+        342,
+        276,
+        197,
+        157
+      ]
+    },
+    {
+      "round": 14,
+      "increment": [
+        5411,
+        3728,
+        849,
+        29,
+        30,
+        19,
+        12
+      ],
+      "cumulative": [
+        69618,
+        58554,
+        15942,
+        371,
+        306,
+        216,
+        169
+      ]
+    },
+    {
+      "round": 15,
+      "increment": [
+        5615,
+        3418,
+        751,
+        49,
+        29,
+        10,
+        8
+      ],
+      "cumulative": [
+        75233,
+        61972,
+        16693,
+        420,
+        335,
+        226,
+        177
+      ]
+    },
+    {
+      "round": 16,
+      "increment": [
+        4892,
+        3843,
+        715,
+        23,
+        15,
+        13,
+        8
+      ],
+      "cumulative": [
+        80125,
+        65815,
+        17408,
+        443,
+        350,
+        239,
+        185
+      ]
+    },
+    {
+      "round": 17,
+      "increment": [
+        1588,
+        1548,
+        339,
+        8,
+        13,
+        6,
+        5
+      ],
+      "cumulative": [
+        81713,
+        67363,
+        17747,
+        451,
+        363,
+        245,
+        190
+      ]
+    }
+  ],
+  "total": [
+    81713,
+    67363,
+    17747,
+    451,
+    363,
+    245,
+    190
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 206016,
+    "male": 99816,
+    "female": 106198,
+    "votes_polled": 167944,
+    "turnout_pct": 81.52,
+    "confirmed": true,
+    "male_polled": 81370,
+    "female_polled": 86573
+  },
+  "booth_count": 230,
+  "district": "Alappuzha"
+}

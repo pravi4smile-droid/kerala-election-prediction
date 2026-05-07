@@ -1,0 +1,225 @@
+{
+  "const_no": 53,
+  "name": "KONGAD",
+  "source_year": 2026,
+  "winner_alliance_2026": "udf",
+  "candidates": [
+    "GURUVAYOORAPPAN P E",
+    "THULASI TEACHER",
+    "DR. RENU SURESH",
+    "ADV. K.SANTHAKUMARI"
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "GURUVAYOORAPPAN P E",
+      "party": "Bahujan Samaj Party",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 845,
+      "vote_pct_2026": "0.58"
+    },
+    {
+      "index": 1,
+      "name": "THULASI TEACHER",
+      "party": "INC",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 61929,
+      "vote_pct_2026": "42.55"
+    },
+    {
+      "index": 2,
+      "name": "DR. RENU SURESH",
+      "party": "BJP",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 24557,
+      "vote_pct_2026": "16.87"
+    },
+    {
+      "index": 3,
+      "name": "ADV. K.SANTHAKUMARI",
+      "party": "CPI(M)",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 58215,
+      "vote_pct_2026": "40.00"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        82,
+        7525,
+        2265,
+        6248
+      ],
+      "cumulative": [
+        82,
+        7525,
+        2265,
+        6248
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        73,
+        8639,
+        1484,
+        5768
+      ],
+      "cumulative": [
+        155,
+        16164,
+        3749,
+        12016
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        64,
+        9114,
+        1463,
+        6267
+      ],
+      "cumulative": [
+        219,
+        25278,
+        5212,
+        18283
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        60,
+        7736,
+        2003,
+        5162
+      ],
+      "cumulative": [
+        279,
+        33014,
+        7215,
+        23445
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        97,
+        6205,
+        2794,
+        8173
+      ],
+      "cumulative": [
+        376,
+        39219,
+        10009,
+        31618
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        82,
+        5836,
+        2604,
+        7342
+      ],
+      "cumulative": [
+        458,
+        45055,
+        12613,
+        38960
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        81,
+        5292,
+        2937,
+        5665
+      ],
+      "cumulative": [
+        539,
+        50347,
+        15550,
+        44625
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        136,
+        5211,
+        3680,
+        6675
+      ],
+      "cumulative": [
+        675,
+        55558,
+        19230,
+        51300
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        147,
+        5240,
+        4439,
+        5685
+      ],
+      "cumulative": [
+        822,
+        60798,
+        23669,
+        56985
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        23,
+        1131,
+        888,
+        1230
+      ],
+      "cumulative": [
+        845,
+        61929,
+        24557,
+        58215
+      ]
+    }
+  ],
+  "total": [
+    845,
+    61929,
+    24557,
+    58215
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 182603,
+    "male": 89813,
+    "female": 92790,
+    "votes_polled": 146375,
+    "turnout_pct": 80.16,
+    "confirmed": true,
+    "male_polled": 71994,
+    "female_polled": 74380
+  },
+  "booth_count": 193,
+  "district": "Palakkad"
+}

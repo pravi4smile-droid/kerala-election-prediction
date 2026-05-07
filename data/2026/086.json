@@ -1,0 +1,300 @@
+{
+  "const_no": 86,
+  "name": "MUVATTUPUZHA",
+  "source_year": 2026,
+  "winner_alliance_2026": "udf",
+  "candidates": [
+    "N ARUN",
+    "DR. MATHEW KUZHALNADAN",
+    "BABU MATHEW",
+    "SUNNY KADOOTHAZHE"
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "N ARUN",
+      "party": "CPI",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 46393,
+      "vote_pct_2026": "32.04"
+    },
+    {
+      "index": 1,
+      "name": "DR. MATHEW KUZHALNADAN",
+      "party": "INC",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 88107,
+      "vote_pct_2026": "60.84"
+    },
+    {
+      "index": 2,
+      "name": "BABU MATHEW",
+      "party": "Social Democratic Party Of India",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 598,
+      "vote_pct_2026": "0.41"
+    },
+    {
+      "index": 3,
+      "name": "SUNNY KADOOTHAZHE",
+      "party": "TTP",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 9715,
+      "vote_pct_2026": "6.71"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        4488,
+        6154,
+        25,
+        744
+      ],
+      "cumulative": [
+        4488,
+        6154,
+        25,
+        744
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        4411,
+        6923,
+        120,
+        370
+      ],
+      "cumulative": [
+        8899,
+        13077,
+        145,
+        1114
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        3565,
+        6876,
+        92,
+        515
+      ],
+      "cumulative": [
+        12464,
+        19953,
+        237,
+        1629
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        3498,
+        5852,
+        27,
+        790
+      ],
+      "cumulative": [
+        15962,
+        25805,
+        264,
+        2419
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        3401,
+        6010,
+        40,
+        709
+      ],
+      "cumulative": [
+        19363,
+        31815,
+        304,
+        3128
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        3592,
+        6087,
+        61,
+        667
+      ],
+      "cumulative": [
+        22955,
+        37902,
+        365,
+        3795
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        2318,
+        5171,
+        18,
+        595
+      ],
+      "cumulative": [
+        25273,
+        43073,
+        383,
+        4390
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        2418,
+        6067,
+        31,
+        615
+      ],
+      "cumulative": [
+        27691,
+        49140,
+        414,
+        5005
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        2774,
+        5172,
+        30,
+        962
+      ],
+      "cumulative": [
+        30465,
+        54312,
+        444,
+        5967
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        2009,
+        6134,
+        27,
+        689
+      ],
+      "cumulative": [
+        32474,
+        60446,
+        471,
+        6656
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        3239,
+        6139,
+        24,
+        773
+      ],
+      "cumulative": [
+        35713,
+        66585,
+        495,
+        7429
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        2796,
+        6316,
+        28,
+        678
+      ],
+      "cumulative": [
+        38509,
+        72901,
+        523,
+        8107
+      ]
+    },
+    {
+      "round": 13,
+      "increment": [
+        3530,
+        5868,
+        28,
+        624
+      ],
+      "cumulative": [
+        42039,
+        78769,
+        551,
+        8731
+      ]
+    },
+    {
+      "round": 14,
+      "increment": [
+        3105,
+        6433,
+        32,
+        715
+      ],
+      "cumulative": [
+        45144,
+        85202,
+        583,
+        9446
+      ]
+    },
+    {
+      "round": 15,
+      "increment": [
+        1249,
+        2905,
+        15,
+        269
+      ],
+      "cumulative": [
+        46393,
+        88107,
+        598,
+        9715
+      ]
+    }
+  ],
+  "total": [
+    46393,
+    88107,
+    598,
+    9715
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 186254,
+    "male": 91420,
+    "female": 94829,
+    "votes_polled": 148593,
+    "turnout_pct": 79.78,
+    "confirmed": false,
+    "male_polled": 72935,
+    "female_polled": 75655
+  },
+  "booth_count": 203,
+  "district": "Ernakulam"
+}

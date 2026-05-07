@@ -1,0 +1,4740 @@
+{
+  "const_no": 83,
+  "name": "83-THRIKKAKARA Assembly Election",
+  "source_year": 2021,
+  "winner_alliance_2021": "udf",
+  "candidates": [
+    "Adv.P.T.THOMAS",
+    "P.M.SHIBU",
+    "S SAJI",
+    "KRISHNAPRASAD",
+    "Dr.TERRY THOMAS",
+    "JINU",
+    "Dr.J.JACOB",
+    "BINOJ",
+    "SUBIN",
+    "RIYAS YUSUF"
+  ],
+  "candidates_2021": [
+    {
+      "index": 0,
+      "name": "Adv.P.T.THOMAS",
+      "party": "INC",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "keralaassembly.org 2021 result page",
+      "actual_votes_2021": 59839,
+      "vote_pct_2021": "43.82",
+      "source_url": "http://www.keralaassembly.org/election/assembly_poll.php?no=83&year=2021"
+    },
+    {
+      "index": 1,
+      "name": "P.M.SHIBU",
+      "party": "BSP",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "keralaassembly.org 2021 result page",
+      "actual_votes_2021": 331,
+      "vote_pct_2021": "0.24",
+      "source_url": "http://www.keralaassembly.org/election/assembly_poll.php?no=83&year=2021"
+    },
+    {
+      "index": 2,
+      "name": "S SAJI",
+      "party": "BJP",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "keralaassembly.org 2021 result page",
+      "actual_votes_2021": 15483,
+      "vote_pct_2021": "11.34",
+      "source_url": "http://www.keralaassembly.org/election/assembly_poll.php?no=83&year=2021"
+    },
+    {
+      "index": 3,
+      "name": "KRISHNAPRASAD",
+      "party": "DSJP",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "keralaassembly.org 2021 result page",
+      "actual_votes_2021": 181,
+      "vote_pct_2021": "0.13",
+      "source_url": "http://www.keralaassembly.org/election/assembly_poll.php?no=83&year=2021"
+    },
+    {
+      "index": 4,
+      "name": "Dr.TERRY THOMAS",
+      "party": "T2P",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "keralaassembly.org 2021 result page",
+      "actual_votes_2021": 13897,
+      "vote_pct_2021": "10.18",
+      "source_url": "http://www.keralaassembly.org/election/assembly_poll.php?no=83&year=2021"
+    },
+    {
+      "index": 5,
+      "name": "JINU",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "keralaassembly.org 2021 result page",
+      "actual_votes_2021": 143,
+      "vote_pct_2021": "0.10",
+      "source_url": "http://www.keralaassembly.org/election/assembly_poll.php?no=83&year=2021"
+    },
+    {
+      "index": 6,
+      "name": "Dr.J.JACOB",
+      "party": "LDF",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "keralaassembly.org 2021 result page",
+      "actual_votes_2021": 45510,
+      "vote_pct_2021": "33.32",
+      "source_url": "http://www.keralaassembly.org/election/assembly_poll.php?no=83&year=2021"
+    },
+    {
+      "index": 7,
+      "name": "BINOJ",
+      "party": "",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "parsed_2021_pdf_name_only"
+    },
+    {
+      "index": 8,
+      "name": "SUBIN",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "keralaassembly.org 2021 result page",
+      "actual_votes_2021": 59,
+      "vote_pct_2021": "0.04",
+      "source_url": "http://www.keralaassembly.org/election/assembly_poll.php?no=83&year=2021"
+    },
+    {
+      "index": 9,
+      "name": "RIYAS YUSUF",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "keralaassembly.org 2021 result page",
+      "actual_votes_2021": 298,
+      "vote_pct_2021": "0.22",
+      "source_url": "http://www.keralaassembly.org/election/assembly_poll.php?no=83&year=2021"
+    }
+  ],
+  "booth_summary": {
+    "total_rows": 287,
+    "main_booths": 162,
+    "auxiliary_rows": 125,
+    "total_votes_in_candidate_columns": 133710,
+    "candidate_totals": [
+      58707,
+      322,
+      15218,
+      174,
+      13773,
+      143,
+      44894,
+      130,
+      55,
+      294
+    ]
+  },
+  "booths": [
+    {
+      "main": 1,
+      "is_aux": false,
+      "votes": [
+        202,
+        0,
+        24,
+        1,
+        17,
+        0,
+        141,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 1,
+      "is_aux": true,
+      "votes": [
+        166,
+        1,
+        7,
+        0,
+        16,
+        1,
+        174,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 2,
+      "is_aux": false,
+      "votes": [
+        166,
+        2,
+        67,
+        0,
+        36,
+        0,
+        103,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 2,
+      "is_aux": true,
+      "votes": [
+        201,
+        0,
+        43,
+        0,
+        35,
+        0,
+        108,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 3,
+      "is_aux": false,
+      "votes": [
+        231,
+        0,
+        100,
+        0,
+        31,
+        0,
+        128,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 3,
+      "is_aux": true,
+      "votes": [
+        194,
+        2,
+        81,
+        0,
+        31,
+        0,
+        212,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "main": 4,
+      "is_aux": false,
+      "votes": [
+        193,
+        2,
+        41,
+        0,
+        39,
+        0,
+        201,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 4,
+      "is_aux": true,
+      "votes": [
+        219,
+        0,
+        63,
+        1,
+        54,
+        1,
+        137,
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "main": 5,
+      "is_aux": false,
+      "votes": [
+        166,
+        0,
+        86,
+        0,
+        61,
+        1,
+        164,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 5,
+      "is_aux": true,
+      "votes": [
+        196,
+        3,
+        55,
+        1,
+        33,
+        0,
+        266,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "main": 6,
+      "is_aux": false,
+      "votes": [
+        231,
+        3,
+        112,
+        1,
+        43,
+        1,
+        135,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 6,
+      "is_aux": true,
+      "votes": [
+        163,
+        0,
+        175,
+        0,
+        44,
+        0,
+        96,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 7,
+      "is_aux": false,
+      "votes": [
+        228,
+        0,
+        65,
+        1,
+        39,
+        0,
+        95,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 7,
+      "is_aux": true,
+      "votes": [
+        224,
+        0,
+        83,
+        0,
+        41,
+        0,
+        92,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 8,
+      "is_aux": false,
+      "votes": [
+        166,
+        0,
+        89,
+        1,
+        31,
+        0,
+        91,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 8,
+      "is_aux": true,
+      "votes": [
+        184,
+        0,
+        100,
+        0,
+        52,
+        0,
+        63,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 9,
+      "is_aux": false,
+      "votes": [
+        182,
+        0,
+        81,
+        0,
+        52,
+        0,
+        145,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 9,
+      "is_aux": true,
+      "votes": [
+        185,
+        2,
+        136,
+        0,
+        29,
+        0,
+        104,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 10,
+      "is_aux": false,
+      "votes": [
+        167,
+        0,
+        72,
+        0,
+        44,
+        0,
+        91,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 10,
+      "is_aux": true,
+      "votes": [
+        175,
+        1,
+        72,
+        1,
+        47,
+        0,
+        91,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 11,
+      "is_aux": false,
+      "votes": [
+        135,
+        0,
+        90,
+        0,
+        41,
+        0,
+        79,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 11,
+      "is_aux": true,
+      "votes": [
+        213,
+        1,
+        60,
+        1,
+        36,
+        1,
+        110,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 12,
+      "is_aux": false,
+      "votes": [
+        253,
+        2,
+        129,
+        2,
+        49,
+        0,
+        200,
+        2,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 13,
+      "is_aux": false,
+      "votes": [
+        271,
+        1,
+        127,
+        0,
+        45,
+        1,
+        295,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 14,
+      "is_aux": false,
+      "votes": [
+        176,
+        1,
+        113,
+        0,
+        36,
+        1,
+        83,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 14,
+      "is_aux": true,
+      "votes": [
+        170,
+        1,
+        91,
+        0,
+        39,
+        0,
+        130,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 15,
+      "is_aux": false,
+      "votes": [
+        146,
+        0,
+        126,
+        2,
+        36,
+        1,
+        93,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "main": 15,
+      "is_aux": true,
+      "votes": [
+        169,
+        3,
+        88,
+        0,
+        32,
+        1,
+        182,
+        0,
+        0,
+        5
+      ]
+    },
+    {
+      "main": 16,
+      "is_aux": false,
+      "votes": [
+        143,
+        1,
+        75,
+        0,
+        56,
+        0,
+        71,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 16,
+      "is_aux": true,
+      "votes": [
+        164,
+        0,
+        68,
+        0,
+        54,
+        0,
+        92,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "main": 17,
+      "is_aux": false,
+      "votes": [
+        177,
+        1,
+        35,
+        1,
+        26,
+        1,
+        87,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 17,
+      "is_aux": true,
+      "votes": [
+        146,
+        2,
+        54,
+        0,
+        32,
+        0,
+        121,
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "main": 18,
+      "is_aux": false,
+      "votes": [
+        232,
+        1,
+        58,
+        1,
+        73,
+        1,
+        108,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "main": 19,
+      "is_aux": false,
+      "votes": [
+        250,
+        2,
+        46,
+        1,
+        64,
+        0,
+        114,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 20,
+      "is_aux": false,
+      "votes": [
+        210,
+        1,
+        66,
+        0,
+        51,
+        0,
+        121,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 20,
+      "is_aux": true,
+      "votes": [
+        166,
+        3,
+        65,
+        1,
+        70,
+        0,
+        143,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 21,
+      "is_aux": false,
+      "votes": [
+        256,
+        1,
+        74,
+        1,
+        71,
+        0,
+        258,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 22,
+      "is_aux": false,
+      "votes": [
+        268,
+        3,
+        58,
+        1,
+        51,
+        1,
+        198,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "main": 23,
+      "is_aux": false,
+      "votes": [
+        220,
+        1,
+        50,
+        0,
+        36,
+        1,
+        132,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 23,
+      "is_aux": true,
+      "votes": [
+        195,
+        0,
+        73,
+        2,
+        65,
+        1,
+        151,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 24,
+      "is_aux": false,
+      "votes": [
+        292,
+        4,
+        80,
+        0,
+        81,
+        2,
+        257,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 25,
+      "is_aux": false,
+      "votes": [
+        302,
+        0,
+        67,
+        0,
+        55,
+        1,
+        293,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 26,
+      "is_aux": false,
+      "votes": [
+        137,
+        1,
+        46,
+        1,
+        19,
+        0,
+        172,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 26,
+      "is_aux": true,
+      "votes": [
+        189,
+        2,
+        75,
+        0,
+        35,
+        1,
+        113,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 27,
+      "is_aux": false,
+      "votes": [
+        198,
+        1,
+        44,
+        0,
+        56,
+        0,
+        161,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 27,
+      "is_aux": true,
+      "votes": [
+        241,
+        2,
+        38,
+        3,
+        52,
+        1,
+        231,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "main": 28,
+      "is_aux": false,
+      "votes": [
+        169,
+        0,
+        19,
+        0,
+        26,
+        0,
+        185,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 28,
+      "is_aux": true,
+      "votes": [
+        184,
+        0,
+        39,
+        0,
+        24,
+        1,
+        156,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 29,
+      "is_aux": false,
+      "votes": [
+        176,
+        2,
+        40,
+        0,
+        18,
+        0,
+        171,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 29,
+      "is_aux": true,
+      "votes": [
+        201,
+        0,
+        27,
+        1,
+        16,
+        1,
+        216,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 30,
+      "is_aux": false,
+      "votes": [
+        329,
+        2,
+        23,
+        1,
+        56,
+        0,
+        221,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 31,
+      "is_aux": false,
+      "votes": [
+        175,
+        3,
+        76,
+        0,
+        59,
+        2,
+        139,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "main": 31,
+      "is_aux": true,
+      "votes": [
+        240,
+        0,
+        56,
+        2,
+        38,
+        1,
+        170,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 32,
+      "is_aux": false,
+      "votes": [
+        237,
+        0,
+        59,
+        0,
+        46,
+        1,
+        153,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 32,
+      "is_aux": true,
+      "votes": [
+        237,
+        2,
+        65,
+        1,
+        55,
+        0,
+        207,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 33,
+      "is_aux": false,
+      "votes": [
+        231,
+        2,
+        50,
+        1,
+        79,
+        1,
+        135,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 33,
+      "is_aux": true,
+      "votes": [
+        269,
+        1,
+        42,
+        2,
+        53,
+        0,
+        213,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 34,
+      "is_aux": false,
+      "votes": [
+        189,
+        1,
+        82,
+        0,
+        24,
+        1,
+        134,
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "main": 34,
+      "is_aux": true,
+      "votes": [
+        199,
+        0,
+        30,
+        1,
+        20,
+        0,
+        216,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 35,
+      "is_aux": false,
+      "votes": [
+        174,
+        0,
+        22,
+        0,
+        16,
+        0,
+        202,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 35,
+      "is_aux": true,
+      "votes": [
+        193,
+        1,
+        26,
+        0,
+        28,
+        0,
+        178,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 36,
+      "is_aux": false,
+      "votes": [
+        193,
+        0,
+        37,
+        0,
+        30,
+        2,
+        190,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 36,
+      "is_aux": true,
+      "votes": [
+        230,
+        0,
+        63,
+        0,
+        40,
+        0,
+        135,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 37,
+      "is_aux": false,
+      "votes": [
+        173,
+        1,
+        19,
+        1,
+        32,
+        0,
+        171,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 37,
+      "is_aux": true,
+      "votes": [
+        185,
+        0,
+        38,
+        1,
+        33,
+        1,
+        164,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 38,
+      "is_aux": false,
+      "votes": [
+        225,
+        0,
+        33,
+        0,
+        38,
+        0,
+        112,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 38,
+      "is_aux": true,
+      "votes": [
+        208,
+        2,
+        35,
+        0,
+        43,
+        0,
+        120,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "main": 39,
+      "is_aux": false,
+      "votes": [
+        207,
+        2,
+        49,
+        1,
+        35,
+        0,
+        202,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 39,
+      "is_aux": true,
+      "votes": [
+        231,
+        2,
+        48,
+        0,
+        35,
+        2,
+        175,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 40,
+      "is_aux": false,
+      "votes": [
+        178,
+        1,
+        59,
+        2,
+        21,
+        0,
+        186,
+        2,
+        0,
+        6
+      ]
+    },
+    {
+      "main": 40,
+      "is_aux": true,
+      "votes": [
+        179,
+        2,
+        49,
+        1,
+        16,
+        0,
+        242,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 41,
+      "is_aux": false,
+      "votes": [
+        140,
+        0,
+        61,
+        0,
+        33,
+        0,
+        88,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 41,
+      "is_aux": true,
+      "votes": [
+        109,
+        0,
+        60,
+        0,
+        39,
+        0,
+        102,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 42,
+      "is_aux": false,
+      "votes": [
+        174,
+        0,
+        62,
+        0,
+        32,
+        0,
+        91,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "main": 42,
+      "is_aux": true,
+      "votes": [
+        186,
+        0,
+        47,
+        0,
+        40,
+        0,
+        69,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "main": 43,
+      "is_aux": false,
+      "votes": [
+        302,
+        4,
+        53,
+        1,
+        67,
+        1,
+        191,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 44,
+      "is_aux": false,
+      "votes": [
+        324,
+        2,
+        57,
+        0,
+        94,
+        1,
+        135,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "main": 45,
+      "is_aux": false,
+      "votes": [
+        241,
+        1,
+        52,
+        0,
+        56,
+        1,
+        111,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "main": 45,
+      "is_aux": true,
+      "votes": [
+        247,
+        0,
+        59,
+        1,
+        69,
+        0,
+        168,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 46,
+      "is_aux": false,
+      "votes": [
+        182,
+        0,
+        20,
+        0,
+        41,
+        0,
+        154,
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "main": 46,
+      "is_aux": true,
+      "votes": [
+        204,
+        4,
+        29,
+        0,
+        37,
+        0,
+        188,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 47,
+      "is_aux": false,
+      "votes": [
+        184,
+        0,
+        113,
+        1,
+        46,
+        0,
+        140,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "main": 47,
+      "is_aux": true,
+      "votes": [
+        224,
+        1,
+        60,
+        0,
+        79,
+        1,
+        124,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "main": 48,
+      "is_aux": false,
+      "votes": [
+        275,
+        0,
+        18,
+        1,
+        63,
+        0,
+        114,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "main": 48,
+      "is_aux": true,
+      "votes": [
+        273,
+        2,
+        21,
+        1,
+        71,
+        0,
+        189,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 49,
+      "is_aux": false,
+      "votes": [
+        241,
+        1,
+        35,
+        1,
+        54,
+        0,
+        103,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 49,
+      "is_aux": true,
+      "votes": [
+        272,
+        3,
+        55,
+        0,
+        42,
+        0,
+        100,
+        1,
+        0,
+        4
+      ]
+    },
+    {
+      "main": 50,
+      "is_aux": false,
+      "votes": [
+        230,
+        0,
+        76,
+        1,
+        31,
+        1,
+        96,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 50,
+      "is_aux": true,
+      "votes": [
+        289,
+        1,
+        38,
+        0,
+        61,
+        0,
+        98,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "main": 51,
+      "is_aux": false,
+      "votes": [
+        197,
+        1,
+        84,
+        0,
+        34,
+        0,
+        118,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 51,
+      "is_aux": true,
+      "votes": [
+        220,
+        2,
+        72,
+        0,
+        44,
+        0,
+        112,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 52,
+      "is_aux": false,
+      "votes": [
+        165,
+        0,
+        28,
+        2,
+        56,
+        0,
+        169,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 53,
+      "is_aux": false,
+      "votes": [
+        147,
+        1,
+        110,
+        0,
+        20,
+        1,
+        79,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 53,
+      "is_aux": true,
+      "votes": [
+        104,
+        0,
+        228,
+        0,
+        8,
+        0,
+        28,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 54,
+      "is_aux": false,
+      "votes": [
+        234,
+        0,
+        40,
+        0,
+        22,
+        0,
+        210,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 54,
+      "is_aux": true,
+      "votes": [
+        250,
+        1,
+        16,
+        0,
+        25,
+        1,
+        247,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "main": 55,
+      "is_aux": false,
+      "votes": [
+        175,
+        2,
+        18,
+        2,
+        29,
+        0,
+        227,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 55,
+      "is_aux": true,
+      "votes": [
+        192,
+        0,
+        23,
+        0,
+        26,
+        3,
+        227,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 56,
+      "is_aux": false,
+      "votes": [
+        241,
+        0,
+        50,
+        1,
+        38,
+        0,
+        105,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 56,
+      "is_aux": true,
+      "votes": [
+        221,
+        1,
+        12,
+        0,
+        27,
+        1,
+        225,
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "main": 57,
+      "is_aux": false,
+      "votes": [
+        179,
+        1,
+        32,
+        0,
+        34,
+        0,
+        101,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 57,
+      "is_aux": true,
+      "votes": [
+        224,
+        1,
+        29,
+        1,
+        16,
+        0,
+        157,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 58,
+      "is_aux": false,
+      "votes": [
+        192,
+        3,
+        45,
+        2,
+        38,
+        3,
+        406,
+        3,
+        1,
+        4
+      ]
+    },
+    {
+      "main": 59,
+      "is_aux": false,
+      "votes": [
+        165,
+        0,
+        79,
+        0,
+        51,
+        1,
+        180,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 60,
+      "is_aux": false,
+      "votes": [
+        176,
+        1,
+        65,
+        0,
+        39,
+        1,
+        167,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 60,
+      "is_aux": true,
+      "votes": [
+        193,
+        3,
+        53,
+        0,
+        34,
+        0,
+        162,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 61,
+      "is_aux": false,
+      "votes": [
+        242,
+        0,
+        54,
+        2,
+        54,
+        2,
+        411,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "main": 62,
+      "is_aux": false,
+      "votes": [
+        183,
+        1,
+        64,
+        3,
+        28,
+        2,
+        164,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 62,
+      "is_aux": true,
+      "votes": [
+        189,
+        0,
+        31,
+        0,
+        50,
+        0,
+        212,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 63,
+      "is_aux": false,
+      "votes": [
+        191,
+        1,
+        58,
+        1,
+        44,
+        0,
+        143,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 63,
+      "is_aux": true,
+      "votes": [
+        215,
+        2,
+        75,
+        1,
+        40,
+        1,
+        152,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 64,
+      "is_aux": false,
+      "votes": [
+        165,
+        2,
+        33,
+        0,
+        22,
+        0,
+        92,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 64,
+      "is_aux": true,
+      "votes": [
+        149,
+        5,
+        43,
+        2,
+        37,
+        0,
+        171,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 65,
+      "is_aux": false,
+      "votes": [
+        191,
+        1,
+        66,
+        1,
+        47,
+        1,
+        158,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 65,
+      "is_aux": true,
+      "votes": [
+        221,
+        1,
+        58,
+        3,
+        47,
+        2,
+        177,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 66,
+      "is_aux": false,
+      "votes": [
+        140,
+        0,
+        40,
+        0,
+        33,
+        0,
+        218,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 66,
+      "is_aux": true,
+      "votes": [
+        159,
+        0,
+        49,
+        0,
+        26,
+        2,
+        240,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 67,
+      "is_aux": false,
+      "votes": [
+        268,
+        1,
+        81,
+        3,
+        40,
+        2,
+        277,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 68,
+      "is_aux": false,
+      "votes": [
+        214,
+        0,
+        34,
+        1,
+        27,
+        0,
+        167,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 68,
+      "is_aux": true,
+      "votes": [
+        285,
+        0,
+        23,
+        0,
+        20,
+        0,
+        129,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 69,
+      "is_aux": false,
+      "votes": [
+        199,
+        2,
+        73,
+        0,
+        40,
+        1,
+        220,
+        2,
+        2,
+        0
+      ]
+    },
+    {
+      "main": 69,
+      "is_aux": true,
+      "votes": [
+        253,
+        1,
+        55,
+        0,
+        38,
+        1,
+        201,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 70,
+      "is_aux": false,
+      "votes": [
+        152,
+        0,
+        62,
+        0,
+        41,
+        1,
+        213,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 70,
+      "is_aux": true,
+      "votes": [
+        151,
+        0,
+        61,
+        0,
+        44,
+        1,
+        278,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 71,
+      "is_aux": false,
+      "votes": [
+        127,
+        1,
+        44,
+        0,
+        38,
+        1,
+        112,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 71,
+      "is_aux": true,
+      "votes": [
+        175,
+        1,
+        41,
+        1,
+        42,
+        1,
+        241,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 72,
+      "is_aux": false,
+      "votes": [
+        294,
+        1,
+        59,
+        1,
+        76,
+        0,
+        134,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 73,
+      "is_aux": false,
+      "votes": [
+        211,
+        1,
+        35,
+        0,
+        55,
+        1,
+        100,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 73,
+      "is_aux": true,
+      "votes": [
+        292,
+        2,
+        19,
+        0,
+        66,
+        0,
+        101,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 74,
+      "is_aux": false,
+      "votes": [
+        303,
+        4,
+        115,
+        1,
+        95,
+        0,
+        228,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 75,
+      "is_aux": false,
+      "votes": [
+        288,
+        3,
+        17,
+        0,
+        35,
+        1,
+        148,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 75,
+      "is_aux": true,
+      "votes": [
+        284,
+        1,
+        23,
+        0,
+        56,
+        0,
+        140,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 76,
+      "is_aux": false,
+      "votes": [
+        310,
+        0,
+        29,
+        0,
+        52,
+        0,
+        114,
+        0,
+        1,
+        8
+      ]
+    },
+    {
+      "main": 76,
+      "is_aux": true,
+      "votes": [
+        354,
+        0,
+        35,
+        1,
+        59,
+        0,
+        135,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "main": 77,
+      "is_aux": false,
+      "votes": [
+        336,
+        1,
+        54,
+        2,
+        71,
+        1,
+        237,
+        1,
+        0,
+        12
+      ]
+    },
+    {
+      "main": 78,
+      "is_aux": false,
+      "votes": [
+        166,
+        0,
+        45,
+        0,
+        41,
+        0,
+        65,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 78,
+      "is_aux": true,
+      "votes": [
+        182,
+        1,
+        44,
+        0,
+        50,
+        0,
+        65,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 79,
+      "is_aux": false,
+      "votes": [
+        367,
+        2,
+        84,
+        1,
+        74,
+        0,
+        149,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 80,
+      "is_aux": false,
+      "votes": [
+        220,
+        0,
+        47,
+        0,
+        71,
+        1,
+        69,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 80,
+      "is_aux": true,
+      "votes": [
+        248,
+        3,
+        52,
+        0,
+        70,
+        0,
+        103,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 81,
+      "is_aux": false,
+      "votes": [
+        256,
+        3,
+        60,
+        0,
+        57,
+        0,
+        88,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 81,
+      "is_aux": true,
+      "votes": [
+        237,
+        1,
+        98,
+        0,
+        42,
+        0,
+        85,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 82,
+      "is_aux": false,
+      "votes": [
+        143,
+        2,
+        156,
+        0,
+        44,
+        1,
+        87,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 82,
+      "is_aux": true,
+      "votes": [
+        128,
+        1,
+        211,
+        1,
+        30,
+        0,
+        98,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 83,
+      "is_aux": false,
+      "votes": [
+        127,
+        3,
+        113,
+        1,
+        26,
+        2,
+        202,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 83,
+      "is_aux": true,
+      "votes": [
+        116,
+        4,
+        103,
+        1,
+        32,
+        1,
+        300,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "main": 84,
+      "is_aux": false,
+      "votes": [
+        110,
+        1,
+        67,
+        0,
+        25,
+        1,
+        202,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 84,
+      "is_aux": true,
+      "votes": [
+        163,
+        3,
+        32,
+        1,
+        50,
+        0,
+        183,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 85,
+      "is_aux": false,
+      "votes": [
+        139,
+        1,
+        132,
+        1,
+        39,
+        0,
+        58,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 85,
+      "is_aux": true,
+      "votes": [
+        114,
+        1,
+        99,
+        0,
+        37,
+        1,
+        120,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 86,
+      "is_aux": false,
+      "votes": [
+        142,
+        0,
+        39,
+        0,
+        24,
+        0,
+        76,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "main": 86,
+      "is_aux": true,
+      "votes": [
+        176,
+        1,
+        14,
+        0,
+        10,
+        0,
+        139,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "main": 87,
+      "is_aux": false,
+      "votes": [
+        167,
+        1,
+        26,
+        0,
+        16,
+        0,
+        126,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 87,
+      "is_aux": true,
+      "votes": [
+        150,
+        0,
+        12,
+        0,
+        12,
+        0,
+        154,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 88,
+      "is_aux": false,
+      "votes": [
+        341,
+        0,
+        54,
+        0,
+        61,
+        0,
+        202,
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "main": 89,
+      "is_aux": false,
+      "votes": [
+        165,
+        0,
+        60,
+        0,
+        48,
+        0,
+        149,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 89,
+      "is_aux": true,
+      "votes": [
+        204,
+        0,
+        77,
+        0,
+        36,
+        0,
+        140,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 90,
+      "is_aux": false,
+      "votes": [
+        137,
+        2,
+        90,
+        1,
+        42,
+        0,
+        141,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 90,
+      "is_aux": true,
+      "votes": [
+        193,
+        3,
+        62,
+        3,
+        56,
+        1,
+        99,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 91,
+      "is_aux": false,
+      "votes": [
+        115,
+        2,
+        91,
+        1,
+        32,
+        0,
+        105,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 91,
+      "is_aux": true,
+      "votes": [
+        165,
+        3,
+        56,
+        2,
+        44,
+        0,
+        113,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 92,
+      "is_aux": false,
+      "votes": [
+        224,
+        3,
+        54,
+        0,
+        55,
+        0,
+        102,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "main": 92,
+      "is_aux": true,
+      "votes": [
+        220,
+        0,
+        57,
+        0,
+        59,
+        1,
+        97,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 93,
+      "is_aux": false,
+      "votes": [
+        219,
+        0,
+        50,
+        3,
+        43,
+        0,
+        83,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 93,
+      "is_aux": true,
+      "votes": [
+        192,
+        0,
+        74,
+        2,
+        43,
+        0,
+        169,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 94,
+      "is_aux": false,
+      "votes": [
+        204,
+        0,
+        32,
+        0,
+        35,
+        1,
+        154,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 94,
+      "is_aux": true,
+      "votes": [
+        195,
+        2,
+        61,
+        0,
+        41,
+        0,
+        115,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 95,
+      "is_aux": false,
+      "votes": [
+        247,
+        0,
+        45,
+        1,
+        36,
+        0,
+        105,
+        1,
+        0,
+        4
+      ]
+    },
+    {
+      "main": 95,
+      "is_aux": true,
+      "votes": [
+        180,
+        0,
+        64,
+        1,
+        58,
+        0,
+        153,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 96,
+      "is_aux": false,
+      "votes": [
+        164,
+        1,
+        59,
+        1,
+        60,
+        0,
+        55,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 96,
+      "is_aux": true,
+      "votes": [
+        169,
+        2,
+        85,
+        0,
+        49,
+        0,
+        74,
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "main": 97,
+      "is_aux": false,
+      "votes": [
+        179,
+        0,
+        77,
+        3,
+        48,
+        1,
+        94,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 97,
+      "is_aux": true,
+      "votes": [
+        175,
+        2,
+        77,
+        2,
+        48,
+        0,
+        146,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 98,
+      "is_aux": false,
+      "votes": [
+        177,
+        0,
+        83,
+        0,
+        46,
+        0,
+        96,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 99,
+      "is_aux": false,
+      "votes": [
+        245,
+        2,
+        117,
+        1,
+        55,
+        0,
+        115,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 100,
+      "is_aux": false,
+      "votes": [
+        186,
+        1,
+        25,
+        1,
+        46,
+        0,
+        102,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 100,
+      "is_aux": true,
+      "votes": [
+        184,
+        0,
+        36,
+        0,
+        45,
+        0,
+        112,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 101,
+      "is_aux": false,
+      "votes": [
+        166,
+        1,
+        95,
+        2,
+        44,
+        0,
+        105,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 101,
+      "is_aux": true,
+      "votes": [
+        233,
+        1,
+        50,
+        0,
+        52,
+        0,
+        150,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 102,
+      "is_aux": false,
+      "votes": [
+        181,
+        2,
+        47,
+        0,
+        33,
+        1,
+        74,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 102,
+      "is_aux": true,
+      "votes": [
+        172,
+        0,
+        56,
+        3,
+        47,
+        1,
+        107,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 103,
+      "is_aux": false,
+      "votes": [
+        263,
+        0,
+        44,
+        0,
+        47,
+        0,
+        84,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 103,
+      "is_aux": true,
+      "votes": [
+        262,
+        1,
+        49,
+        0,
+        51,
+        0,
+        107,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 104,
+      "is_aux": false,
+      "votes": [
+        181,
+        1,
+        70,
+        1,
+        26,
+        0,
+        183,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 104,
+      "is_aux": true,
+      "votes": [
+        153,
+        3,
+        75,
+        0,
+        39,
+        2,
+        121,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 105,
+      "is_aux": false,
+      "votes": [
+        160,
+        1,
+        52,
+        0,
+        36,
+        0,
+        79,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 105,
+      "is_aux": true,
+      "votes": [
+        133,
+        0,
+        79,
+        0,
+        37,
+        0,
+        128,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 106,
+      "is_aux": false,
+      "votes": [
+        156,
+        1,
+        83,
+        1,
+        62,
+        0,
+        81,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 106,
+      "is_aux": true,
+      "votes": [
+        197,
+        0,
+        41,
+        0,
+        55,
+        0,
+        135,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 107,
+      "is_aux": false,
+      "votes": [
+        124,
+        0,
+        65,
+        0,
+        40,
+        1,
+        88,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 107,
+      "is_aux": true,
+      "votes": [
+        209,
+        1,
+        63,
+        0,
+        59,
+        0,
+        91,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 108,
+      "is_aux": false,
+      "votes": [
+        241,
+        0,
+        17,
+        0,
+        30,
+        0,
+        156,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 108,
+      "is_aux": true,
+      "votes": [
+        191,
+        0,
+        35,
+        0,
+        50,
+        1,
+        141,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 109,
+      "is_aux": false,
+      "votes": [
+        279,
+        0,
+        22,
+        1,
+        58,
+        0,
+        384,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "main": 110,
+      "is_aux": false,
+      "votes": [
+        254,
+        4,
+        16,
+        1,
+        32,
+        0,
+        112,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 110,
+      "is_aux": true,
+      "votes": [
+        238,
+        0,
+        17,
+        0,
+        70,
+        0,
+        103,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 111,
+      "is_aux": false,
+      "votes": [
+        210,
+        2,
+        22,
+        0,
+        35,
+        0,
+        204,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 111,
+      "is_aux": true,
+      "votes": [
+        243,
+        0,
+        31,
+        1,
+        59,
+        0,
+        120,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 112,
+      "is_aux": false,
+      "votes": [
+        270,
+        0,
+        46,
+        0,
+        42,
+        0,
+        164,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 112,
+      "is_aux": true,
+      "votes": [
+        287,
+        1,
+        37,
+        2,
+        42,
+        1,
+        147,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 113,
+      "is_aux": false,
+      "votes": [
+        209,
+        1,
+        26,
+        1,
+        62,
+        1,
+        158,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 113,
+      "is_aux": true,
+      "votes": [
+        235,
+        1,
+        34,
+        0,
+        79,
+        0,
+        146,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 114,
+      "is_aux": false,
+      "votes": [
+        265,
+        2,
+        24,
+        0,
+        46,
+        0,
+        111,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 114,
+      "is_aux": true,
+      "votes": [
+        209,
+        3,
+        45,
+        0,
+        87,
+        1,
+        169,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 115,
+      "is_aux": false,
+      "votes": [
+        155,
+        1,
+        30,
+        0,
+        47,
+        0,
+        111,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 115,
+      "is_aux": true,
+      "votes": [
+        208,
+        1,
+        27,
+        0,
+        60,
+        1,
+        125,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 116,
+      "is_aux": false,
+      "votes": [
+        161,
+        2,
+        104,
+        3,
+        76,
+        0,
+        175,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 116,
+      "is_aux": true,
+      "votes": [
+        203,
+        0,
+        72,
+        1,
+        101,
+        1,
+        143,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 117,
+      "is_aux": false,
+      "votes": [
+        194,
+        1,
+        18,
+        1,
+        41,
+        2,
+        130,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 117,
+      "is_aux": true,
+      "votes": [
+        193,
+        3,
+        60,
+        2,
+        58,
+        2,
+        119,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 118,
+      "is_aux": false,
+      "votes": [
+        273,
+        1,
+        81,
+        0,
+        54,
+        1,
+        291,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 119,
+      "is_aux": false,
+      "votes": [
+        243,
+        1,
+        46,
+        0,
+        47,
+        2,
+        292,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "main": 120,
+      "is_aux": false,
+      "votes": [
+        209,
+        2,
+        28,
+        0,
+        39,
+        0,
+        132,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 120,
+      "is_aux": true,
+      "votes": [
+        181,
+        1,
+        27,
+        0,
+        48,
+        1,
+        168,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 121,
+      "is_aux": false,
+      "votes": [
+        263,
+        0,
+        33,
+        0,
+        58,
+        0,
+        81,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 122,
+      "is_aux": false,
+      "votes": [
+        192,
+        2,
+        59,
+        1,
+        67,
+        1,
+        87,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 122,
+      "is_aux": true,
+      "votes": [
+        183,
+        3,
+        54,
+        1,
+        79,
+        0,
+        184,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 123,
+      "is_aux": false,
+      "votes": [
+        161,
+        0,
+        15,
+        0,
+        42,
+        0,
+        177,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 123,
+      "is_aux": true,
+      "votes": [
+        209,
+        2,
+        26,
+        2,
+        41,
+        0,
+        162,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 124,
+      "is_aux": false,
+      "votes": [
+        170,
+        0,
+        39,
+        0,
+        31,
+        0,
+        201,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "main": 124,
+      "is_aux": true,
+      "votes": [
+        208,
+        0,
+        72,
+        0,
+        54,
+        0,
+        142,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 125,
+      "is_aux": false,
+      "votes": [
+        204,
+        0,
+        30,
+        0,
+        37,
+        0,
+        150,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 125,
+      "is_aux": true,
+      "votes": [
+        246,
+        1,
+        31,
+        0,
+        47,
+        0,
+        157,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 126,
+      "is_aux": false,
+      "votes": [
+        280,
+        0,
+        34,
+        0,
+        53,
+        1,
+        157,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 127,
+      "is_aux": false,
+      "votes": [
+        183,
+        0,
+        45,
+        0,
+        57,
+        2,
+        125,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 127,
+      "is_aux": true,
+      "votes": [
+        250,
+        0,
+        27,
+        1,
+        60,
+        0,
+        118,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 128,
+      "is_aux": false,
+      "votes": [
+        208,
+        0,
+        29,
+        0,
+        59,
+        1,
+        162,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 128,
+      "is_aux": true,
+      "votes": [
+        218,
+        0,
+        18,
+        0,
+        39,
+        1,
+        205,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 129,
+      "is_aux": false,
+      "votes": [
+        251,
+        1,
+        27,
+        0,
+        63,
+        0,
+        143,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 129,
+      "is_aux": true,
+      "votes": [
+        288,
+        0,
+        27,
+        0,
+        45,
+        0,
+        213,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 130,
+      "is_aux": false,
+      "votes": [
+        206,
+        2,
+        38,
+        2,
+        81,
+        0,
+        126,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 130,
+      "is_aux": true,
+      "votes": [
+        217,
+        1,
+        58,
+        0,
+        92,
+        0,
+        149,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 131,
+      "is_aux": false,
+      "votes": [
+        219,
+        1,
+        36,
+        0,
+        82,
+        0,
+        121,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 131,
+      "is_aux": true,
+      "votes": [
+        267,
+        1,
+        17,
+        0,
+        66,
+        0,
+        162,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 132,
+      "is_aux": false,
+      "votes": [
+        178,
+        0,
+        31,
+        1,
+        65,
+        0,
+        110,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 132,
+      "is_aux": true,
+      "votes": [
+        218,
+        0,
+        19,
+        1,
+        91,
+        0,
+        97,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 133,
+      "is_aux": false,
+      "votes": [
+        196,
+        0,
+        26,
+        1,
+        105,
+        0,
+        124,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 133,
+      "is_aux": true,
+      "votes": [
+        206,
+        1,
+        17,
+        0,
+        49,
+        0,
+        229,
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "main": 134,
+      "is_aux": false,
+      "votes": [
+        188,
+        3,
+        93,
+        3,
+        52,
+        1,
+        175,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 134,
+      "is_aux": true,
+      "votes": [
+        208,
+        2,
+        70,
+        1,
+        53,
+        0,
+        255,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 135,
+      "is_aux": false,
+      "votes": [
+        146,
+        0,
+        17,
+        1,
+        24,
+        0,
+        159,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 135,
+      "is_aux": true,
+      "votes": [
+        136,
+        0,
+        7,
+        1,
+        10,
+        0,
+        283,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 136,
+      "is_aux": false,
+      "votes": [
+        157,
+        0,
+        20,
+        0,
+        26,
+        2,
+        263,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 136,
+      "is_aux": true,
+      "votes": [
+        187,
+        1,
+        34,
+        0,
+        76,
+        3,
+        189,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 137,
+      "is_aux": false,
+      "votes": [
+        221,
+        0,
+        15,
+        0,
+        34,
+        0,
+        197,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 138,
+      "is_aux": false,
+      "votes": [
+        159,
+        0,
+        36,
+        1,
+        53,
+        0,
+        153,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 138,
+      "is_aux": true,
+      "votes": [
+        144,
+        2,
+        21,
+        0,
+        45,
+        1,
+        281,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 139,
+      "is_aux": false,
+      "votes": [
+        174,
+        0,
+        66,
+        1,
+        50,
+        1,
+        121,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "main": 139,
+      "is_aux": true,
+      "votes": [
+        192,
+        2,
+        65,
+        0,
+        52,
+        0,
+        167,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 140,
+      "is_aux": false,
+      "votes": [
+        232,
+        1,
+        97,
+        3,
+        74,
+        0,
+        153,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "main": 141,
+      "is_aux": false,
+      "votes": [
+        160,
+        4,
+        43,
+        3,
+        49,
+        3,
+        266,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 141,
+      "is_aux": true,
+      "votes": [
+        275,
+        2,
+        26,
+        0,
+        95,
+        1,
+        167,
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "main": 142,
+      "is_aux": false,
+      "votes": [
+        322,
+        0,
+        27,
+        1,
+        74,
+        2,
+        216,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 143,
+      "is_aux": false,
+      "votes": [
+        150,
+        1,
+        15,
+        0,
+        40,
+        0,
+        164,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 143,
+      "is_aux": true,
+      "votes": [
+        244,
+        2,
+        33,
+        0,
+        46,
+        3,
+        177,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 144,
+      "is_aux": false,
+      "votes": [
+        307,
+        2,
+        63,
+        0,
+        120,
+        2,
+        240,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 145,
+      "is_aux": false,
+      "votes": [
+        318,
+        2,
+        61,
+        0,
+        103,
+        0,
+        246,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 146,
+      "is_aux": false,
+      "votes": [
+        130,
+        1,
+        25,
+        2,
+        88,
+        1,
+        148,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 146,
+      "is_aux": true,
+      "votes": [
+        142,
+        2,
+        22,
+        1,
+        72,
+        0,
+        162,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "main": 147,
+      "is_aux": false,
+      "votes": [
+        109,
+        1,
+        33,
+        1,
+        70,
+        0,
+        262,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 147,
+      "is_aux": true,
+      "votes": [
+        182,
+        0,
+        55,
+        0,
+        94,
+        0,
+        292,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 148,
+      "is_aux": false,
+      "votes": [
+        120,
+        3,
+        26,
+        1,
+        54,
+        1,
+        231,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 148,
+      "is_aux": true,
+      "votes": [
+        252,
+        2,
+        36,
+        2,
+        72,
+        0,
+        202,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 149,
+      "is_aux": false,
+      "votes": [
+        112,
+        3,
+        25,
+        2,
+        40,
+        0,
+        279,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 149,
+      "is_aux": true,
+      "votes": [
+        164,
+        10,
+        44,
+        0,
+        83,
+        0,
+        212,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 150,
+      "is_aux": false,
+      "votes": [
+        281,
+        0,
+        23,
+        0,
+        23,
+        1,
+        151,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 150,
+      "is_aux": true,
+      "votes": [
+        256,
+        3,
+        42,
+        1,
+        59,
+        0,
+        169,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 151,
+      "is_aux": false,
+      "votes": [
+        228,
+        1,
+        29,
+        1,
+        56,
+        0,
+        124,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 152,
+      "is_aux": false,
+      "votes": [
+        361,
+        2,
+        47,
+        0,
+        56,
+        0,
+        151,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 153,
+      "is_aux": false,
+      "votes": [
+        185,
+        2,
+        21,
+        1,
+        41,
+        0,
+        147,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 153,
+      "is_aux": true,
+      "votes": [
+        190,
+        1,
+        52,
+        0,
+        57,
+        2,
+        159,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 154,
+      "is_aux": false,
+      "votes": [
+        156,
+        2,
+        50,
+        2,
+        53,
+        2,
+        214,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 154,
+      "is_aux": true,
+      "votes": [
+        158,
+        0,
+        15,
+        2,
+        62,
+        2,
+        268,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 155,
+      "is_aux": false,
+      "votes": [
+        133,
+        0,
+        47,
+        2,
+        58,
+        0,
+        64,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 155,
+      "is_aux": true,
+      "votes": [
+        148,
+        1,
+        58,
+        1,
+        89,
+        0,
+        68,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 156,
+      "is_aux": false,
+      "votes": [
+        138,
+        2,
+        48,
+        0,
+        51,
+        2,
+        143,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 156,
+      "is_aux": true,
+      "votes": [
+        186,
+        1,
+        10,
+        0,
+        35,
+        0,
+        257,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 157,
+      "is_aux": false,
+      "votes": [
+        154,
+        2,
+        26,
+        1,
+        50,
+        1,
+        176,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 157,
+      "is_aux": true,
+      "votes": [
+        194,
+        2,
+        21,
+        1,
+        47,
+        0,
+        166,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 158,
+      "is_aux": false,
+      "votes": [
+        238,
+        2,
+        91,
+        1,
+        134,
+        1,
+        157,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "main": 159,
+      "is_aux": false,
+      "votes": [
+        151,
+        1,
+        39,
+        1,
+        58,
+        3,
+        215,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 159,
+      "is_aux": true,
+      "votes": [
+        226,
+        1,
+        38,
+        0,
+        49,
+        0,
+        188,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 160,
+      "is_aux": false,
+      "votes": [
+        123,
+        0,
+        8,
+        0,
+        13,
+        2,
+        225,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 160,
+      "is_aux": true,
+      "votes": [
+        181,
+        0,
+        19,
+        0,
+        22,
+        1,
+        227,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 161,
+      "is_aux": false,
+      "votes": [
+        245,
+        1,
+        14,
+        0,
+        35,
+        0,
+        138,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 161,
+      "is_aux": true,
+      "votes": [
+        290,
+        1,
+        27,
+        1,
+        53,
+        0,
+        203,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "main": 162,
+      "is_aux": false,
+      "votes": [
+        278,
+        3,
+        91,
+        0,
+        97,
+        0,
+        99,
+        0,
+        0,
+        2
+      ]
+    }
+  ],
+  "public_source_2021": "http://www.keralaassembly.org/election/assembly_poll.php?no=83&year=2021"
+}

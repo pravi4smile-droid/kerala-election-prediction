@@ -1,0 +1,285 @@
+{
+  "const_no": 6,
+  "name": "PAYYANNUR",
+  "source_year": 2026,
+  "winner_alliance_2026": "udf",
+  "candidates": [
+    "A. P. GANGADHARAN",
+    "T. I. MADHUSOODANAN",
+    "V. KUNHIKRISHNAN",
+    "SANDEEP V. K."
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "A. P. GANGADHARAN",
+      "party": "BJP",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 8204,
+      "vote_pct_2026": "5.44"
+    },
+    {
+      "index": 1,
+      "name": "T. I. MADHUSOODANAN",
+      "party": "CPI(M)",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 67077,
+      "vote_pct_2026": "44.45"
+    },
+    {
+      "index": 2,
+      "name": "V. KUNHIKRISHNAN",
+      "party": "IND",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 75074,
+      "vote_pct_2026": "49.75"
+    },
+    {
+      "index": 3,
+      "name": "SANDEEP V. K.",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 542,
+      "vote_pct_2026": "0.36"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        713,
+        6932,
+        4524,
+        63
+      ],
+      "cumulative": [
+        713,
+        6932,
+        4524,
+        63
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        684,
+        7434,
+        4092,
+        34
+      ],
+      "cumulative": [
+        1397,
+        14366,
+        8616,
+        97
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        663,
+        6033,
+        4212,
+        38
+      ],
+      "cumulative": [
+        2060,
+        20399,
+        12828,
+        135
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        736,
+        4599,
+        6430,
+        47
+      ],
+      "cumulative": [
+        2796,
+        24998,
+        19258,
+        182
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        454,
+        5589,
+        5470,
+        44
+      ],
+      "cumulative": [
+        3250,
+        30587,
+        24728,
+        226
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        394,
+        4504,
+        6879,
+        42
+      ],
+      "cumulative": [
+        3644,
+        35091,
+        31607,
+        268
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        463,
+        3729,
+        6903,
+        38
+      ],
+      "cumulative": [
+        4107,
+        38820,
+        38510,
+        306
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        591,
+        3943,
+        5129,
+        30
+      ],
+      "cumulative": [
+        4698,
+        42763,
+        43639,
+        336
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        430,
+        3723,
+        6731,
+        30
+      ],
+      "cumulative": [
+        5128,
+        46486,
+        50370,
+        366
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        713,
+        4437,
+        6012,
+        46
+      ],
+      "cumulative": [
+        5841,
+        50923,
+        56382,
+        412
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        551,
+        6070,
+        4416,
+        34
+      ],
+      "cumulative": [
+        6392,
+        56993,
+        60798,
+        446
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        621,
+        4061,
+        5007,
+        35
+      ],
+      "cumulative": [
+        7013,
+        61054,
+        65805,
+        481
+      ]
+    },
+    {
+      "round": 13,
+      "increment": [
+        609,
+        3051,
+        5779,
+        36
+      ],
+      "cumulative": [
+        7622,
+        64105,
+        71584,
+        517
+      ]
+    },
+    {
+      "round": 14,
+      "increment": [
+        582,
+        2972,
+        3490,
+        25
+      ],
+      "cumulative": [
+        8204,
+        67077,
+        75074,
+        542
+      ]
+    }
+  ],
+  "total": [
+    8204,
+    67077,
+    75074,
+    542
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 188935,
+    "male": 91006,
+    "female": 97926,
+    "votes_polled": 152055,
+    "turnout_pct": 80.48,
+    "confirmed": true,
+    "male_polled": 73242,
+    "female_polled": 78811
+  },
+  "booth_count": 192,
+  "district": "Kannur"
+}

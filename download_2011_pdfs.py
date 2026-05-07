@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""Download Kerala 2011 Form 20 PDFs into data/2011/booth_wise."""
+
+import os
+import time
+
+import requests
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+OUT_DIR = os.path.join(BASE_DIR, "data", "2011", "booth_wise")
+URLS = [
+    "https://www.ceo.kerala.gov.in/pdf/form20/{n:03d}.pdf",
+    "https://www.ceo.kerala.gov.in/pdf/form20/{n:03d}.PDF",
+]
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    "Accept": "application/pdf,*/*",
+}
+
+
+def main():
+    os.makedirs(OUT_DIR, exist_ok=True)
+    ok, failed = 0, []
+    session = requests.Session()
+    session.headers.update(HEADERS)
+
+    for n in range(1, 141):
+        dest = os.path.join(OUT_DIR, f"{n:03d}.pdf")
+        if os.path.exists(dest) and os.path.getsize(dest) > 3000:
+            print(f"{n:03d}: exists")
+            ok += 1
+            continue
+        downloaded = False
+        last_status = ""
+        for pattern in URLS:
+            url = pattern.format(n=n)
+            try:
+                res = session.get(url, timeout=30)
+                last_status = f"HTTP {res.status_code}"
+                if res.status_code == 200 and len(res.content) > 3000:
+                    with open(dest, "wb") as f:
+                        f.write(res.content)
+                    print(f"{n:03d}: {len(res.content)//1024} KB")
+                    ok += 1
+                    downloaded = True
+                    break
+            except Exception as exc:
+                last_status = str(exc)
+        if not downloaded:
+            print(f"{n:03d}: {last_status}")
+            failed.append(n)
+        time.sleep(0.15)
+
+    print(f"Downloaded {ok}/140")
+    if failed:
+        print("Failed:", failed)
+
+
+if __name__ == "__main__":
+    main()

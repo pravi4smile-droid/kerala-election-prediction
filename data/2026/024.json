@@ -1,0 +1,660 @@
+{
+  "const_no": 24,
+  "name": "PERAMBRA",
+  "source_year": 2026,
+  "winner_alliance_2026": "udf",
+  "candidates": [
+    "ADV. FATHIMA THAHILIYA",
+    "M. MOHANAN MASTER",
+    "RENJITH MALAYIL",
+    "T. P. RAMAKRISHNAN",
+    "AKHIL KUMAR .A.M",
+    "FATHIMA NASRI. V",
+    "FATHIMATHU RUKSANA. P",
+    "P.K. BIJU MASTER",
+    "K. RAMAKRISHNAN S/O GOVINDAN NAIR",
+    "T.M. RAMAKRISHNAN S/O NARAYANAN NAIR"
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "ADV. FATHIMA THAHILIYA",
+      "party": "IUML",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 79735,
+      "vote_pct_2026": "47.60"
+    },
+    {
+      "index": 1,
+      "name": "M. MOHANAN MASTER",
+      "party": "BJP",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 12746,
+      "vote_pct_2026": "7.61"
+    },
+    {
+      "index": 2,
+      "name": "RENJITH MALAYIL",
+      "party": "Aam Aadmi Party",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 120,
+      "vote_pct_2026": "0.07"
+    },
+    {
+      "index": 3,
+      "name": "T. P. RAMAKRISHNAN",
+      "party": "CPI(M)",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 74279,
+      "vote_pct_2026": "44.34"
+    },
+    {
+      "index": 4,
+      "name": "AKHIL KUMAR .A.M",
+      "party": "CPI",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 147,
+      "vote_pct_2026": "0.09"
+    },
+    {
+      "index": 5,
+      "name": "FATHIMA NASRI. V",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 140,
+      "vote_pct_2026": "0.08"
+    },
+    {
+      "index": 6,
+      "name": "FATHIMATHU RUKSANA. P",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 147,
+      "vote_pct_2026": "0.09"
+    },
+    {
+      "index": 7,
+      "name": "P.K. BIJU MASTER",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 63,
+      "vote_pct_2026": "0.04"
+    },
+    {
+      "index": 8,
+      "name": "K. RAMAKRISHNAN S/O GOVINDAN NAIR",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 61,
+      "vote_pct_2026": "0.04"
+    },
+    {
+      "index": 9,
+      "name": "T.M. RAMAKRISHNAN S/O NARAYANAN NAIR",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 67,
+      "vote_pct_2026": "0.04"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        5542,
+        678,
+        4,
+        3571,
+        11,
+        7,
+        8,
+        4,
+        3,
+        5
+      ],
+      "cumulative": [
+        5542,
+        678,
+        4,
+        3571,
+        11,
+        7,
+        8,
+        4,
+        3,
+        5
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        5292,
+        721,
+        7,
+        3581,
+        4,
+        12,
+        17,
+        9,
+        5,
+        3
+      ],
+      "cumulative": [
+        10834,
+        1399,
+        11,
+        7152,
+        15,
+        19,
+        25,
+        13,
+        8,
+        8
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        4793,
+        588,
+        5,
+        3173,
+        5,
+        17,
+        16,
+        3,
+        1,
+        4
+      ],
+      "cumulative": [
+        15627,
+        1987,
+        16,
+        10325,
+        20,
+        36,
+        41,
+        16,
+        9,
+        12
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        4654,
+        704,
+        10,
+        4667,
+        11,
+        13,
+        15,
+        7,
+        2,
+        5
+      ],
+      "cumulative": [
+        20281,
+        2691,
+        26,
+        14992,
+        31,
+        49,
+        56,
+        23,
+        11,
+        17
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        5011,
+        811,
+        5,
+        4467,
+        6,
+        11,
+        10,
+        5,
+        4,
+        3
+      ],
+      "cumulative": [
+        25292,
+        3502,
+        31,
+        19459,
+        37,
+        60,
+        66,
+        28,
+        15,
+        20
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        4953,
+        844,
+        8,
+        4666,
+        11,
+        10,
+        5,
+        2,
+        4,
+        6
+      ],
+      "cumulative": [
+        30245,
+        4346,
+        39,
+        24125,
+        48,
+        70,
+        71,
+        30,
+        19,
+        26
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        4440,
+        860,
+        3,
+        4699,
+        6,
+        6,
+        10,
+        3,
+        1,
+        5
+      ],
+      "cumulative": [
+        34685,
+        5206,
+        42,
+        28824,
+        54,
+        76,
+        81,
+        33,
+        20,
+        31
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        4747,
+        754,
+        12,
+        3933,
+        4,
+        4,
+        5,
+        2,
+        3,
+        4
+      ],
+      "cumulative": [
+        39432,
+        5960,
+        54,
+        32757,
+        58,
+        80,
+        86,
+        35,
+        23,
+        35
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        5525,
+        1095,
+        10,
+        5013,
+        8,
+        3,
+        8,
+        4,
+        8,
+        2
+      ],
+      "cumulative": [
+        44957,
+        7055,
+        64,
+        37770,
+        66,
+        83,
+        94,
+        39,
+        31,
+        37
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        5693,
+        1008,
+        6,
+        4400,
+        10,
+        6,
+        8,
+        3,
+        0,
+        0
+      ],
+      "cumulative": [
+        50650,
+        8063,
+        70,
+        42170,
+        76,
+        89,
+        102,
+        42,
+        31,
+        37
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        4205,
+        526,
+        6,
+        4965,
+        11,
+        6,
+        2,
+        4,
+        5,
+        3
+      ],
+      "cumulative": [
+        54855,
+        8589,
+        76,
+        47135,
+        87,
+        95,
+        104,
+        46,
+        36,
+        40
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        4458,
+        719,
+        6,
+        4954,
+        14,
+        4,
+        5,
+        1,
+        2,
+        2
+      ],
+      "cumulative": [
+        59313,
+        9308,
+        82,
+        52089,
+        101,
+        99,
+        109,
+        47,
+        38,
+        42
+      ]
+    },
+    {
+      "round": 13,
+      "increment": [
+        4686,
+        848,
+        11,
+        4799,
+        11,
+        8,
+        13,
+        3,
+        5,
+        4
+      ],
+      "cumulative": [
+        63999,
+        10156,
+        93,
+        56888,
+        112,
+        107,
+        122,
+        50,
+        43,
+        46
+      ]
+    },
+    {
+      "round": 14,
+      "increment": [
+        4661,
+        897,
+        4,
+        4498,
+        8,
+        7,
+        12,
+        5,
+        0,
+        10
+      ],
+      "cumulative": [
+        68660,
+        11053,
+        97,
+        61386,
+        120,
+        114,
+        134,
+        55,
+        43,
+        56
+      ]
+    },
+    {
+      "round": 15,
+      "increment": [
+        3878,
+        692,
+        6,
+        5180,
+        7,
+        10,
+        3,
+        3,
+        4,
+        3
+      ],
+      "cumulative": [
+        72538,
+        11745,
+        103,
+        66566,
+        127,
+        124,
+        137,
+        58,
+        47,
+        59
+      ]
+    },
+    {
+      "round": 16,
+      "increment": [
+        3946,
+        578,
+        12,
+        4684,
+        13,
+        12,
+        8,
+        2,
+        7,
+        6
+      ],
+      "cumulative": [
+        76484,
+        12323,
+        115,
+        71250,
+        140,
+        136,
+        145,
+        60,
+        54,
+        65
+      ]
+    },
+    {
+      "round": 17,
+      "increment": [
+        2506,
+        299,
+        5,
+        2529,
+        6,
+        3,
+        1,
+        2,
+        6,
+        2
+      ],
+      "cumulative": [
+        78990,
+        12622,
+        120,
+        73779,
+        146,
+        139,
+        146,
+        62,
+        60,
+        67
+      ]
+    },
+    {
+      "round": 18,
+      "increment": [
+        419,
+        54,
+        0,
+        169,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "cumulative": [
+        79409,
+        12676,
+        120,
+        73948,
+        146,
+        139,
+        147,
+        63,
+        60,
+        67
+      ]
+    },
+    {
+      "round": 19,
+      "increment": [
+        326,
+        70,
+        0,
+        331,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "cumulative": [
+        79735,
+        12746,
+        120,
+        74279,
+        147,
+        140,
+        147,
+        63,
+        61,
+        67
+      ]
+    }
+  ],
+  "total": [
+    79735,
+    12746,
+    120,
+    74279,
+    147,
+    140,
+    147,
+    63,
+    61,
+    67
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 205970,
+    "male": 100858,
+    "female": 105112,
+    "votes_polled": 166259,
+    "turnout_pct": 80.72,
+    "confirmed": true,
+    "male_polled": 81413,
+    "female_polled": 84846
+  },
+  "booth_count": 232,
+  "district": "Kozhikode"
+}

@@ -1,0 +1,718 @@
+{
+  "const_no": 36,
+  "name": "36-WANDOOR (SC) Assembly Election",
+  "source_year": 2024,
+  "election_type": "lok_sabha",
+  "source_pdf": "https://www.ceo.kerala.gov.in/ceokerala/pdf/GE-2024/LAC_WISE_RESULTS/036.pdf",
+  "electorate": 233102,
+  "nota_index": null,
+  "candidates": [
+    "ANNIE RAJA",
+    "P.R KRISHNANKUTTY",
+    "RAHUL GANDHI",
+    "K SURENDRAN",
+    "AJEEB MUHAMMED",
+    "PRASEETHA AZHIKODE",
+    "P RADHAKRISHNAN",
+    "SATHYAN K.P",
+    "SINOJ A.C"
+  ],
+  "candidates_2024_ls": [
+    {
+      "index": 0,
+      "name": "ANNIE RAJA",
+      "party": "CPI",
+      "alliance": "LDF",
+      "is_major_alliance": true,
+      "source": "wikipedia_2024_kerala_ls_candidates",
+      "source_candidate_name": "Annie Raja"
+    },
+    {
+      "index": 1,
+      "name": "P.R KRISHNANKUTTY",
+      "party": "",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ceo_kerala_ge_2024_lac_wise_form20"
+    },
+    {
+      "index": 2,
+      "name": "RAHUL GANDHI",
+      "party": "INC",
+      "alliance": "UDF",
+      "is_major_alliance": true,
+      "source": "wikipedia_2024_kerala_ls_candidates",
+      "source_candidate_name": "Rahul Gandhi"
+    },
+    {
+      "index": 3,
+      "name": "K SURENDRAN",
+      "party": "BJP",
+      "alliance": "NDA",
+      "is_major_alliance": true,
+      "source": "wikipedia_2024_kerala_ls_candidates",
+      "source_candidate_name": "K. Surendran"
+    },
+    {
+      "index": 4,
+      "name": "AJEEB MUHAMMED",
+      "party": "",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ceo_kerala_ge_2024_lac_wise_form20"
+    },
+    {
+      "index": 5,
+      "name": "PRASEETHA AZHIKODE",
+      "party": "",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ceo_kerala_ge_2024_lac_wise_form20"
+    },
+    {
+      "index": 6,
+      "name": "P RADHAKRISHNAN",
+      "party": "",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ceo_kerala_ge_2024_lac_wise_form20"
+    },
+    {
+      "index": 7,
+      "name": "SATHYAN K.P",
+      "party": "",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ceo_kerala_ge_2024_lac_wise_form20"
+    },
+    {
+      "index": 8,
+      "name": "SINOJ A.C",
+      "party": "",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ceo_kerala_ge_2024_lac_wise_form20"
+    }
+  ],
+  "booth_summary": {
+    "total_rows": 40,
+    "main_booths": 40,
+    "auxiliary_rows": 0,
+    "total_votes_in_candidate_columns": 33011,
+    "candidate_totals": [
+      8964,
+      62,
+      21017,
+      2865,
+      23,
+      21,
+      13,
+      25,
+      21
+    ]
+  },
+  "booths": [
+    {
+      "main": 1,
+      "is_aux": false,
+      "votes": [
+        439,
+        1,
+        431,
+        23,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 2,
+      "is_aux": false,
+      "votes": [
+        154,
+        1,
+        521,
+        19,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 3,
+      "is_aux": false,
+      "votes": [
+        152,
+        1,
+        398,
+        39,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 4,
+      "is_aux": false,
+      "votes": [
+        307,
+        5,
+        663,
+        79,
+        3,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 28,
+      "is_aux": false,
+      "votes": [
+        329,
+        5,
+        302,
+        140,
+        2,
+        4,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 29,
+      "is_aux": false,
+      "votes": [
+        190,
+        1,
+        123,
+        108,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 30,
+      "is_aux": false,
+      "votes": [
+        322,
+        0,
+        724,
+        85,
+        1,
+        1,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "main": 31,
+      "is_aux": false,
+      "votes": [
+        335,
+        1,
+        666,
+        70,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 32,
+      "is_aux": false,
+      "votes": [
+        279,
+        0,
+        719,
+        68,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 56,
+      "is_aux": false,
+      "votes": [
+        292,
+        2,
+        554,
+        136,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 57,
+      "is_aux": false,
+      "votes": [
+        199,
+        1,
+        603,
+        88,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 58,
+      "is_aux": false,
+      "votes": [
+        163,
+        0,
+        794,
+        58,
+        1,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 59,
+      "is_aux": false,
+      "votes": [
+        225,
+        0,
+        492,
+        137,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "main": 60,
+      "is_aux": false,
+      "votes": [
+        281,
+        2,
+        754,
+        107,
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "main": 84,
+      "is_aux": false,
+      "votes": [
+        155,
+        1,
+        378,
+        29,
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 85,
+      "is_aux": false,
+      "votes": [
+        290,
+        2,
+        376,
+        196,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 86,
+      "is_aux": false,
+      "votes": [
+        166,
+        3,
+        340,
+        50,
+        1,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 87,
+      "is_aux": false,
+      "votes": [
+        165,
+        1,
+        616,
+        99,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 88,
+      "is_aux": false,
+      "votes": [
+        164,
+        3,
+        649,
+        128,
+        2,
+        2,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "main": 112,
+      "is_aux": false,
+      "votes": [
+        201,
+        2,
+        336,
+        183,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 113,
+      "is_aux": false,
+      "votes": [
+        188,
+        2,
+        648,
+        214,
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 114,
+      "is_aux": false,
+      "votes": [
+        215,
+        4,
+        577,
+        10,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "main": 115,
+      "is_aux": false,
+      "votes": [
+        138,
+        1,
+        406,
+        73,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 116,
+      "is_aux": false,
+      "votes": [
+        205,
+        2,
+        734,
+        52,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 140,
+      "is_aux": false,
+      "votes": [
+        450,
+        2,
+        482,
+        83,
+        0,
+        0,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "main": 141,
+      "is_aux": false,
+      "votes": [
+        107,
+        1,
+        645,
+        10,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 142,
+      "is_aux": false,
+      "votes": [
+        207,
+        1,
+        744,
+        31,
+        0,
+        2,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "main": 143,
+      "is_aux": false,
+      "votes": [
+        98,
+        0,
+        512,
+        10,
+        0,
+        4,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 144,
+      "is_aux": false,
+      "votes": [
+        161,
+        2,
+        355,
+        4,
+        0,
+        1,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "main": 168,
+      "is_aux": false,
+      "votes": [
+        248,
+        0,
+        618,
+        30,
+        0,
+        0,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "main": 169,
+      "is_aux": false,
+      "votes": [
+        176,
+        4,
+        766,
+        16,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "main": 170,
+      "is_aux": false,
+      "votes": [
+        198,
+        1,
+        629,
+        50,
+        2,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 171,
+      "is_aux": false,
+      "votes": [
+        175,
+        1,
+        447,
+        93,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 172,
+      "is_aux": false,
+      "votes": [
+        185,
+        2,
+        316,
+        24,
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 174,
+      "is_aux": false,
+      "votes": [
+        202,
+        4,
+        505,
+        64,
+        1,
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "main": 196,
+      "is_aux": false,
+      "votes": [
+        201,
+        0,
+        694,
+        66,
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "main": 197,
+      "is_aux": false,
+      "votes": [
+        215,
+        1,
+        487,
+        79,
+        0,
+        0,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "main": 198,
+      "is_aux": false,
+      "votes": [
+        261,
+        1,
+        385,
+        41,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "main": 199,
+      "is_aux": false,
+      "votes": [
+        238,
+        1,
+        379,
+        24,
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "main": 200,
+      "is_aux": false,
+      "votes": [
+        288,
+        0,
+        249,
+        49,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "lok_sabha_constituency": "Wayanad",
+  "lok_sabha_constituency_no": 4
+}

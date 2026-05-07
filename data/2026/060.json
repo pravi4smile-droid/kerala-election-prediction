@@ -1,0 +1,308 @@
+{
+  "const_no": 60,
+  "name": "ALATHUR",
+  "source_year": 2026,
+  "winner_alliance_2026": "ldf",
+  "candidates": [
+    "M T CHANDRAN",
+    "K V  PRASANNAKUMAR",
+    "K M FEBIN",
+    "T M SASI",
+    "B FEBIN S/O BALAN K.C."
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "M T CHANDRAN",
+      "party": "Bahujan Samaj Party",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 639,
+      "vote_pct_2026": "0.49"
+    },
+    {
+      "index": 1,
+      "name": "K V  PRASANNAKUMAR",
+      "party": "BJP",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 17141,
+      "vote_pct_2026": "13.06"
+    },
+    {
+      "index": 2,
+      "name": "K M FEBIN",
+      "party": "INC",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 52234,
+      "vote_pct_2026": "39.81"
+    },
+    {
+      "index": 3,
+      "name": "T M SASI",
+      "party": "CPI(M)",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 60617,
+      "vote_pct_2026": "46.20"
+    },
+    {
+      "index": 4,
+      "name": "B FEBIN S/O BALAN K.C.",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 575,
+      "vote_pct_2026": "0.44"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        63,
+        1688,
+        4118,
+        4773,
+        41
+      ],
+      "cumulative": [
+        63,
+        1688,
+        4118,
+        4773,
+        41
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        59,
+        1568,
+        4488,
+        4826,
+        35
+      ],
+      "cumulative": [
+        122,
+        3256,
+        8606,
+        9599,
+        76
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        43,
+        1443,
+        4239,
+        4803,
+        46
+      ],
+      "cumulative": [
+        165,
+        4699,
+        12845,
+        14402,
+        122
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        47,
+        1193,
+        3761,
+        5162,
+        31
+      ],
+      "cumulative": [
+        212,
+        5892,
+        16606,
+        19564,
+        153
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        77,
+        1553,
+        4540,
+        5206,
+        50
+      ],
+      "cumulative": [
+        289,
+        7445,
+        21146,
+        24770,
+        203
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        34,
+        1065,
+        5671,
+        4634,
+        40
+      ],
+      "cumulative": [
+        323,
+        8510,
+        26817,
+        29404,
+        243
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        50,
+        1754,
+        3991,
+        4622,
+        54
+      ],
+      "cumulative": [
+        373,
+        10264,
+        30808,
+        34026,
+        297
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        57,
+        1421,
+        3880,
+        4802,
+        48
+      ],
+      "cumulative": [
+        430,
+        11685,
+        34688,
+        38828,
+        345
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        43,
+        1001,
+        4166,
+        4616,
+        47
+      ],
+      "cumulative": [
+        473,
+        12686,
+        38854,
+        43444,
+        392
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        59,
+        1675,
+        3663,
+        5734,
+        53
+      ],
+      "cumulative": [
+        532,
+        14361,
+        42517,
+        49178,
+        445
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        49,
+        1241,
+        3626,
+        4528,
+        52
+      ],
+      "cumulative": [
+        581,
+        15602,
+        46143,
+        53706,
+        497
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        45,
+        968,
+        4734,
+        4614,
+        51
+      ],
+      "cumulative": [
+        626,
+        16570,
+        50877,
+        58320,
+        548
+      ]
+    },
+    {
+      "round": 13,
+      "increment": [
+        13,
+        571,
+        1357,
+        2297,
+        27
+      ],
+      "cumulative": [
+        639,
+        17141,
+        52234,
+        60617,
+        575
+      ]
+    }
+  ],
+  "total": [
+    639,
+    17141,
+    52234,
+    60617,
+    575
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 165657,
+    "male": 81649,
+    "female": 84007,
+    "votes_polled": 133188,
+    "turnout_pct": 80.4,
+    "confirmed": false,
+    "male_polled": 65646,
+    "female_polled": 67542
+  },
+  "booth_count": 174,
+  "district": "Palakkad"
+}

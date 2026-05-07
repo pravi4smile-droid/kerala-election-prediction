@@ -1,0 +1,219 @@
+{
+  "const_no": 28,
+  "name": "KOZHIKODE SOUTH",
+  "source_year": 2026,
+  "winner_alliance_2026": "udf",
+  "candidates": [
+    "ADV. FYZAL BABU",
+    "T. RANEESH",
+    "AHAMMAD DEVARKOVIL"
+  ],
+  "candidates_2026": [
+    {
+      "index": 0,
+      "name": "ADV. FYZAL BABU",
+      "party": "IUML",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 52187,
+      "vote_pct_2026": "41.54"
+    },
+    {
+      "index": 1,
+      "name": "T. RANEESH",
+      "party": "BJP",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 32000,
+      "vote_pct_2026": "25.47"
+    },
+    {
+      "index": 2,
+      "name": "AHAMMAD DEVARKOVIL",
+      "party": "INL",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI round results scraper",
+      "actual_votes_2026": 41429,
+      "vote_pct_2026": "32.98"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "increment": [
+        2244,
+        2585,
+        1806
+      ],
+      "cumulative": [
+        2244,
+        2585,
+        1806
+      ]
+    },
+    {
+      "round": 2,
+      "increment": [
+        5938,
+        632,
+        2924
+      ],
+      "cumulative": [
+        8182,
+        3217,
+        4730
+      ]
+    },
+    {
+      "round": 3,
+      "increment": [
+        5663,
+        1463,
+        3821
+      ],
+      "cumulative": [
+        13845,
+        4680,
+        8551
+      ]
+    },
+    {
+      "round": 4,
+      "increment": [
+        2472,
+        4171,
+        3221
+      ],
+      "cumulative": [
+        16317,
+        8851,
+        11772
+      ]
+    },
+    {
+      "round": 5,
+      "increment": [
+        2773,
+        4211,
+        3672
+      ],
+      "cumulative": [
+        19090,
+        13062,
+        15444
+      ]
+    },
+    {
+      "round": 6,
+      "increment": [
+        2448,
+        4699,
+        3351
+      ],
+      "cumulative": [
+        21538,
+        17761,
+        18795
+      ]
+    },
+    {
+      "round": 7,
+      "increment": [
+        4189,
+        3719,
+        3618
+      ],
+      "cumulative": [
+        25727,
+        21480,
+        22413
+      ]
+    },
+    {
+      "round": 8,
+      "increment": [
+        4863,
+        1927,
+        3328
+      ],
+      "cumulative": [
+        30590,
+        23407,
+        25741
+      ]
+    },
+    {
+      "round": 9,
+      "increment": [
+        5846,
+        1782,
+        3435
+      ],
+      "cumulative": [
+        36436,
+        25189,
+        29176
+      ]
+    },
+    {
+      "round": 10,
+      "increment": [
+        5352,
+        1544,
+        4552
+      ],
+      "cumulative": [
+        41788,
+        26733,
+        33728
+      ]
+    },
+    {
+      "round": 11,
+      "increment": [
+        5536,
+        2417,
+        3950
+      ],
+      "cumulative": [
+        47324,
+        29150,
+        37678
+      ]
+    },
+    {
+      "round": 12,
+      "increment": [
+        4863,
+        2850,
+        3751
+      ],
+      "cumulative": [
+        52187,
+        32000,
+        41429
+      ]
+    }
+  ],
+  "total": [
+    52187,
+    32000,
+    41429
+  ],
+  "fetched_at": "2026-05-05T07:54:14.219281",
+  "turnout": {
+    "electorate": 155972,
+    "male": 76168,
+    "female": 79802,
+    "votes_polled": 126010,
+    "turnout_pct": 80.79,
+    "confirmed": true,
+    "male_polled": 61536,
+    "female_polled": 64472
+  },
+  "booth_count": 168,
+  "district": "Kozhikode"
+}
