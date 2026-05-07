@@ -785,14 +785,13 @@ def get_round_leads_matrix():
             a = c.get("alliance", "other")
             idx_alliance[i] = a if a in ("ldf", "udf", "nda") else "other"
         row_rounds = []
-        cumulative_by_round = {}
+        delta_leads = {}
 
         for rr in result.get("rounds", []):
             round_no = int(rr.get("round", len(row_rounds) + 1))
             cumulative = rr.get("cumulative", [])
             if not cumulative:
                 continue
-            cumulative_by_round[round_no] = cumulative
             lead_idx = max(range(len(cumulative)), key=lambda i: cumulative[i])
             leader_name = candidates[lead_idx] if lead_idx < len(candidates) else ""
             leader_party = parties[lead_idx] if lead_idx < len(parties) else ""
@@ -811,17 +810,12 @@ def get_round_leads_matrix():
             })
             max_round = max(max_round, round_no)
 
-        # Compute per-round delta leaders (who leads in each individual round's votes)
-        delta_leads = {}
-        sorted_rnds = sorted(cumulative_by_round.keys())
-        for i, rno in enumerate(sorted_rnds):
-            curr = cumulative_by_round[rno]
-            prev = cumulative_by_round[sorted_rnds[i - 1]] if i > 0 else [0] * len(curr)
-            deltas = [curr[j] - (prev[j] if j < len(prev) else 0) for j in range(len(curr))]
-            if not any(d > 0 for d in deltas):
-                continue
-            delta_lead_idx = max(range(len(deltas)), key=lambda x: deltas[x])
-            delta_leads[rno] = idx_alliance.get(delta_lead_idx, "other")
+            # Per-round delta leader using the increment field directly
+            increment = rr.get("increment", [])
+            if increment and any(v > 0 for v in increment):
+                inc_lead_idx = max(range(len(increment)), key=lambda x: increment[x])
+                delta_leads[round_no] = idx_alliance.get(inc_lead_idx, "other")
+
         const_delta_leads[const_no] = delta_leads
 
         rows.append({
