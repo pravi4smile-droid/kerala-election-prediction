@@ -762,6 +762,7 @@ def get_round_leads_matrix():
     """Return cumulative leading alliance by round for every constituency."""
     rows = []
     max_round = 0
+    const_delta_leads = {}  # const_no -> {round_no: alliance}
 
     for const_no in sorted(META):
         result = load_round_result(const_no)
@@ -784,12 +785,14 @@ def get_round_leads_matrix():
             a = c.get("alliance", "other")
             idx_alliance[i] = a if a in ("ldf", "udf", "nda") else "other"
         row_rounds = []
+        cumulative_by_round = {}
 
         for rr in result.get("rounds", []):
             round_no = int(rr.get("round", len(row_rounds) + 1))
             cumulative = rr.get("cumulative", [])
             if not cumulative:
                 continue
+            cumulative_by_round[round_no] = cumulative
             lead_idx = max(range(len(cumulative)), key=lambda i: cumulative[i])
             leader_name = candidates[lead_idx] if lead_idx < len(candidates) else ""
             leader_party = parties[lead_idx] if lead_idx < len(parties) else ""
@@ -807,6 +810,19 @@ def get_round_leads_matrix():
                 "votes": cumulative[lead_idx],
             })
             max_round = max(max_round, round_no)
+
+        # Compute per-round delta leaders (who leads in each individual round's votes)
+        delta_leads = {}
+        sorted_rnds = sorted(cumulative_by_round.keys())
+        for i, rno in enumerate(sorted_rnds):
+            curr = cumulative_by_round[rno]
+            prev = cumulative_by_round[sorted_rnds[i - 1]] if i > 0 else [0] * len(curr)
+            deltas = [curr[j] - (prev[j] if j < len(prev) else 0) for j in range(len(curr))]
+            if not any(d > 0 for d in deltas):
+                continue
+            delta_lead_idx = max(range(len(deltas)), key=lambda x: deltas[x])
+            delta_leads[rno] = idx_alliance.get(delta_lead_idx, "other")
+        const_delta_leads[const_no] = delta_leads
 
         rows.append({
             "const_no": const_no,
@@ -839,9 +855,19 @@ def get_round_leads_matrix():
             tally[alliance] = tally.get(alliance, 0) + 1
         row["rounds"] = carried_rounds
 
+    # delta_tally_by_round: count which alliance led per round (no carry-forward)
+    delta_tally_by_round = {}
+    for const_no, delta_leads in const_delta_leads.items():
+        for round_no, alliance in delta_leads.items():
+            tally = delta_tally_by_round.setdefault(
+                str(round_no), {"ldf": 0, "udf": 0, "nda": 0, "other": 0}
+            )
+            tally[alliance] = tally.get(alliance, 0) + 1
+
     return jsonify({
         "max_round": max_round,
         "tally_by_round": tally_by_round,
+        "delta_tally_by_round": delta_tally_by_round,
         "rows": rows,
     })
 

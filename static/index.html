@@ -1832,16 +1832,14 @@ async function renderRoundLeads() {
   const rounds = Array.from({length: maxRound}, (_, i) => i + 1);
   const parties = ['ldf', 'udf', 'nda'];
 
-  // Build round-only tally (exclude carried entries)
+  // Build round-only tally using per-round delta leaders from backend
   function roundOnlyTally() {
     const t = {};
     rounds.forEach(r => { t[r] = {ldf:0, udf:0, nda:0, other:0}; });
-    (data.rows || []).forEach(row => {
-      (row.rounds || []).forEach(rr => {
-        if (rr.carried) return;
-        const a = parties.includes(rr.alliance) ? rr.alliance : 'other';
-        if (t[rr.round]) t[rr.round][a]++;
-      });
+    const src = data.delta_tally_by_round || {};
+    rounds.forEach(r => {
+      const entry = src[String(r)];
+      if (entry) t[r] = {...t[r], ...entry};
     });
     return t;
   }
