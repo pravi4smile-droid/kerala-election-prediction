@@ -783,7 +783,8 @@ def get_round_leads_matrix():
         idx_alliance = {}
         for i, c in enumerate(cands_2026):
             a = c.get("alliance", "other")
-            idx_alliance[i] = a if a in ("ldf", "udf", "nda") else "other"
+            idx = c.get("index", i)
+            idx_alliance[idx] = a if a in ("ldf", "udf", "nda") else "other"
         row_rounds = []
         delta_leads = {}
 
@@ -801,20 +802,31 @@ def get_round_leads_matrix():
             else:
                 alliance = _classify_2026_leader(leader_name, leader_party, meta)
 
-            row_rounds.append({
+            round_entry = {
                 "round": round_no,
                 "alliance": alliance,
                 "leader_name": leader_name,
                 "leader_party": leader_party,
                 "votes": cumulative[lead_idx],
-            })
+            }
             max_round = max(max_round, round_no)
 
             # Per-round delta leader using the increment field directly
             increment = rr.get("increment", [])
             if increment and any(v > 0 for v in increment):
                 inc_lead_idx = max(range(len(increment)), key=lambda x: increment[x])
-                delta_leads[round_no] = idx_alliance.get(inc_lead_idx, "other")
+                inc_leader_name = candidates[inc_lead_idx] if inc_lead_idx < len(candidates) else ""
+                inc_leader_party = parties[inc_lead_idx] if inc_lead_idx < len(parties) else ""
+                inc_alliance = idx_alliance.get(inc_lead_idx, "other")
+                delta_leads[round_no] = inc_alliance
+                round_entry.update({
+                    "delta_alliance": inc_alliance,
+                    "delta_leader_name": inc_leader_name,
+                    "delta_leader_party": inc_leader_party,
+                    "delta_votes": increment[inc_lead_idx],
+                })
+
+            row_rounds.append(round_entry)
 
         const_delta_leads[const_no] = delta_leads
 
@@ -873,6 +885,13 @@ def get_round_results(const_no):
     if not result:
         return jsonify({"error": "No round data for this constituency"}), 404
 
+    candidate_alliances = ["other" for _ in result.get("candidates", [])]
+    for cand in result.get("candidates_2026", []):
+        idx = cand.get("index")
+        alliance = (cand.get("alliance") or "other").lower()
+        if isinstance(idx, int) and 0 <= idx < len(candidate_alliances):
+            candidate_alliances[idx] = alliance if alliance in ("ldf", "udf", "nda") else "other"
+
     # Load supporting data for 2021 comparison
     bd = BOOTH_DATA.get(const_no)
 
@@ -887,7 +906,7 @@ def get_round_results(const_no):
 
     # Without booth data, predictions or tot_rounds, return as-is
     if not bd or not pred_map or not tot_rounds:
-        return jsonify(result)
+        return jsonify({**result, "candidate_alliances": candidate_alliances})
 
     import re as _re
     def _norm(s):
@@ -1002,6 +1021,7 @@ def get_round_results(const_no):
         })
 
     return jsonify({**result, "rounds": enriched_rounds, "tot_rounds": tot_rounds,
+                    "candidate_alliances": candidate_alliances,
                     "alliance_idx": alliance_idx})
 
 

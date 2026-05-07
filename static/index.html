@@ -1621,6 +1621,7 @@ async function renderRounds() {
   const parties    = rd.parties    || [];
   const rounds     = rd.rounds     || [];
   const totals     = rd.total      || [];
+  const candidateAlliances = rd.candidate_alliances || [];
   const n          = candidates.length;
 
   if (!rounds.length) { renderRoundsFallback(); return; }
@@ -1631,6 +1632,10 @@ async function renderRounds() {
   const appCands = c.candidates || [];
 
   function candColor(ci) {
+    const mappedAlliance = candidateAlliances[ci];
+    if (['ldf', 'udf', 'nda'].includes(mappedAlliance)) {
+      return ALLIANCE_COLORS[mappedAlliance];
+    }
     // Try to match by name fragment
     const ecName = candidates[ci].toLowerCase();
     for (const ac of appCands) {
@@ -1922,8 +1927,13 @@ async function renderRoundLeads() {
         table += `<td class="lead-cell empty"></td>`;
         return;
       }
-      const a = parties.includes(rr.alliance) ? rr.alliance : 'other';
-      table += `<td class="lead-cell ${a}" title="${row.name} R${r}: ${rr.leader_name} (${rr.leader_party}) ${Number(rr.votes||0).toLocaleString()}">
+      const displayAlliance = isCumul ? rr.alliance : (rr.delta_alliance || rr.alliance);
+      const displayName = isCumul ? rr.leader_name : (rr.delta_leader_name || rr.leader_name);
+      const displayParty = isCumul ? rr.leader_party : (rr.delta_leader_party || rr.leader_party);
+      const displayVotes = isCumul ? rr.votes : (rr.delta_votes ?? rr.votes);
+      const modeLabel = isCumul ? 'cumulative lead' : 'round votes lead';
+      const a = parties.includes(displayAlliance) ? displayAlliance : 'other';
+      table += `<td class="lead-cell ${a}" title="${row.name} R${r} ${modeLabel}: ${displayName} (${displayParty}) ${Number(displayVotes||0).toLocaleString()}">
         ${ALLIANCE_LABELS[a] || 'IND'}
       </td>`;
     });
