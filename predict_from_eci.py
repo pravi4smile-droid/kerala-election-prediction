@@ -448,95 +448,141 @@ def assess_call_readiness(
     tot_rounds: int,
     live_votes: list[int] | None = None,
     previous_leaders: list[int] | None = None,
+    previous_shift_patterns: list[list[float]] | None = None,
 ) -> dict:
     """Classify whether a projection is ready to call, too early, or too close."""
     margin = int(pred.get("margin", 0) or 0)
     pct = pred.get("formula", {}).get("pct", pred.get("pct_counted", 0) or 0)
+    raw_conf = int(pred.get("confidence", 0) or 0)
     winner_idx = pred.get("winner_idx", 0)
     live_leader_idx = None
     if live_votes:
         live_leader_idx = max(range(len(live_votes)), key=lambda i: live_votes[i])
 
-    if cur_round >= tot_rounds or pct >= 99.5 or pred.get("formula", {}).get("projection_method") == "final_count":
+    def verdict(status, label, text_conf, ready, reason, pct_conf):
         return {
-            "call_status": "called",
-            "call_label": "Called",
-            "call_confidence": "Final",
-            "call_ready": True,
-            "call_reason": "Counting complete",
+            "call_status": status,
+            "call_label": label,
+            "call_confidence": text_conf,
+            "call_confidence_pct": pct_conf,
+            "confidence": pct_conf,
+            "raw_confidence": raw_conf,
+            "call_ready": ready,
+            "call_reason": reason,
         }
 
-    leaders = list(previous_leaders or [])
-    if not leaders and live_leader_idx is not None:
-        leaders = [live_leader_idx]
-    stable_recent = len(leaders) >= 2 and len(set(leaders[-2:])) == 1 and leaders[-1] == winner_idx
-    stable_all = bool(leaders) and len(set(leaders)) == 1 and leaders[-1] == winner_idx
-    projected_stable_all = len(leaders) >= 3 and all(leader == winner_idx for leader in leaders)
-    live_agrees = live_leader_idx is None or live_leader_idx == winner_idx
+    if cur_round >= tot_rounds or pct >= 99.5 or pred.get("formula", {}).get("projection_method") == "final_count":
+        return verdict("called", "Called", "Final", True, "Counting complete", 99)
+
+    sorted_idx = sorted(
+        range(len(pred.get("projected", []) or live_votes or [])),
+        key=lambda i: -(pred.get("projected", []) or live_votes or [])[i],
+    )
+    top_indices = sorted(set(([winner_idx] + sorted_idx[:3])[:3]))
+
+    def shift_stable(patterns: list[list[float]], min_rounds: int, recent_only: bool) -> bool:
+        if len(patterns) < min_rounds:
+            return False
+        check = patterns[-min_rounds:] if recent_only else patterns
+        for idx in top_indices:
+            vals = [row[idx] for row in check if idx < len(row)]
+            if len(vals) < min_rounds:
+                return False
+            signs = []
+            for value in vals:
+                if value > 1.0:
+                    signs.append(1)
+                elif value < -1.0:
+                    signs.append(-1)
+                else:
+                    signs.append(0)
+            # A real stable shift means the same side is over/under-performing
+            # historical early share each round. Tiny +/-1pp noise is neutral.
+            non_neutral = [s for s in signs if s != 0]
+            if non_neutral and len(set(non_neutral)) > 1:
+                return False
+            if not non_neutral and max(vals) - min(vals) > 3.0:
+                return False
+        return True
+
+    shift_patterns = list(previous_shift_patterns or [])
+    if not shift_patterns and pred.get("formula", {}).get("delta"):
+        shift_patterns = [pred["formula"]["delta"]]
+    stable_recent = shift_stable(shift_patterns, 2, True)
+    stable_all = shift_stable(shift_patterns, 3, False)
+    projected_stable_all = stable_all
 
     if margin >= 20000:
-        return {
-            "call_status": "ready_to_call",
-            "call_label": "Ready to Call",
-            "call_confidence": "High",
-            "call_ready": True,
-            "call_reason": "Projected margin is above 20,000 votes",
-        }
-    if cur_round >= 2 and stable_recent and live_agrees and margin >= 10000:
-        return {
-            "call_status": "ready_to_call",
-            "call_label": "Ready to Call",
-            "call_confidence": "High",
-            "call_ready": True,
-            "call_reason": "Same leader trend for multiple rounds and projected margin is above 10,000 votes",
-        }
-    if cur_round >= 3 and pct >= 50 and stable_all and live_agrees and margin >= 5000:
-        return {
-            "call_status": "ready_to_call",
-            "call_label": "Ready to Call",
-            "call_confidence": "Medium",
-            "call_ready": True,
-            "call_reason": "More than 50% counted, every round follows the same leader pattern, and projected margin is above 5,000 votes",
-        }
-    if cur_round >= 3 and pct >= 90 and projected_stable_all and live_agrees and margin >= 2000:
-        return {
-            "call_status": "ready_to_call",
-            "call_label": "Ready to Call",
-            "call_confidence": "Medium",
-            "call_ready": True,
-            "call_reason": "More than 90% counted, the leader pattern is intact, and projected margin is above 2,000 votes",
-        }
-    if cur_round >= 3 and pct >= 75 and projected_stable_all and live_agrees and margin >= 4000:
-        return {
-            "call_status": "ready_to_call",
-            "call_label": "Ready to Call",
-            "call_confidence": "Medium",
-            "call_ready": True,
-            "call_reason": "More than 75% counted, the leader pattern is intact, and projected margin is above 4,000 votes",
-        }
+        return verdict(
+            "ready_to_call", "Ready to Call", "High", True,
+            "Projected margin is above 20,000 votes",
+            max(raw_conf, 98),
+        )
+    if cur_round >= 2 and pct >= 25 and stable_recent and margin >= 12000:
+        return verdict(
+            "ready_to_call", "Ready to Call", "High", True,
+            "More than 25% counted, recent rounds show a consistent vote-shift pattern, and projected margin is above 12,000 votes",
+            max(raw_conf, 96),
+        )
+    if cur_round >= 2 and stable_recent and margin >= 8000:
+        return verdict(
+            "ready_to_call", "Ready to Call", "High", True,
+            "Recent rounds show a consistent vote-shift pattern and projected margin is above 8,000 votes",
+            max(raw_conf, 95),
+        )
+    if cur_round >= 3 and pct >= 50 and stable_all and margin >= 4000:
+        return verdict(
+            "ready_to_call", "Ready to Call", "Medium", True,
+            "More than 50% counted, rounds follow a consistent vote-shift pattern, and projected margin is above 4,000 votes",
+            max(raw_conf, 92),
+        )
+    if cur_round >= 3 and pct >= 90 and projected_stable_all and margin >= 1500:
+        return verdict(
+            "ready_to_call", "Ready to Call", "Medium", True,
+            "More than 90% counted, the vote-shift pattern is intact, and projected margin is above 1,500 votes",
+            max(raw_conf, 95),
+        )
+    if cur_round >= 3 and pct >= 75 and projected_stable_all and margin >= 3500:
+        return verdict(
+            "ready_to_call", "Ready to Call", "Medium", True,
+            "More than 75% counted, the vote-shift pattern is intact, and projected margin is above 3,500 votes",
+            max(raw_conf, 90),
+        )
+    if cur_round >= 12 and projected_stable_all and margin >= 3500:
+        return verdict(
+            "ready_to_call", "Ready to Call", "Medium", True,
+            "Round 12 or later, the vote-shift pattern is intact, and projected margin is above 3,500 votes",
+            max(raw_conf, 88),
+        )
+    if cur_round >= 10 and pct >= 70 and projected_stable_all and margin >= 2500:
+        return verdict(
+            "ready_to_call", "Ready to Call", "Medium", True,
+            "Round 10 or later, more than 70% counted, the vote-shift pattern is intact, and projected margin is above 2,500 votes",
+            max(raw_conf, 87),
+        )
+    if cur_round >= 15 and projected_stable_all and margin >= 2500:
+        return verdict(
+            "ready_to_call", "Ready to Call", "Medium", True,
+            "Round 15 or later, the vote-shift pattern is intact, and projected margin is above 2,500 votes",
+            max(raw_conf, 86),
+        )
     if cur_round <= 1 or pct < 15:
-        return {
-            "call_status": "too_early",
-            "call_label": "Too Early to Call",
-            "call_confidence": "Low",
-            "call_ready": False,
-            "call_reason": "Needs more counted votes before calling",
-        }
+        return verdict(
+            "too_early", "Too Early to Call", "Low", False,
+            "Needs more counted votes before calling",
+            min(raw_conf, 35),
+        )
     if margin < 5000:
-        return {
-            "call_status": "too_close",
-            "call_label": "Too Close to Call",
-            "call_confidence": "Low",
-            "call_ready": False,
-            "call_reason": "Projected margin is below 5,000 votes",
-        }
-    return {
-        "call_status": "watching",
-        "call_label": "Watching Trend",
-        "call_confidence": "Medium",
-        "call_ready": False,
-        "call_reason": "Projection has a lead, but call thresholds are not met yet",
-    }
+        return verdict(
+            "too_close", "Too Close to Call", "Low", False,
+            "Projected margin is below 5,000 votes",
+            min(raw_conf, 55),
+        )
+    return verdict(
+        "watching", "Watching Trend", "Medium", False,
+        "Projection has a lead, but call thresholds are not met yet",
+        max(min(raw_conf, 79), 60),
+    )
 
 
 # â”€â”€ Prediction logic â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -785,6 +831,45 @@ def projected_winner_history_from_2026(const_no: int, upto_round: int) -> list[i
     return leaders
 
 
+def shift_pattern_history_from_2026(const_no: int, upto_round: int) -> list[list[float]]:
+    """Return per-round swing-vs-history deltas in LDF/UDF/NDA order."""
+    path = os.path.join(DIR_2026, f"{const_no:03d}.json")
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8") as f:
+        entry = json.load(f)
+
+    alliances = ["ldf", "udf", "nda"]
+    candidate_alliances = {
+        c.get("index"): c.get("alliance")
+        for c in entry.get("candidates_2026", [])
+        if c.get("alliance") in alliances
+    }
+    patterns = []
+    rounds = entry.get("rounds", []) or []
+    votes_polled = (entry.get("turnout") or {}).get("votes_polled", 0)
+    for r, rr in enumerate(rounds[:upto_round], start=1):
+        cumulative = rr.get("cumulative", [])
+        votes = [0, 0, 0]
+        for idx, alliance in candidate_alliances.items():
+            if isinstance(idx, int) and idx < len(cumulative):
+                votes[alliances.index(alliance)] += int(cumulative[idx] or 0)
+        if sum(votes) <= 0:
+            continue
+        pred = predict(
+            votes,
+            r,
+            len(rounds),
+            const_no=const_no,
+            votes_polled=votes_polled,
+            total_counted=sum(int(x or 0) for x in cumulative),
+        )
+        delta = pred.get("formula", {}).get("delta")
+        if delta and len(delta) >= 3:
+            patterns.append(delta)
+    return patterns
+
+
 def run():
     # Build live-style inputs from split 2026 files.  The old live_results.json
     # scraper output is no longer required once data/2026 has complete rounds.
@@ -915,6 +1000,7 @@ def run():
             tot_rounds,
             votes,
             projected_winner_history_from_2026(cno, cur_round),
+            shift_pattern_history_from_2026(cno, cur_round),
         ))
 
         winner_alliance = alliances[pred["winner_idx"]]

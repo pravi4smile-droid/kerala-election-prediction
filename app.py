@@ -589,7 +589,12 @@ def predict():
     total_counted  = sum(votes_in)   # approximation (excludes minor independents)
 
     # Import the canonical prediction engine (cached after first import)
-    from predict_from_eci import predict as eci_predict, assess_call_readiness
+    from predict_from_eci import (
+        predict as eci_predict,
+        assess_call_readiness,
+        projected_winner_history_from_2026,
+        shift_pattern_history_from_2026,
+    )
     pred = eci_predict(votes_in, cur_round, tot_rounds,
                        const_no=const_no,
                        votes_polled=votes_polled_v,
@@ -609,7 +614,14 @@ def predict():
 
     w_idx = pred["winner_idx"]
     winner_alliance = cands[w_idx]["alliance"] if w_idx < len(cands) else "ldf"
-    pred.update(assess_call_readiness(pred, cur_round, tot_rounds, votes_in))
+    pred.update(assess_call_readiness(
+        pred,
+        cur_round,
+        tot_rounds,
+        votes_in,
+        projected_winner_history_from_2026(const_no, cur_round),
+        shift_pattern_history_from_2026(const_no, cur_round),
+    ))
 
     return jsonify({
         "projected":        projected,
@@ -621,6 +633,8 @@ def predict():
         "call_status":      pred.get("call_status", "watching"),
         "call_label":       pred.get("call_label", "Watching Trend"),
         "call_confidence":  pred.get("call_confidence", "Medium"),
+        "call_confidence_pct": pred.get("call_confidence_pct", pred["confidence"]),
+        "raw_confidence":   pred.get("raw_confidence"),
         "call_ready":       pred.get("call_ready", False),
         "call_reason":      pred.get("call_reason", ""),
         "pct_counted":      pred["pct_counted"],
