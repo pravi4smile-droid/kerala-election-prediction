@@ -10,11 +10,11 @@
 /* ── Kerala Election Predictor — Rich Light Theme ───────────────────────── */
 :root {
   /* Alliance palette */
-  --ldf: #991b1b;  --ldf-light: #fecaca;  --ldf-mid: #dc2626;  --ldf-xlight: #fef2f2;
-  --ldf-grad: linear-gradient(135deg, #ef4444 0%, #991b1b 100%);
+  --ldf: #cc0000;  --ldf-light: #fecaca;  --ldf-mid: #ef4444;  --ldf-xlight: #fef2f2;
+  --ldf-grad: linear-gradient(135deg, #f87171 0%, #cc0000 100%);
   --udf: #1e40af;  --udf-light: #dbeafe;  --udf-mid: #2563eb;  --udf-xlight: #eff6ff;
   --udf-grad: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
-  --nda: #9a3412;  --nda-light: #fed7aa;  --nda-mid: #ea580c;  --nda-xlight: #fff7ed;
+  --nda: #c2410c;  --nda-light: #fed7aa;  --nda-mid: #f97316;  --nda-xlight: #fff7ed;
   --nda-grad: linear-gradient(135deg, #f97316 0%, #c2410c 100%);
   --ind: #4b5563;  --ind-light: #f3f4f6;  --ind-mid: #6b7280;
 
@@ -248,7 +248,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 .btn-primary:hover { background: linear-gradient(135deg, #2c2520 0%, #3c3530 100%); }
 .btn-success {
   background: var(--ldf-grad); color: #fff; border-color: var(--ldf);
-  box-shadow: 0 1px 4px rgba(153,27,27,.3), 0 2px 10px rgba(153,27,27,.15);
+  box-shadow: 0 1px 4px rgba(204,0,0,.3), 0 2px 10px rgba(204,0,0,.15);
 }
 .btn-success:hover { filter: brightness(1.08); }
 .btn-danger { background: #fff0f0; color: var(--accent); border-color: #fca5a5; }
@@ -270,7 +270,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
   border: 1.5px solid var(--border);
 }
 .call-indicator span { font-weight: 500; color: var(--muted); letter-spacing: 0; }
-.call-ready { color: var(--ldf); border-color: rgba(153,27,27,.25); background: var(--ldf-xlight); }
+.call-ready { color: var(--ldf); border-color: rgba(204,0,0,.25); background: var(--ldf-xlight); }
 .call-called { color: var(--udf); border-color: rgba(37,99,235,.25); background: #eff6ff; }
 .call-early { color: var(--nda); border-color: rgba(234,88,12,.28); background: var(--nda-xlight); }
 .call-close { color: var(--accent); border-color: rgba(220,38,38,.25); background: #fff0f0; }
@@ -465,7 +465,7 @@ const state = {
   searchFilter: '',
 };
 
-const ALLIANCE_COLORS = { ldf:'#991b1b', udf:'#1e40af', nda:'#9a3412', ind:'#4b5563' };
+const ALLIANCE_COLORS = { ldf:'#cc0000', udf:'#1e40af', nda:'#ea580c', ind:'#4b5563' };
 const ALLIANCE_BG     = { ldf:'#fef2f2', udf:'#eff6ff', nda:'#fff7ed', ind:'#f3f4f6' };
 const ALLIANCE_LABELS = { ldf:'LDF', udf:'UDF', nda:'BJP', ind:'IND', other:'IND' };
 
@@ -1919,13 +1919,12 @@ async function renderRoundLeads() {
     </td>`;
     rounds.forEach(r => {
       const rr = byRound[r];
-      // In Round Only mode, treat carried entries as empty
-      if (!rr || (!isCumul && rr.carried)) {
-        table += `<td class="lead-cell empty">-</td>`;
+      // Matrix always empty for carried rounds; carry-forward is for graph only
+      if (!rr || rr.carried) {
+        table += `<td class="lead-cell empty"></td>`;
         return;
       }
       const a = parties.includes(rr.alliance) ? rr.alliance : 'other';
-      const dimStyle = (!isCumul && rr.carried) ? '' : '';
       table += `<td class="lead-cell ${a}" title="${row.name} R${r}: ${rr.leader_name} (${rr.leader_party}) ${Number(rr.votes||0).toLocaleString()}">
         ${ALLIANCE_LABELS[a] || 'IND'}
       </td>`;
