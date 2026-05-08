@@ -1,0 +1,3390 @@
+{
+  "const_no": 61,
+  "name": "61-CHELAKKARA (SC) Assembly Election",
+  "source_year": 2024,
+  "election_type": "assembly_by_election",
+  "source_pdf": "https://www.ceo.kerala.gov.in/ceokerala/pdf/BYEELECTION2024/results/chelakkara.pdf",
+  "party_source_url": "https://results.eci.gov.in/ResultAcByeNov2024/ConstituencywiseS1161.htm",
+  "electorate": 213418,
+  "nota_index": 6,
+  "candidates": [
+    "U R PRADEEP",
+    "K BALAKRISHNAN",
+    "RAMYA HARIDAS",
+    "LINDESH",
+    "K B SUDHEER",
+    "N K HARIDASAN"
+  ],
+  "candidates_2024": [
+    {
+      "index": 0,
+      "name": "U R PRADEEP",
+      "party": "CPI(M)",
+      "alliance": "ldf",
+      "is_major_alliance": true,
+      "source": "ECI by-election result page and CEO Kerala Form 20",
+      "actual_votes_2024": 64827,
+      "vote_pct_2024": "41.72",
+      "source_url": "https://results.eci.gov.in/ResultAcByeNov2024/ConstituencywiseS1161.htm"
+    },
+    {
+      "index": 1,
+      "name": "K BALAKRISHNAN",
+      "party": "BJP",
+      "alliance": "nda",
+      "is_major_alliance": true,
+      "source": "ECI by-election result page and CEO Kerala Form 20",
+      "actual_votes_2024": 33609,
+      "vote_pct_2024": "21.63",
+      "source_url": "https://results.eci.gov.in/ResultAcByeNov2024/ConstituencywiseS1161.htm"
+    },
+    {
+      "index": 2,
+      "name": "RAMYA HARIDAS",
+      "party": "INC",
+      "alliance": "udf",
+      "is_major_alliance": true,
+      "source": "ECI by-election result page and CEO Kerala Form 20",
+      "actual_votes_2024": 52626,
+      "vote_pct_2024": "33.87",
+      "source_url": "https://results.eci.gov.in/ResultAcByeNov2024/ConstituencywiseS1161.htm"
+    },
+    {
+      "index": 3,
+      "name": "LINDESH",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI by-election result page and CEO Kerala Form 20",
+      "actual_votes_2024": 240,
+      "vote_pct_2024": "0.15",
+      "source_url": "https://results.eci.gov.in/ResultAcByeNov2024/ConstituencywiseS1161.htm"
+    },
+    {
+      "index": 4,
+      "name": "K B SUDHEER",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI by-election result page and CEO Kerala Form 20",
+      "actual_votes_2024": 3920,
+      "vote_pct_2024": "2.52",
+      "source_url": "https://results.eci.gov.in/ResultAcByeNov2024/ConstituencywiseS1161.htm"
+    },
+    {
+      "index": 5,
+      "name": "N K HARIDASAN",
+      "party": "IND",
+      "alliance": "other",
+      "is_major_alliance": false,
+      "source": "ECI by-election result page and CEO Kerala Form 20",
+      "actual_votes_2024": 170,
+      "vote_pct_2024": "0.11",
+      "source_url": "https://results.eci.gov.in/ResultAcByeNov2024/ConstituencywiseS1161.htm"
+    }
+  ],
+  "booth_summary": {
+    "total_rows": 180,
+    "main_booths": 177,
+    "auxiliary_rows": 3,
+    "total_votes_in_candidate_columns": 154054,
+    "candidate_totals": [
+      64259,
+      33354,
+      52137,
+      230,
+      3909,
+      165
+    ],
+    "nota": 1027,
+    "rejected": 0,
+    "total_polled": 155081
+  },
+  "evm_summary": {
+    "candidate_totals": [
+      64259,
+      33354,
+      52137,
+      230,
+      3909,
+      165
+    ],
+    "valid_total": 154054,
+    "rejected": 0,
+    "nota": 1027,
+    "total": 155081,
+    "tendered": 0
+  },
+  "postal_ballot_summary": {
+    "candidate_totals": [
+      568,
+      255,
+      489,
+      10,
+      11,
+      5
+    ],
+    "valid_total": 1338,
+    "rejected": 141,
+    "nota": 7,
+    "total": 1486,
+    "tendered": 0
+  },
+  "final_summary": {
+    "candidate_totals": [
+      64827,
+      33609,
+      52626,
+      240,
+      3920,
+      170
+    ],
+    "valid_total": 155392,
+    "rejected": 141,
+    "nota": 1034,
+    "total": 156567,
+    "tendered": 0
+  },
+  "booths": [
+    {
+      "serial_no": 1,
+      "main": 1,
+      "is_aux": false,
+      "votes": [
+        415,
+        159,
+        333,
+        2,
+        5,
+        3
+      ],
+      "valid_total": 917,
+      "rejected": 0,
+      "nota": 8,
+      "total": 925,
+      "tendered": 0
+    },
+    {
+      "serial_no": 2,
+      "main": 2,
+      "is_aux": false,
+      "votes": [
+        473,
+        183,
+        210,
+        2,
+        27,
+        2
+      ],
+      "valid_total": 897,
+      "rejected": 0,
+      "nota": 6,
+      "total": 903,
+      "tendered": 0
+    },
+    {
+      "serial_no": 3,
+      "main": 3,
+      "is_aux": false,
+      "votes": [
+        495,
+        97,
+        389,
+        0,
+        56,
+        1
+      ],
+      "valid_total": 1038,
+      "rejected": 0,
+      "nota": 3,
+      "total": 1041,
+      "tendered": 0
+    },
+    {
+      "serial_no": 4,
+      "main": 4,
+      "is_aux": false,
+      "votes": [
+        545,
+        127,
+        356,
+        2,
+        22,
+        0
+      ],
+      "valid_total": 1052,
+      "rejected": 0,
+      "nota": 7,
+      "total": 1059,
+      "tendered": 0
+    },
+    {
+      "serial_no": 5,
+      "main": 5,
+      "is_aux": false,
+      "votes": [
+        332,
+        197,
+        478,
+        2,
+        24,
+        2
+      ],
+      "valid_total": 1035,
+      "rejected": 0,
+      "nota": 3,
+      "total": 1038,
+      "tendered": 0
+    },
+    {
+      "serial_no": 6,
+      "main": 6,
+      "is_aux": false,
+      "votes": [
+        440,
+        259,
+        232,
+        1,
+        16,
+        1
+      ],
+      "valid_total": 949,
+      "rejected": 0,
+      "nota": 5,
+      "total": 954,
+      "tendered": 0
+    },
+    {
+      "serial_no": 7,
+      "main": 7,
+      "is_aux": false,
+      "votes": [
+        538,
+        53,
+        459,
+        3,
+        47,
+        0
+      ],
+      "valid_total": 1100,
+      "rejected": 0,
+      "nota": 8,
+      "total": 1108,
+      "tendered": 0
+    },
+    {
+      "serial_no": 8,
+      "main": 8,
+      "is_aux": false,
+      "votes": [
+        468,
+        344,
+        204,
+        0,
+        6,
+        2
+      ],
+      "valid_total": 1024,
+      "rejected": 0,
+      "nota": 5,
+      "total": 1029,
+      "tendered": 0
+    },
+    {
+      "serial_no": 9,
+      "main": 9,
+      "is_aux": false,
+      "votes": [
+        337,
+        261,
+        151,
+        0,
+        9,
+        0
+      ],
+      "valid_total": 758,
+      "rejected": 0,
+      "nota": 6,
+      "total": 764,
+      "tendered": 0
+    },
+    {
+      "serial_no": 10,
+      "main": 10,
+      "is_aux": false,
+      "votes": [
+        407,
+        185,
+        376,
+        2,
+        46,
+        1
+      ],
+      "valid_total": 1017,
+      "rejected": 0,
+      "nota": 6,
+      "total": 1023,
+      "tendered": 0
+    },
+    {
+      "serial_no": 11,
+      "main": 11,
+      "is_aux": false,
+      "votes": [
+        552,
+        250,
+        242,
+        0,
+        34,
+        6
+      ],
+      "valid_total": 1084,
+      "rejected": 0,
+      "nota": 10,
+      "total": 1094,
+      "tendered": 0
+    },
+    {
+      "serial_no": 12,
+      "main": 12,
+      "is_aux": false,
+      "votes": [
+        402,
+        115,
+        298,
+        1,
+        11,
+        3
+      ],
+      "valid_total": 830,
+      "rejected": 0,
+      "nota": 4,
+      "total": 834,
+      "tendered": 0
+    },
+    {
+      "serial_no": 13,
+      "main": 13,
+      "is_aux": false,
+      "votes": [
+        434,
+        100,
+        252,
+        1,
+        16,
+        2
+      ],
+      "valid_total": 805,
+      "rejected": 0,
+      "nota": 4,
+      "total": 809,
+      "tendered": 0
+    },
+    {
+      "serial_no": 14,
+      "main": 14,
+      "is_aux": false,
+      "votes": [
+        272,
+        174,
+        240,
+        0,
+        6,
+        1
+      ],
+      "valid_total": 693,
+      "rejected": 0,
+      "nota": 5,
+      "total": 698,
+      "tendered": 0
+    },
+    {
+      "serial_no": 15,
+      "main": 15,
+      "is_aux": false,
+      "votes": [
+        549,
+        196,
+        190,
+        1,
+        15,
+        1
+      ],
+      "valid_total": 952,
+      "rejected": 0,
+      "nota": 3,
+      "total": 955,
+      "tendered": 0
+    },
+    {
+      "serial_no": 16,
+      "main": 16,
+      "is_aux": false,
+      "votes": [
+        509,
+        176,
+        294,
+        1,
+        25,
+        1
+      ],
+      "valid_total": 1006,
+      "rejected": 0,
+      "nota": 3,
+      "total": 1009,
+      "tendered": 0
+    },
+    {
+      "serial_no": 17,
+      "main": 17,
+      "is_aux": false,
+      "votes": [
+        369,
+        142,
+        527,
+        0,
+        28,
+        0
+      ],
+      "valid_total": 1066,
+      "rejected": 0,
+      "nota": 2,
+      "total": 1068,
+      "tendered": 0
+    },
+    {
+      "serial_no": 18,
+      "main": 18,
+      "is_aux": false,
+      "votes": [
+        191,
+        77,
+        262,
+        1,
+        9,
+        2
+      ],
+      "valid_total": 542,
+      "rejected": 0,
+      "nota": 2,
+      "total": 544,
+      "tendered": 0
+    },
+    {
+      "serial_no": 19,
+      "main": 18,
+      "is_aux": true,
+      "votes": [
+        209,
+        127,
+        245,
+        0,
+        8,
+        1
+      ],
+      "valid_total": 590,
+      "rejected": 0,
+      "nota": 3,
+      "total": 593,
+      "tendered": 0
+    },
+    {
+      "serial_no": 20,
+      "main": 19,
+      "is_aux": false,
+      "votes": [
+        529,
+        183,
+        251,
+        2,
+        5,
+        1
+      ],
+      "valid_total": 971,
+      "rejected": 0,
+      "nota": 5,
+      "total": 976,
+      "tendered": 0
+    },
+    {
+      "serial_no": 21,
+      "main": 20,
+      "is_aux": false,
+      "votes": [
+        534,
+        113,
+        251,
+        1,
+        30,
+        3
+      ],
+      "valid_total": 932,
+      "rejected": 0,
+      "nota": 2,
+      "total": 934,
+      "tendered": 0
+    },
+    {
+      "serial_no": 22,
+      "main": 21,
+      "is_aux": false,
+      "votes": [
+        227,
+        63,
+        224,
+        0,
+        17,
+        0
+      ],
+      "valid_total": 531,
+      "rejected": 0,
+      "nota": 5,
+      "total": 536,
+      "tendered": 0
+    },
+    {
+      "serial_no": 23,
+      "main": 21,
+      "is_aux": true,
+      "votes": [
+        272,
+        76,
+        210,
+        1,
+        15,
+        1
+      ],
+      "valid_total": 575,
+      "rejected": 0,
+      "nota": 3,
+      "total": 578,
+      "tendered": 0
+    },
+    {
+      "serial_no": 24,
+      "main": 22,
+      "is_aux": false,
+      "votes": [
+        372,
+        190,
+        233,
+        1,
+        18,
+        1
+      ],
+      "valid_total": 815,
+      "rejected": 0,
+      "nota": 2,
+      "total": 817,
+      "tendered": 0
+    },
+    {
+      "serial_no": 25,
+      "main": 23,
+      "is_aux": false,
+      "votes": [
+        431,
+        157,
+        403,
+        4,
+        18,
+        0
+      ],
+      "valid_total": 1013,
+      "rejected": 0,
+      "nota": 8,
+      "total": 1021,
+      "tendered": 0
+    },
+    {
+      "serial_no": 26,
+      "main": 24,
+      "is_aux": false,
+      "votes": [
+        420,
+        146,
+        288,
+        0,
+        5,
+        1
+      ],
+      "valid_total": 860,
+      "rejected": 0,
+      "nota": 3,
+      "total": 863,
+      "tendered": 0
+    },
+    {
+      "serial_no": 27,
+      "main": 25,
+      "is_aux": false,
+      "votes": [
+        590,
+        135,
+        198,
+        1,
+        6,
+        1
+      ],
+      "valid_total": 931,
+      "rejected": 0,
+      "nota": 5,
+      "total": 936,
+      "tendered": 0
+    },
+    {
+      "serial_no": 28,
+      "main": 26,
+      "is_aux": false,
+      "votes": [
+        480,
+        114,
+        215,
+        1,
+        8,
+        1
+      ],
+      "valid_total": 819,
+      "rejected": 0,
+      "nota": 1,
+      "total": 820,
+      "tendered": 0
+    },
+    {
+      "serial_no": 29,
+      "main": 27,
+      "is_aux": false,
+      "votes": [
+        437,
+        205,
+        241,
+        0,
+        59,
+        2
+      ],
+      "valid_total": 944,
+      "rejected": 0,
+      "nota": 7,
+      "total": 951,
+      "tendered": 0
+    },
+    {
+      "serial_no": 30,
+      "main": 28,
+      "is_aux": false,
+      "votes": [
+        370,
+        132,
+        220,
+        0,
+        46,
+        0
+      ],
+      "valid_total": 768,
+      "rejected": 0,
+      "nota": 4,
+      "total": 772,
+      "tendered": 0
+    },
+    {
+      "serial_no": 31,
+      "main": 29,
+      "is_aux": false,
+      "votes": [
+        486,
+        204,
+        233,
+        0,
+        9,
+        1
+      ],
+      "valid_total": 933,
+      "rejected": 0,
+      "nota": 8,
+      "total": 941,
+      "tendered": 0
+    },
+    {
+      "serial_no": 32,
+      "main": 30,
+      "is_aux": false,
+      "votes": [
+        502,
+        211,
+        290,
+        0,
+        37,
+        0
+      ],
+      "valid_total": 1040,
+      "rejected": 0,
+      "nota": 5,
+      "total": 1045,
+      "tendered": 0
+    },
+    {
+      "serial_no": 33,
+      "main": 31,
+      "is_aux": false,
+      "votes": [
+        444,
+        144,
+        328,
+        1,
+        11,
+        1
+      ],
+      "valid_total": 929,
+      "rejected": 0,
+      "nota": 7,
+      "total": 936,
+      "tendered": 0
+    },
+    {
+      "serial_no": 34,
+      "main": 32,
+      "is_aux": false,
+      "votes": [
+        432,
+        227,
+        189,
+        2,
+        25,
+        0
+      ],
+      "valid_total": 875,
+      "rejected": 0,
+      "nota": 12,
+      "total": 887,
+      "tendered": 0
+    },
+    {
+      "serial_no": 35,
+      "main": 33,
+      "is_aux": false,
+      "votes": [
+        438,
+        13,
+        380,
+        0,
+        51,
+        0
+      ],
+      "valid_total": 882,
+      "rejected": 0,
+      "nota": 3,
+      "total": 885,
+      "tendered": 0
+    },
+    {
+      "serial_no": 36,
+      "main": 34,
+      "is_aux": false,
+      "votes": [
+        452,
+        81,
+        367,
+        4,
+        50,
+        0
+      ],
+      "valid_total": 954,
+      "rejected": 0,
+      "nota": 8,
+      "total": 962,
+      "tendered": 0
+    },
+    {
+      "serial_no": 37,
+      "main": 35,
+      "is_aux": false,
+      "votes": [
+        417,
+        237,
+        362,
+        1,
+        52,
+        2
+      ],
+      "valid_total": 1071,
+      "rejected": 0,
+      "nota": 12,
+      "total": 1083,
+      "tendered": 0
+    },
+    {
+      "serial_no": 38,
+      "main": 36,
+      "is_aux": false,
+      "votes": [
+        443,
+        151,
+        219,
+        2,
+        15,
+        2
+      ],
+      "valid_total": 832,
+      "rejected": 0,
+      "nota": 11,
+      "total": 843,
+      "tendered": 0
+    },
+    {
+      "serial_no": 39,
+      "main": 37,
+      "is_aux": false,
+      "votes": [
+        424,
+        60,
+        318,
+        1,
+        38,
+        0
+      ],
+      "valid_total": 841,
+      "rejected": 0,
+      "nota": 3,
+      "total": 844,
+      "tendered": 0
+    },
+    {
+      "serial_no": 40,
+      "main": 38,
+      "is_aux": false,
+      "votes": [
+        317,
+        198,
+        133,
+        1,
+        13,
+        2
+      ],
+      "valid_total": 664,
+      "rejected": 0,
+      "nota": 10,
+      "total": 674,
+      "tendered": 0
+    },
+    {
+      "serial_no": 41,
+      "main": 39,
+      "is_aux": false,
+      "votes": [
+        288,
+        94,
+        221,
+        0,
+        16,
+        0
+      ],
+      "valid_total": 619,
+      "rejected": 0,
+      "nota": 5,
+      "total": 624,
+      "tendered": 0
+    },
+    {
+      "serial_no": 42,
+      "main": 40,
+      "is_aux": false,
+      "votes": [
+        267,
+        402,
+        163,
+        1,
+        71,
+        2
+      ],
+      "valid_total": 906,
+      "rejected": 0,
+      "nota": 4,
+      "total": 910,
+      "tendered": 0
+    },
+    {
+      "serial_no": 43,
+      "main": 41,
+      "is_aux": false,
+      "votes": [
+        282,
+        220,
+        175,
+        0,
+        80,
+        1
+      ],
+      "valid_total": 758,
+      "rejected": 0,
+      "nota": 1,
+      "total": 759,
+      "tendered": 0
+    },
+    {
+      "serial_no": 44,
+      "main": 42,
+      "is_aux": false,
+      "votes": [
+        422,
+        222,
+        353,
+        2,
+        39,
+        1
+      ],
+      "valid_total": 1039,
+      "rejected": 0,
+      "nota": 6,
+      "total": 1045,
+      "tendered": 0
+    },
+    {
+      "serial_no": 45,
+      "main": 43,
+      "is_aux": false,
+      "votes": [
+        289,
+        20,
+        247,
+        0,
+        52,
+        1
+      ],
+      "valid_total": 609,
+      "rejected": 0,
+      "nota": 3,
+      "total": 612,
+      "tendered": 0
+    },
+    {
+      "serial_no": 46,
+      "main": 44,
+      "is_aux": false,
+      "votes": [
+        338,
+        184,
+        242,
+        0,
+        45,
+        0
+      ],
+      "valid_total": 809,
+      "rejected": 0,
+      "nota": 6,
+      "total": 815,
+      "tendered": 0
+    },
+    {
+      "serial_no": 47,
+      "main": 45,
+      "is_aux": false,
+      "votes": [
+        301,
+        64,
+        183,
+        1,
+        21,
+        0
+      ],
+      "valid_total": 570,
+      "rejected": 0,
+      "nota": 5,
+      "total": 575,
+      "tendered": 0
+    },
+    {
+      "serial_no": 48,
+      "main": 45,
+      "is_aux": true,
+      "votes": [
+        315,
+        50,
+        242,
+        0,
+        28,
+        1
+      ],
+      "valid_total": 636,
+      "rejected": 0,
+      "nota": 2,
+      "total": 638,
+      "tendered": 0
+    },
+    {
+      "serial_no": 49,
+      "main": 46,
+      "is_aux": false,
+      "votes": [
+        394,
+        243,
+        331,
+        2,
+        18,
+        0
+      ],
+      "valid_total": 988,
+      "rejected": 0,
+      "nota": 12,
+      "total": 1000,
+      "tendered": 0
+    },
+    {
+      "serial_no": 50,
+      "main": 47,
+      "is_aux": false,
+      "votes": [
+        301,
+        185,
+        287,
+        0,
+        10,
+        0
+      ],
+      "valid_total": 783,
+      "rejected": 0,
+      "nota": 8,
+      "total": 791,
+      "tendered": 0
+    },
+    {
+      "serial_no": 51,
+      "main": 48,
+      "is_aux": false,
+      "votes": [
+        430,
+        220,
+        259,
+        2,
+        6,
+        0
+      ],
+      "valid_total": 917,
+      "rejected": 0,
+      "nota": 6,
+      "total": 923,
+      "tendered": 0
+    },
+    {
+      "serial_no": 52,
+      "main": 49,
+      "is_aux": false,
+      "votes": [
+        542,
+        270,
+        150,
+        2,
+        7,
+        1
+      ],
+      "valid_total": 972,
+      "rejected": 0,
+      "nota": 4,
+      "total": 976,
+      "tendered": 0
+    },
+    {
+      "serial_no": 53,
+      "main": 50,
+      "is_aux": false,
+      "votes": [
+        464,
+        458,
+        126,
+        0,
+        10,
+        2
+      ],
+      "valid_total": 1060,
+      "rejected": 0,
+      "nota": 8,
+      "total": 1068,
+      "tendered": 0
+    },
+    {
+      "serial_no": 54,
+      "main": 51,
+      "is_aux": false,
+      "votes": [
+        458,
+        229,
+        215,
+        0,
+        22,
+        0
+      ],
+      "valid_total": 924,
+      "rejected": 0,
+      "nota": 4,
+      "total": 928,
+      "tendered": 0
+    },
+    {
+      "serial_no": 55,
+      "main": 52,
+      "is_aux": false,
+      "votes": [
+        427,
+        188,
+        325,
+        4,
+        24,
+        2
+      ],
+      "valid_total": 970,
+      "rejected": 0,
+      "nota": 12,
+      "total": 982,
+      "tendered": 0
+    },
+    {
+      "serial_no": 56,
+      "main": 53,
+      "is_aux": false,
+      "votes": [
+        322,
+        144,
+        386,
+        5,
+        38,
+        1
+      ],
+      "valid_total": 896,
+      "rejected": 0,
+      "nota": 2,
+      "total": 898,
+      "tendered": 0
+    },
+    {
+      "serial_no": 57,
+      "main": 54,
+      "is_aux": false,
+      "votes": [
+        374,
+        135,
+        282,
+        2,
+        28,
+        1
+      ],
+      "valid_total": 822,
+      "rejected": 0,
+      "nota": 6,
+      "total": 828,
+      "tendered": 0
+    },
+    {
+      "serial_no": 58,
+      "main": 55,
+      "is_aux": false,
+      "votes": [
+        387,
+        321,
+        355,
+        1,
+        28,
+        2
+      ],
+      "valid_total": 1094,
+      "rejected": 0,
+      "nota": 6,
+      "total": 1100,
+      "tendered": 0
+    },
+    {
+      "serial_no": 59,
+      "main": 56,
+      "is_aux": false,
+      "votes": [
+        379,
+        259,
+        203,
+        0,
+        7,
+        0
+      ],
+      "valid_total": 848,
+      "rejected": 0,
+      "nota": 4,
+      "total": 852,
+      "tendered": 0
+    },
+    {
+      "serial_no": 60,
+      "main": 57,
+      "is_aux": false,
+      "votes": [
+        352,
+        61,
+        304,
+        1,
+        90,
+        0
+      ],
+      "valid_total": 808,
+      "rejected": 0,
+      "nota": 3,
+      "total": 811,
+      "tendered": 0
+    },
+    {
+      "serial_no": 61,
+      "main": 58,
+      "is_aux": false,
+      "votes": [
+        174,
+        119,
+        218,
+        1,
+        10,
+        1
+      ],
+      "valid_total": 523,
+      "rejected": 0,
+      "nota": 3,
+      "total": 526,
+      "tendered": 0
+    },
+    {
+      "serial_no": 62,
+      "main": 59,
+      "is_aux": false,
+      "votes": [
+        403,
+        96,
+        249,
+        0,
+        7,
+        1
+      ],
+      "valid_total": 756,
+      "rejected": 0,
+      "nota": 8,
+      "total": 764,
+      "tendered": 0
+    },
+    {
+      "serial_no": 63,
+      "main": 60,
+      "is_aux": false,
+      "votes": [
+        352,
+        44,
+        250,
+        1,
+        27,
+        0
+      ],
+      "valid_total": 674,
+      "rejected": 0,
+      "nota": 3,
+      "total": 677,
+      "tendered": 0
+    },
+    {
+      "serial_no": 64,
+      "main": 61,
+      "is_aux": false,
+      "votes": [
+        524,
+        119,
+        333,
+        1,
+        75,
+        0
+      ],
+      "valid_total": 1052,
+      "rejected": 0,
+      "nota": 11,
+      "total": 1063,
+      "tendered": 0
+    },
+    {
+      "serial_no": 65,
+      "main": 62,
+      "is_aux": false,
+      "votes": [
+        481,
+        163,
+        264,
+        1,
+        42,
+        0
+      ],
+      "valid_total": 951,
+      "rejected": 0,
+      "nota": 5,
+      "total": 956,
+      "tendered": 0
+    },
+    {
+      "serial_no": 66,
+      "main": 63,
+      "is_aux": false,
+      "votes": [
+        248,
+        138,
+        367,
+        2,
+        23,
+        0
+      ],
+      "valid_total": 778,
+      "rejected": 0,
+      "nota": 1,
+      "total": 779,
+      "tendered": 0
+    },
+    {
+      "serial_no": 67,
+      "main": 64,
+      "is_aux": false,
+      "votes": [
+        210,
+        123,
+        273,
+        1,
+        18,
+        4
+      ],
+      "valid_total": 629,
+      "rejected": 0,
+      "nota": 5,
+      "total": 634,
+      "tendered": 0
+    },
+    {
+      "serial_no": 68,
+      "main": 65,
+      "is_aux": false,
+      "votes": [
+        310,
+        211,
+        344,
+        1,
+        36,
+        0
+      ],
+      "valid_total": 902,
+      "rejected": 0,
+      "nota": 6,
+      "total": 908,
+      "tendered": 0
+    },
+    {
+      "serial_no": 69,
+      "main": 66,
+      "is_aux": false,
+      "votes": [
+        419,
+        229,
+        202,
+        0,
+        15,
+        1
+      ],
+      "valid_total": 866,
+      "rejected": 0,
+      "nota": 5,
+      "total": 871,
+      "tendered": 0
+    },
+    {
+      "serial_no": 70,
+      "main": 67,
+      "is_aux": false,
+      "votes": [
+        282,
+        143,
+        282,
+        3,
+        9,
+        1
+      ],
+      "valid_total": 720,
+      "rejected": 0,
+      "nota": 6,
+      "total": 726,
+      "tendered": 0
+    },
+    {
+      "serial_no": 71,
+      "main": 68,
+      "is_aux": false,
+      "votes": [
+        303,
+        179,
+        235,
+        2,
+        8,
+        1
+      ],
+      "valid_total": 728,
+      "rejected": 0,
+      "nota": 6,
+      "total": 734,
+      "tendered": 0
+    },
+    {
+      "serial_no": 72,
+      "main": 69,
+      "is_aux": false,
+      "votes": [
+        395,
+        79,
+        325,
+        1,
+        28,
+        1
+      ],
+      "valid_total": 829,
+      "rejected": 0,
+      "nota": 4,
+      "total": 833,
+      "tendered": 0
+    },
+    {
+      "serial_no": 73,
+      "main": 70,
+      "is_aux": false,
+      "votes": [
+        355,
+        197,
+        236,
+        1,
+        19,
+        0
+      ],
+      "valid_total": 808,
+      "rejected": 0,
+      "nota": 5,
+      "total": 813,
+      "tendered": 0
+    },
+    {
+      "serial_no": 74,
+      "main": 71,
+      "is_aux": false,
+      "votes": [
+        508,
+        95,
+        326,
+        0,
+        43,
+        1
+      ],
+      "valid_total": 973,
+      "rejected": 0,
+      "nota": 4,
+      "total": 977,
+      "tendered": 0
+    },
+    {
+      "serial_no": 75,
+      "main": 72,
+      "is_aux": false,
+      "votes": [
+        296,
+        87,
+        260,
+        0,
+        37,
+        0
+      ],
+      "valid_total": 680,
+      "rejected": 0,
+      "nota": 4,
+      "total": 684,
+      "tendered": 0
+    },
+    {
+      "serial_no": 76,
+      "main": 73,
+      "is_aux": false,
+      "votes": [
+        289,
+        172,
+        185,
+        1,
+        7,
+        2
+      ],
+      "valid_total": 656,
+      "rejected": 0,
+      "nota": 9,
+      "total": 665,
+      "tendered": 0
+    },
+    {
+      "serial_no": 77,
+      "main": 74,
+      "is_aux": false,
+      "votes": [
+        281,
+        145,
+        351,
+        5,
+        12,
+        0
+      ],
+      "valid_total": 794,
+      "rejected": 0,
+      "nota": 9,
+      "total": 803,
+      "tendered": 0
+    },
+    {
+      "serial_no": 78,
+      "main": 75,
+      "is_aux": false,
+      "votes": [
+        328,
+        152,
+        302,
+        1,
+        10,
+        0
+      ],
+      "valid_total": 793,
+      "rejected": 0,
+      "nota": 2,
+      "total": 795,
+      "tendered": 0
+    },
+    {
+      "serial_no": 79,
+      "main": 76,
+      "is_aux": false,
+      "votes": [
+        378,
+        122,
+        281,
+        1,
+        29,
+        0
+      ],
+      "valid_total": 811,
+      "rejected": 0,
+      "nota": 5,
+      "total": 816,
+      "tendered": 0
+    },
+    {
+      "serial_no": 80,
+      "main": 77,
+      "is_aux": false,
+      "votes": [
+        436,
+        145,
+        407,
+        1,
+        13,
+        0
+      ],
+      "valid_total": 1002,
+      "rejected": 0,
+      "nota": 6,
+      "total": 1008,
+      "tendered": 0
+    },
+    {
+      "serial_no": 81,
+      "main": 78,
+      "is_aux": false,
+      "votes": [
+        439,
+        146,
+        423,
+        0,
+        13,
+        1
+      ],
+      "valid_total": 1022,
+      "rejected": 0,
+      "nota": 4,
+      "total": 1026,
+      "tendered": 0
+    },
+    {
+      "serial_no": 82,
+      "main": 79,
+      "is_aux": false,
+      "votes": [
+        208,
+        121,
+        333,
+        3,
+        9,
+        0
+      ],
+      "valid_total": 674,
+      "rejected": 0,
+      "nota": 4,
+      "total": 678,
+      "tendered": 0
+    },
+    {
+      "serial_no": 83,
+      "main": 80,
+      "is_aux": false,
+      "votes": [
+        279,
+        160,
+        301,
+        3,
+        15,
+        0
+      ],
+      "valid_total": 758,
+      "rejected": 0,
+      "nota": 11,
+      "total": 769,
+      "tendered": 0
+    },
+    {
+      "serial_no": 84,
+      "main": 81,
+      "is_aux": false,
+      "votes": [
+        344,
+        174,
+        424,
+        0,
+        14,
+        1
+      ],
+      "valid_total": 957,
+      "rejected": 0,
+      "nota": 3,
+      "total": 960,
+      "tendered": 0
+    },
+    {
+      "serial_no": 85,
+      "main": 82,
+      "is_aux": false,
+      "votes": [
+        342,
+        29,
+        362,
+        2,
+        48,
+        0
+      ],
+      "valid_total": 783,
+      "rejected": 0,
+      "nota": 4,
+      "total": 787,
+      "tendered": 0
+    },
+    {
+      "serial_no": 86,
+      "main": 83,
+      "is_aux": false,
+      "votes": [
+        310,
+        134,
+        288,
+        1,
+        44,
+        0
+      ],
+      "valid_total": 777,
+      "rejected": 0,
+      "nota": 4,
+      "total": 781,
+      "tendered": 0
+    },
+    {
+      "serial_no": 87,
+      "main": 84,
+      "is_aux": false,
+      "votes": [
+        241,
+        130,
+        294,
+        1,
+        31,
+        1
+      ],
+      "valid_total": 698,
+      "rejected": 0,
+      "nota": 5,
+      "total": 703,
+      "tendered": 0
+    },
+    {
+      "serial_no": 88,
+      "main": 85,
+      "is_aux": false,
+      "votes": [
+        287,
+        219,
+        219,
+        2,
+        10,
+        2
+      ],
+      "valid_total": 739,
+      "rejected": 0,
+      "nota": 2,
+      "total": 741,
+      "tendered": 0
+    },
+    {
+      "serial_no": 89,
+      "main": 86,
+      "is_aux": false,
+      "votes": [
+        312,
+        232,
+        286,
+        0,
+        14,
+        2
+      ],
+      "valid_total": 846,
+      "rejected": 0,
+      "nota": 5,
+      "total": 851,
+      "tendered": 0
+    },
+    {
+      "serial_no": 90,
+      "main": 87,
+      "is_aux": false,
+      "votes": [
+        338,
+        229,
+        346,
+        0,
+        23,
+        0
+      ],
+      "valid_total": 936,
+      "rejected": 0,
+      "nota": 5,
+      "total": 941,
+      "tendered": 0
+    },
+    {
+      "serial_no": 91,
+      "main": 88,
+      "is_aux": false,
+      "votes": [
+        409,
+        297,
+        305,
+        2,
+        7,
+        1
+      ],
+      "valid_total": 1021,
+      "rejected": 0,
+      "nota": 10,
+      "total": 1031,
+      "tendered": 0
+    },
+    {
+      "serial_no": 92,
+      "main": 89,
+      "is_aux": false,
+      "votes": [
+        309,
+        147,
+        363,
+        0,
+        43,
+        1
+      ],
+      "valid_total": 863,
+      "rejected": 0,
+      "nota": 1,
+      "total": 864,
+      "tendered": 0
+    },
+    {
+      "serial_no": 93,
+      "main": 90,
+      "is_aux": false,
+      "votes": [
+        286,
+        173,
+        277,
+        1,
+        3,
+        1
+      ],
+      "valid_total": 741,
+      "rejected": 0,
+      "nota": 4,
+      "total": 745,
+      "tendered": 0
+    },
+    {
+      "serial_no": 94,
+      "main": 91,
+      "is_aux": false,
+      "votes": [
+        362,
+        155,
+        197,
+        1,
+        10,
+        0
+      ],
+      "valid_total": 725,
+      "rejected": 0,
+      "nota": 2,
+      "total": 727,
+      "tendered": 0
+    },
+    {
+      "serial_no": 95,
+      "main": 92,
+      "is_aux": false,
+      "votes": [
+        298,
+        53,
+        351,
+        4,
+        14,
+        1
+      ],
+      "valid_total": 721,
+      "rejected": 0,
+      "nota": 2,
+      "total": 723,
+      "tendered": 0
+    },
+    {
+      "serial_no": 96,
+      "main": 93,
+      "is_aux": false,
+      "votes": [
+        358,
+        106,
+        373,
+        3,
+        81,
+        0
+      ],
+      "valid_total": 921,
+      "rejected": 0,
+      "nota": 6,
+      "total": 927,
+      "tendered": 0
+    },
+    {
+      "serial_no": 97,
+      "main": 94,
+      "is_aux": false,
+      "votes": [
+        264,
+        166,
+        236,
+        2,
+        34,
+        1
+      ],
+      "valid_total": 703,
+      "rejected": 0,
+      "nota": 3,
+      "total": 706,
+      "tendered": 0
+    },
+    {
+      "serial_no": 98,
+      "main": 95,
+      "is_aux": false,
+      "votes": [
+        419,
+        44,
+        374,
+        1,
+        83,
+        0
+      ],
+      "valid_total": 921,
+      "rejected": 0,
+      "nota": 6,
+      "total": 927,
+      "tendered": 0
+    },
+    {
+      "serial_no": 99,
+      "main": 96,
+      "is_aux": false,
+      "votes": [
+        360,
+        79,
+        355,
+        2,
+        42,
+        2
+      ],
+      "valid_total": 840,
+      "rejected": 0,
+      "nota": 5,
+      "total": 845,
+      "tendered": 0
+    },
+    {
+      "serial_no": 100,
+      "main": 97,
+      "is_aux": false,
+      "votes": [
+        397,
+        284,
+        296,
+        2,
+        4,
+        1
+      ],
+      "valid_total": 984,
+      "rejected": 0,
+      "nota": 10,
+      "total": 994,
+      "tendered": 0
+    },
+    {
+      "serial_no": 101,
+      "main": 98,
+      "is_aux": false,
+      "votes": [
+        283,
+        208,
+        251,
+        2,
+        5,
+        1
+      ],
+      "valid_total": 750,
+      "rejected": 0,
+      "nota": 4,
+      "total": 754,
+      "tendered": 0
+    },
+    {
+      "serial_no": 102,
+      "main": 99,
+      "is_aux": false,
+      "votes": [
+        440,
+        195,
+        219,
+        1,
+        5,
+        2
+      ],
+      "valid_total": 862,
+      "rejected": 0,
+      "nota": 15,
+      "total": 877,
+      "tendered": 0
+    },
+    {
+      "serial_no": 103,
+      "main": 100,
+      "is_aux": false,
+      "votes": [
+        279,
+        384,
+        252,
+        0,
+        7,
+        0
+      ],
+      "valid_total": 922,
+      "rejected": 0,
+      "nota": 7,
+      "total": 929,
+      "tendered": 0
+    },
+    {
+      "serial_no": 104,
+      "main": 101,
+      "is_aux": false,
+      "votes": [
+        260,
+        272,
+        195,
+        1,
+        6,
+        0
+      ],
+      "valid_total": 734,
+      "rejected": 0,
+      "nota": 7,
+      "total": 741,
+      "tendered": 0
+    },
+    {
+      "serial_no": 105,
+      "main": 102,
+      "is_aux": false,
+      "votes": [
+        419,
+        176,
+        328,
+        0,
+        9,
+        1
+      ],
+      "valid_total": 933,
+      "rejected": 0,
+      "nota": 7,
+      "total": 940,
+      "tendered": 0
+    },
+    {
+      "serial_no": 106,
+      "main": 103,
+      "is_aux": false,
+      "votes": [
+        322,
+        299,
+        220,
+        3,
+        4,
+        1
+      ],
+      "valid_total": 849,
+      "rejected": 0,
+      "nota": 6,
+      "total": 855,
+      "tendered": 0
+    },
+    {
+      "serial_no": 107,
+      "main": 104,
+      "is_aux": false,
+      "votes": [
+        441,
+        237,
+        252,
+        1,
+        5,
+        0
+      ],
+      "valid_total": 936,
+      "rejected": 0,
+      "nota": 2,
+      "total": 938,
+      "tendered": 0
+    },
+    {
+      "serial_no": 108,
+      "main": 105,
+      "is_aux": false,
+      "votes": [
+        425,
+        148,
+        382,
+        2,
+        1,
+        0
+      ],
+      "valid_total": 958,
+      "rejected": 0,
+      "nota": 4,
+      "total": 962,
+      "tendered": 0
+    },
+    {
+      "serial_no": 109,
+      "main": 106,
+      "is_aux": false,
+      "votes": [
+        305,
+        355,
+        323,
+        3,
+        4,
+        0
+      ],
+      "valid_total": 990,
+      "rejected": 0,
+      "nota": 7,
+      "total": 997,
+      "tendered": 0
+    },
+    {
+      "serial_no": 110,
+      "main": 107,
+      "is_aux": false,
+      "votes": [
+        335,
+        262,
+        289,
+        1,
+        8,
+        3
+      ],
+      "valid_total": 898,
+      "rejected": 0,
+      "nota": 6,
+      "total": 904,
+      "tendered": 0
+    },
+    {
+      "serial_no": 111,
+      "main": 108,
+      "is_aux": false,
+      "votes": [
+        240,
+        244,
+        220,
+        2,
+        8,
+        1
+      ],
+      "valid_total": 715,
+      "rejected": 0,
+      "nota": 6,
+      "total": 721,
+      "tendered": 0
+    },
+    {
+      "serial_no": 112,
+      "main": 109,
+      "is_aux": false,
+      "votes": [
+        440,
+        99,
+        354,
+        3,
+        11,
+        1
+      ],
+      "valid_total": 908,
+      "rejected": 0,
+      "nota": 4,
+      "total": 912,
+      "tendered": 0
+    },
+    {
+      "serial_no": 113,
+      "main": 110,
+      "is_aux": false,
+      "votes": [
+        249,
+        302,
+        341,
+        2,
+        26,
+        3
+      ],
+      "valid_total": 923,
+      "rejected": 0,
+      "nota": 3,
+      "total": 926,
+      "tendered": 0
+    },
+    {
+      "serial_no": 114,
+      "main": 111,
+      "is_aux": false,
+      "votes": [
+        319,
+        193,
+        292,
+        2,
+        36,
+        0
+      ],
+      "valid_total": 842,
+      "rejected": 0,
+      "nota": 4,
+      "total": 846,
+      "tendered": 0
+    },
+    {
+      "serial_no": 115,
+      "main": 112,
+      "is_aux": false,
+      "votes": [
+        250,
+        215,
+        232,
+        2,
+        46,
+        1
+      ],
+      "valid_total": 746,
+      "rejected": 0,
+      "nota": 3,
+      "total": 749,
+      "tendered": 0
+    },
+    {
+      "serial_no": 116,
+      "main": 113,
+      "is_aux": false,
+      "votes": [
+        378,
+        196,
+        352,
+        0,
+        14,
+        0
+      ],
+      "valid_total": 940,
+      "rejected": 0,
+      "nota": 7,
+      "total": 947,
+      "tendered": 0
+    },
+    {
+      "serial_no": 117,
+      "main": 114,
+      "is_aux": false,
+      "votes": [
+        459,
+        216,
+        423,
+        2,
+        12,
+        1
+      ],
+      "valid_total": 1113,
+      "rejected": 0,
+      "nota": 16,
+      "total": 1129,
+      "tendered": 0
+    },
+    {
+      "serial_no": 118,
+      "main": 115,
+      "is_aux": false,
+      "votes": [
+        397,
+        207,
+        256,
+        0,
+        10,
+        2
+      ],
+      "valid_total": 872,
+      "rejected": 0,
+      "nota": 1,
+      "total": 873,
+      "tendered": 0
+    },
+    {
+      "serial_no": 119,
+      "main": 116,
+      "is_aux": false,
+      "votes": [
+        257,
+        259,
+        168,
+        1,
+        7,
+        0
+      ],
+      "valid_total": 692,
+      "rejected": 0,
+      "nota": 4,
+      "total": 696,
+      "tendered": 0
+    },
+    {
+      "serial_no": 120,
+      "main": 117,
+      "is_aux": false,
+      "votes": [
+        442,
+        338,
+        162,
+        0,
+        2,
+        3
+      ],
+      "valid_total": 947,
+      "rejected": 0,
+      "nota": 7,
+      "total": 954,
+      "tendered": 0
+    },
+    {
+      "serial_no": 121,
+      "main": 118,
+      "is_aux": false,
+      "votes": [
+        288,
+        354,
+        348,
+        1,
+        4,
+        2
+      ],
+      "valid_total": 997,
+      "rejected": 0,
+      "nota": 6,
+      "total": 1003,
+      "tendered": 0
+    },
+    {
+      "serial_no": 122,
+      "main": 119,
+      "is_aux": false,
+      "votes": [
+        327,
+        288,
+        276,
+        5,
+        5,
+        0
+      ],
+      "valid_total": 901,
+      "rejected": 0,
+      "nota": 8,
+      "total": 909,
+      "tendered": 0
+    },
+    {
+      "serial_no": 123,
+      "main": 120,
+      "is_aux": false,
+      "votes": [
+        274,
+        293,
+        301,
+        4,
+        5,
+        0
+      ],
+      "valid_total": 877,
+      "rejected": 0,
+      "nota": 3,
+      "total": 880,
+      "tendered": 0
+    },
+    {
+      "serial_no": 124,
+      "main": 121,
+      "is_aux": false,
+      "votes": [
+        233,
+        394,
+        363,
+        3,
+        11,
+        1
+      ],
+      "valid_total": 1005,
+      "rejected": 0,
+      "nota": 7,
+      "total": 1012,
+      "tendered": 0
+    },
+    {
+      "serial_no": 125,
+      "main": 122,
+      "is_aux": false,
+      "votes": [
+        368,
+        302,
+        286,
+        3,
+        1,
+        0
+      ],
+      "valid_total": 960,
+      "rejected": 0,
+      "nota": 8,
+      "total": 968,
+      "tendered": 0
+    },
+    {
+      "serial_no": 126,
+      "main": 123,
+      "is_aux": false,
+      "votes": [
+        383,
+        447,
+        160,
+        2,
+        6,
+        2
+      ],
+      "valid_total": 1000,
+      "rejected": 0,
+      "nota": 9,
+      "total": 1009,
+      "tendered": 0
+    },
+    {
+      "serial_no": 127,
+      "main": 124,
+      "is_aux": false,
+      "votes": [
+        169,
+        259,
+        161,
+        0,
+        2,
+        0
+      ],
+      "valid_total": 591,
+      "rejected": 0,
+      "nota": 3,
+      "total": 594,
+      "tendered": 0
+    },
+    {
+      "serial_no": 128,
+      "main": 125,
+      "is_aux": false,
+      "votes": [
+        260,
+        242,
+        232,
+        0,
+        14,
+        0
+      ],
+      "valid_total": 748,
+      "rejected": 0,
+      "nota": 6,
+      "total": 754,
+      "tendered": 0
+    },
+    {
+      "serial_no": 129,
+      "main": 126,
+      "is_aux": false,
+      "votes": [
+        404,
+        221,
+        351,
+        1,
+        13,
+        0
+      ],
+      "valid_total": 990,
+      "rejected": 0,
+      "nota": 7,
+      "total": 997,
+      "tendered": 0
+    },
+    {
+      "serial_no": 130,
+      "main": 127,
+      "is_aux": false,
+      "votes": [
+        375,
+        255,
+        352,
+        1,
+        17,
+        0
+      ],
+      "valid_total": 1000,
+      "rejected": 0,
+      "nota": 5,
+      "total": 1005,
+      "tendered": 0
+    },
+    {
+      "serial_no": 131,
+      "main": 128,
+      "is_aux": false,
+      "votes": [
+        245,
+        261,
+        262,
+        1,
+        9,
+        2
+      ],
+      "valid_total": 780,
+      "rejected": 0,
+      "nota": 7,
+      "total": 787,
+      "tendered": 0
+    },
+    {
+      "serial_no": 132,
+      "main": 129,
+      "is_aux": false,
+      "votes": [
+        220,
+        171,
+        199,
+        2,
+        10,
+        0
+      ],
+      "valid_total": 602,
+      "rejected": 0,
+      "nota": 5,
+      "total": 607,
+      "tendered": 0
+    },
+    {
+      "serial_no": 133,
+      "main": 130,
+      "is_aux": false,
+      "votes": [
+        252,
+        231,
+        255,
+        0,
+        6,
+        1
+      ],
+      "valid_total": 745,
+      "rejected": 0,
+      "nota": 5,
+      "total": 750,
+      "tendered": 0
+    },
+    {
+      "serial_no": 134,
+      "main": 131,
+      "is_aux": false,
+      "votes": [
+        364,
+        379,
+        277,
+        1,
+        4,
+        2
+      ],
+      "valid_total": 1027,
+      "rejected": 0,
+      "nota": 8,
+      "total": 1035,
+      "tendered": 0
+    },
+    {
+      "serial_no": 135,
+      "main": 132,
+      "is_aux": false,
+      "votes": [
+        402,
+        253,
+        369,
+        2,
+        8,
+        1
+      ],
+      "valid_total": 1035,
+      "rejected": 0,
+      "nota": 4,
+      "total": 1039,
+      "tendered": 0
+    },
+    {
+      "serial_no": 136,
+      "main": 133,
+      "is_aux": false,
+      "votes": [
+        439,
+        231,
+        233,
+        2,
+        22,
+        0
+      ],
+      "valid_total": 927,
+      "rejected": 0,
+      "nota": 3,
+      "total": 930,
+      "tendered": 0
+    },
+    {
+      "serial_no": 137,
+      "main": 134,
+      "is_aux": false,
+      "votes": [
+        337,
+        214,
+        321,
+        2,
+        20,
+        2
+      ],
+      "valid_total": 896,
+      "rejected": 0,
+      "nota": 8,
+      "total": 904,
+      "tendered": 0
+    },
+    {
+      "serial_no": 138,
+      "main": 135,
+      "is_aux": false,
+      "votes": [
+        426,
+        200,
+        240,
+        2,
+        11,
+        3
+      ],
+      "valid_total": 882,
+      "rejected": 0,
+      "nota": 2,
+      "total": 884,
+      "tendered": 0
+    },
+    {
+      "serial_no": 139,
+      "main": 136,
+      "is_aux": false,
+      "votes": [
+        325,
+        263,
+        223,
+        0,
+        13,
+        0
+      ],
+      "valid_total": 824,
+      "rejected": 0,
+      "nota": 2,
+      "total": 826,
+      "tendered": 0
+    },
+    {
+      "serial_no": 140,
+      "main": 137,
+      "is_aux": false,
+      "votes": [
+        507,
+        264,
+        269,
+        2,
+        5,
+        1
+      ],
+      "valid_total": 1048,
+      "rejected": 0,
+      "nota": 10,
+      "total": 1058,
+      "tendered": 0
+    },
+    {
+      "serial_no": 141,
+      "main": 138,
+      "is_aux": false,
+      "votes": [
+        363,
+        106,
+        534,
+        1,
+        18,
+        0
+      ],
+      "valid_total": 1022,
+      "rejected": 0,
+      "nota": 3,
+      "total": 1025,
+      "tendered": 0
+    },
+    {
+      "serial_no": 142,
+      "main": 139,
+      "is_aux": false,
+      "votes": [
+        347,
+        41,
+        288,
+        0,
+        13,
+        0
+      ],
+      "valid_total": 689,
+      "rejected": 0,
+      "nota": 8,
+      "total": 697,
+      "tendered": 0
+    },
+    {
+      "serial_no": 143,
+      "main": 140,
+      "is_aux": false,
+      "votes": [
+        397,
+        136,
+        259,
+        0,
+        7,
+        0
+      ],
+      "valid_total": 799,
+      "rejected": 0,
+      "nota": 8,
+      "total": 807,
+      "tendered": 0
+    },
+    {
+      "serial_no": 144,
+      "main": 141,
+      "is_aux": false,
+      "votes": [
+        273,
+        305,
+        415,
+        2,
+        15,
+        1
+      ],
+      "valid_total": 1011,
+      "rejected": 0,
+      "nota": 8,
+      "total": 1019,
+      "tendered": 0
+    },
+    {
+      "serial_no": 145,
+      "main": 142,
+      "is_aux": false,
+      "votes": [
+        168,
+        108,
+        454,
+        1,
+        29,
+        1
+      ],
+      "valid_total": 761,
+      "rejected": 0,
+      "nota": 3,
+      "total": 764,
+      "tendered": 0
+    },
+    {
+      "serial_no": 146,
+      "main": 143,
+      "is_aux": false,
+      "votes": [
+        190,
+        50,
+        363,
+        1,
+        13,
+        0
+      ],
+      "valid_total": 617,
+      "rejected": 0,
+      "nota": 2,
+      "total": 619,
+      "tendered": 0
+    },
+    {
+      "serial_no": 147,
+      "main": 144,
+      "is_aux": false,
+      "votes": [
+        428,
+        143,
+        320,
+        1,
+        64,
+        0
+      ],
+      "valid_total": 956,
+      "rejected": 0,
+      "nota": 7,
+      "total": 963,
+      "tendered": 0
+    },
+    {
+      "serial_no": 148,
+      "main": 145,
+      "is_aux": false,
+      "votes": [
+        283,
+        155,
+        267,
+        0,
+        27,
+        0
+      ],
+      "valid_total": 732,
+      "rejected": 0,
+      "nota": 4,
+      "total": 736,
+      "tendered": 0
+    },
+    {
+      "serial_no": 149,
+      "main": 146,
+      "is_aux": false,
+      "votes": [
+        303,
+        201,
+        417,
+        4,
+        21,
+        1
+      ],
+      "valid_total": 947,
+      "rejected": 0,
+      "nota": 7,
+      "total": 954,
+      "tendered": 0
+    },
+    {
+      "serial_no": 150,
+      "main": 147,
+      "is_aux": false,
+      "votes": [
+        265,
+        226,
+        365,
+        0,
+        39,
+        0
+      ],
+      "valid_total": 895,
+      "rejected": 0,
+      "nota": 9,
+      "total": 904,
+      "tendered": 0
+    },
+    {
+      "serial_no": 151,
+      "main": 148,
+      "is_aux": false,
+      "votes": [
+        222,
+        139,
+        214,
+        1,
+        7,
+        3
+      ],
+      "valid_total": 586,
+      "rejected": 0,
+      "nota": 2,
+      "total": 588,
+      "tendered": 0
+    },
+    {
+      "serial_no": 152,
+      "main": 149,
+      "is_aux": false,
+      "votes": [
+        354,
+        211,
+        329,
+        3,
+        9,
+        0
+      ],
+      "valid_total": 906,
+      "rejected": 0,
+      "nota": 5,
+      "total": 911,
+      "tendered": 0
+    },
+    {
+      "serial_no": 153,
+      "main": 150,
+      "is_aux": false,
+      "votes": [
+        385,
+        269,
+        280,
+        2,
+        8,
+        2
+      ],
+      "valid_total": 946,
+      "rejected": 0,
+      "nota": 11,
+      "total": 957,
+      "tendered": 0
+    },
+    {
+      "serial_no": 154,
+      "main": 151,
+      "is_aux": false,
+      "votes": [
+        238,
+        182,
+        285,
+        1,
+        27,
+        0
+      ],
+      "valid_total": 733,
+      "rejected": 0,
+      "nota": 8,
+      "total": 741,
+      "tendered": 0
+    },
+    {
+      "serial_no": 155,
+      "main": 152,
+      "is_aux": false,
+      "votes": [
+        308,
+        342,
+        350,
+        2,
+        21,
+        4
+      ],
+      "valid_total": 1027,
+      "rejected": 0,
+      "nota": 12,
+      "total": 1039,
+      "tendered": 0
+    },
+    {
+      "serial_no": 156,
+      "main": 153,
+      "is_aux": false,
+      "votes": [
+        266,
+        273,
+        416,
+        1,
+        12,
+        3
+      ],
+      "valid_total": 971,
+      "rejected": 0,
+      "nota": 6,
+      "total": 977,
+      "tendered": 0
+    },
+    {
+      "serial_no": 157,
+      "main": 154,
+      "is_aux": false,
+      "votes": [
+        339,
+        186,
+        251,
+        1,
+        21,
+        1
+      ],
+      "valid_total": 799,
+      "rejected": 0,
+      "nota": 4,
+      "total": 803,
+      "tendered": 0
+    },
+    {
+      "serial_no": 158,
+      "main": 155,
+      "is_aux": false,
+      "votes": [
+        384,
+        153,
+        185,
+        1,
+        7,
+        3
+      ],
+      "valid_total": 733,
+      "rejected": 0,
+      "nota": 3,
+      "total": 736,
+      "tendered": 0
+    },
+    {
+      "serial_no": 159,
+      "main": 156,
+      "is_aux": false,
+      "votes": [
+        393,
+        181,
+        415,
+        1,
+        25,
+        1
+      ],
+      "valid_total": 1016,
+      "rejected": 0,
+      "nota": 3,
+      "total": 1019,
+      "tendered": 0
+    },
+    {
+      "serial_no": 160,
+      "main": 157,
+      "is_aux": false,
+      "votes": [
+        247,
+        183,
+        261,
+        0,
+        18,
+        0
+      ],
+      "valid_total": 709,
+      "rejected": 0,
+      "nota": 4,
+      "total": 713,
+      "tendered": 0
+    },
+    {
+      "serial_no": 161,
+      "main": 158,
+      "is_aux": false,
+      "votes": [
+        256,
+        261,
+        269,
+        1,
+        11,
+        1
+      ],
+      "valid_total": 799,
+      "rejected": 0,
+      "nota": 5,
+      "total": 804,
+      "tendered": 0
+    },
+    {
+      "serial_no": 162,
+      "main": 159,
+      "is_aux": false,
+      "votes": [
+        472,
+        308,
+        184,
+        3,
+        13,
+        0
+      ],
+      "valid_total": 980,
+      "rejected": 0,
+      "nota": 4,
+      "total": 984,
+      "tendered": 0
+    },
+    {
+      "serial_no": 163,
+      "main": 160,
+      "is_aux": false,
+      "votes": [
+        214,
+        346,
+        277,
+        1,
+        18,
+        2
+      ],
+      "valid_total": 858,
+      "rejected": 0,
+      "nota": 11,
+      "total": 869,
+      "tendered": 0
+    },
+    {
+      "serial_no": 164,
+      "main": 161,
+      "is_aux": false,
+      "votes": [
+        296,
+        103,
+        209,
+        3,
+        43,
+        2
+      ],
+      "valid_total": 656,
+      "rejected": 0,
+      "nota": 8,
+      "total": 664,
+      "tendered": 0
+    },
+    {
+      "serial_no": 165,
+      "main": 162,
+      "is_aux": false,
+      "votes": [
+        406,
+        260,
+        309,
+        2,
+        16,
+        3
+      ],
+      "valid_total": 996,
+      "rejected": 0,
+      "nota": 3,
+      "total": 999,
+      "tendered": 0
+    },
+    {
+      "serial_no": 166,
+      "main": 163,
+      "is_aux": false,
+      "votes": [
+        277,
+        181,
+        194,
+        1,
+        4,
+        0
+      ],
+      "valid_total": 657,
+      "rejected": 0,
+      "nota": 7,
+      "total": 664,
+      "tendered": 0
+    },
+    {
+      "serial_no": 167,
+      "main": 164,
+      "is_aux": false,
+      "votes": [
+        497,
+        129,
+        176,
+        1,
+        9,
+        1
+      ],
+      "valid_total": 813,
+      "rejected": 0,
+      "nota": 2,
+      "total": 815,
+      "tendered": 0
+    },
+    {
+      "serial_no": 168,
+      "main": 165,
+      "is_aux": false,
+      "votes": [
+        317,
+        91,
+        471,
+        1,
+        45,
+        0
+      ],
+      "valid_total": 925,
+      "rejected": 0,
+      "nota": 9,
+      "total": 934,
+      "tendered": 0
+    },
+    {
+      "serial_no": 169,
+      "main": 166,
+      "is_aux": false,
+      "votes": [
+        225,
+        93,
+        560,
+        1,
+        116,
+        2
+      ],
+      "valid_total": 997,
+      "rejected": 0,
+      "nota": 10,
+      "total": 1007,
+      "tendered": 0
+    },
+    {
+      "serial_no": 170,
+      "main": 167,
+      "is_aux": false,
+      "votes": [
+        339,
+        99,
+        230,
+        0,
+        8,
+        0
+      ],
+      "valid_total": 676,
+      "rejected": 0,
+      "nota": 5,
+      "total": 681,
+      "tendered": 0
+    },
+    {
+      "serial_no": 171,
+      "main": 168,
+      "is_aux": false,
+      "votes": [
+        274,
+        268,
+        300,
+        0,
+        17,
+        0
+      ],
+      "valid_total": 859,
+      "rejected": 0,
+      "nota": 8,
+      "total": 867,
+      "tendered": 0
+    },
+    {
+      "serial_no": 172,
+      "main": 169,
+      "is_aux": false,
+      "votes": [
+        442,
+        156,
+        386,
+        3,
+        38,
+        1
+      ],
+      "valid_total": 1026,
+      "rejected": 0,
+      "nota": 11,
+      "total": 1037,
+      "tendered": 0
+    },
+    {
+      "serial_no": 173,
+      "main": 170,
+      "is_aux": false,
+      "votes": [
+        432,
+        135,
+        388,
+        3,
+        36,
+        0
+      ],
+      "valid_total": 994,
+      "rejected": 0,
+      "nota": 11,
+      "total": 1005,
+      "tendered": 0
+    },
+    {
+      "serial_no": 174,
+      "main": 171,
+      "is_aux": false,
+      "votes": [
+        271,
+        146,
+        308,
+        1,
+        24,
+        1
+      ],
+      "valid_total": 751,
+      "rejected": 0,
+      "nota": 8,
+      "total": 759,
+      "tendered": 0
+    },
+    {
+      "serial_no": 175,
+      "main": 172,
+      "is_aux": false,
+      "votes": [
+        585,
+        69,
+        187,
+        0,
+        18,
+        0
+      ],
+      "valid_total": 859,
+      "rejected": 0,
+      "nota": 9,
+      "total": 868,
+      "tendered": 0
+    },
+    {
+      "serial_no": 176,
+      "main": 173,
+      "is_aux": false,
+      "votes": [
+        269,
+        136,
+        280,
+        0,
+        9,
+        2
+      ],
+      "valid_total": 696,
+      "rejected": 0,
+      "nota": 5,
+      "total": 701,
+      "tendered": 0
+    },
+    {
+      "serial_no": 177,
+      "main": 174,
+      "is_aux": false,
+      "votes": [
+        385,
+        123,
+        276,
+        1,
+        10,
+        0
+      ],
+      "valid_total": 795,
+      "rejected": 0,
+      "nota": 5,
+      "total": 800,
+      "tendered": 0
+    },
+    {
+      "serial_no": 178,
+      "main": 175,
+      "is_aux": false,
+      "votes": [
+        317,
+        149,
+        306,
+        0,
+        41,
+        2
+      ],
+      "valid_total": 815,
+      "rejected": 0,
+      "nota": 5,
+      "total": 820,
+      "tendered": 0
+    },
+    {
+      "serial_no": 179,
+      "main": 176,
+      "is_aux": false,
+      "votes": [
+        252,
+        118,
+        380,
+        2,
+        14,
+        0
+      ],
+      "valid_total": 766,
+      "rejected": 0,
+      "nota": 12,
+      "total": 778,
+      "tendered": 0
+    },
+    {
+      "serial_no": 180,
+      "main": 177,
+      "is_aux": false,
+      "votes": [
+        222,
+        199,
+        357,
+        2,
+        18,
+        0
+      ],
+      "valid_total": 798,
+      "rejected": 0,
+      "nota": 9,
+      "total": 807,
+      "tendered": 0
+    }
+  ]
+}

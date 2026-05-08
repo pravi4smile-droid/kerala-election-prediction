@@ -17,8 +17,8 @@ LIVE_FILE_LEGACY = LIVE_FILE
 LIVE_FILE   = os.path.join(DATA_PARSING_DIR, "live_results.json")
 PARSED_2021_DIR = os.path.join(DATA_DIR, "2021")
 DIR_2026        = os.path.join(DATA_DIR, "2026")
-HISTORY_YEARS = (2011, 2016, 2019, 2021, 2024)
-HISTORY_YEAR_WEIGHTS = {2011: 1, 2016: 4, 2019: 5, 2021: 6, 2024: 8}
+HISTORY_YEARS = (2011, 2016, 2019, 2021, 2024, 2025)
+HISTORY_YEAR_WEIGHTS = {2011: 1, 2016: 4, 2019: 5, 2021: 6, 2024: 8, 2025: 10}
 APP_FILE    = os.path.join(BASE_DIR, "app.py")
 MAX_BOOTH_ROW_VOTES = 2000
 
@@ -177,10 +177,18 @@ def get_booth_data() -> dict:
     return _BOOTH_DATA
 
 
-def history_dir_for_year(year: int) -> str:
-    """Return the local data folder for an Assembly or Lok Sabha history year."""
+def history_dirs_for_year(year: int) -> list[str]:
+    """Return local data folders for an Assembly or Lok Sabha history year."""
+    if year == 2025:
+        return [os.path.join(DATA_DIR, "2025_be")]
     ls_dir = os.path.join(DATA_DIR, f"{year}_ls")
-    return ls_dir if year in (2019, 2024) and os.path.isdir(ls_dir) else os.path.join(DATA_DIR, str(year))
+    dirs = [ls_dir if year in (2019, 2024) and os.path.isdir(ls_dir) else os.path.join(DATA_DIR, str(year))]
+    if year == 2024:
+        dirs.extend([
+            os.path.join(DATA_DIR, "2024_be"),
+            os.path.join(DATA_DIR, "2024_be_ls"),
+        ])
+    return dirs
 
 
 def get_history_data() -> dict[int, dict]:
@@ -189,9 +197,10 @@ def get_history_data() -> dict[int, dict]:
     if _HISTORY_DATA is None:
         _HISTORY_DATA = {}
         for year in HISTORY_YEARS:
-            year_dir = history_dir_for_year(year)
             year_data = {}
-            if os.path.isdir(year_dir):
+            for year_dir in history_dirs_for_year(year):
+                if not os.path.isdir(year_dir):
+                    continue
                 for fname in os.listdir(year_dir):
                     if not re.fullmatch(r"\d{3}\.json", fname):
                         continue

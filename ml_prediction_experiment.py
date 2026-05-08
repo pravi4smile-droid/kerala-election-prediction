@@ -537,6 +537,93 @@ def apply_model(
     return [v / total for v in shares] if total > 0 else sample.baseline_shares
 
 
+def train_ridge_loglinear(
+    samples: list[Sample],
+    lam: float = 1.0,
+    feature_attr: str = "features",
+) -> list[list[float]]:
+    """Ridge regression with log-ratio targets: log(actual_share) - log(baseline_share).
+    Inference uses softmax so predictions always live on the simplex (no clipping needed)."""
+    if not samples:
+        return []
+    _CLIP = 1e-4
+    p = len(getattr(samples[0], feature_attr))
+    xtx = [[0.0] * p for _ in range(p)]
+    xty = [[0.0, 0.0, 0.0] for _ in range(p)]
+    for s in samples:
+        x = getattr(s, feature_attr)
+        actual_sum = max(sum(s.actual_votes), 1)
+        actual_sh = [v / actual_sum for v in s.actual_votes]
+        y = [
+            math.log(max(actual_sh[k], _CLIP)) - math.log(max(s.baseline_shares[k], _CLIP))
+            for k in range(3)
+        ]
+        for i in range(p):
+            for j in range(p):
+                xtx[i][j] += x[i] * x[j]
+            for k in range(3):
+                xty[i][k] += x[i] * y[k]
+    for i in range(1, p):
+        xtx[i][i] += lam
+    return solve_linear_system(xtx, xty)
+
+
+def apply_model_loglinear(
+    sample: Sample,
+    coef: list[list[float]],
+    feature_attr: str = "features",
+) -> list[float]:
+    """Apply log-linear model: softmax(log(baseline_shares) + correction)."""
+    _CLIP = 1e-4
+    x = getattr(sample, feature_attr)
+    log_corr = [0.0, 0.0, 0.0]
+    for i, xi in enumerate(x):
+        for k in range(3):
+            log_corr[k] += xi * coef[i][k]
+    log_sh = [math.log(max(sample.baseline_shares[k], _CLIP)) + log_corr[k] for k in range(3)]
+    max_log = max(log_sh)
+    exp_sh = [math.exp(v - max_log) for v in log_sh]
+    total = sum(exp_sh)
+    return [v / total for v in exp_sh] if total > 0 else sample.baseline_shares
+
+
+def train_ridge_2out(
+    samples: list[Sample],
+    lam: float = 1.0,
+    feature_attr: str = "features",
+) -> list[list[float]]:
+    """2-output ridge: predict LDF and UDF corrections only; NDA = -(LDF+UDF).
+    Returns a p×3 coefficient matrix identical to train_ridge when targets sum to 0
+    (verified by algebra: beta_0+beta_1+beta_2 = (X'X+lI)^{-1} X'(y0+y1+y2) = 0)."""
+    if not samples:
+        return []
+    p = len(getattr(samples[0], feature_attr))
+    xtx = [[0.0] * p for _ in range(p)]
+    xty = [[0.0, 0.0] for _ in range(p)]
+    for s in samples:
+        x = getattr(s, feature_attr)
+        y = s.corrected_shares_target
+        for i in range(p):
+            for j in range(p):
+                xtx[i][j] += x[i] * x[j]
+            for k in range(2):
+                xty[i][k] += x[i] * y[k]
+    for i in range(1, p):
+        xtx[i][i] += lam
+    coef2 = solve_linear_system(xtx, xty)
+    # Expand: NDA correction = -(LDF + UDF)
+    return [[row[0], row[1], -(row[0] + row[1])] for row in coef2]
+
+
+def apply_model_2out(
+    sample: Sample,
+    coef: list[list[float]],
+    feature_attr: str = "features",
+) -> list[float]:
+    """Apply 2-output model (coef already has 3 columns; identical to apply_model)."""
+    return apply_model(sample, coef, feature_attr)
+
+
 # â"€â"€ Metrics â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
 
 def winner(values: list[float | int]) -> int:
@@ -1021,6 +1108,60 @@ def main() -> None:
         else:
             ev_r = evaluate(subset)
             print(f"\nR{r} (Formula, {ev_r['accuracy']*100:.1f}% acc -- ML not selected by CV)")
+
+    # ── 8. Constraint experiment: additive vs log-linear vs 2-out ─────────
+    print()
+    print(sep)
+    print("8. CONSTRAINT EXPERIMENT -- Improvement #3")
+    print("   Additive (current) | Log-linear (softmax) | 2-out constrained")
+    print("   All: lam=2.0, v1 features, trained on R1-R12, evaluated on 2026 R1-R12")
+    print()
+
+    coef_ll   = train_ridge_loglinear(train_full, lam=2.0, feature_attr="features")
+    coef_2out = train_ridge_2out(train_full,      lam=2.0, feature_attr="features")
+
+    def _eval_fn(samples: list[Sample], apply_fn) -> dict:
+        rows = []
+        for s in samples:
+            actual_w   = winner(s.actual_votes)
+            pred_sh    = apply_fn(s)
+            pred_w     = winner(pred_sh)
+            actual_sh  = [v / max(sum(s.actual_votes), 1) for v in s.actual_votes]
+            smae       = sum(abs(pred_sh[i] - actual_sh[i]) for i in range(3)) / 3
+            merr       = abs(margin(pred_sh) - margin(actual_sh))
+            rows.append({"correct": pred_w == actual_w, "smae": smae, "merr": merr})
+        n = len(rows) or 1
+        return {
+            "n": n,
+            "accuracy":     sum(1 for r in rows if r["correct"]) / n,
+            "share_mae":    sum(r["smae"] for r in rows) / n,
+            "margin_error": sum(r["merr"] for r in rows) / n,
+        }
+
+    _models = [
+        ("Formula    ", lambda s:           s.baseline_shares),
+        ("Additive v1", lambda s, c=coef_v1_full: apply_model(s, c, "features")),
+        ("Log-linear ", lambda s, c=coef_ll:      apply_model_loglinear(s, c, "features")),
+        ("2-out      ", lambda s, c=coef_2out:     apply_model_2out(s, c, "features")),
+    ]
+
+    print(f"{'Model':<14}  {'R1-3':>7}  {'R4-6':>7}  {'R7-9':>7}  {'R10-12':>8}  {'ALL':>7}  {'MAE':>7}  {'MarErr':>8}")
+    for _label, _fn in _models:
+        _gcols = []
+        for _, _rrange in ROUND_GROUPS:
+            _rset   = [r for r in _rrange if r in ROUNDS]
+            _subset = [s for s in val_full if s.round_no in _rset]
+            _gcols.append(_eval_fn(_subset, _fn)["accuracy"] * 100)
+        _ev = _eval_fn(val_full, _fn)
+        print(
+            f"{_label}  {_gcols[0]:>6.1f}%  {_gcols[1]:>6.1f}%  {_gcols[2]:>6.1f}%"
+            f"  {_gcols[3]:>7.1f}%  {_ev['accuracy']*100:>6.1f}%"
+            f"  {_ev['share_mae']*100:>6.2f}pp  {_ev['margin_error']*100:>7.2f}pp"
+        )
+    print()
+    print("  Note: '2-out' derives NDA = -(LDF+UDF). If it matches 'Additive v1'")
+    print("  exactly, the zero-sum constraint is already implicit (proven by algebra).")
+    print("  Log-linear avoids share-clipping by working in log-ratio space.")
 
 
 if __name__ == "__main__":

@@ -431,7 +431,7 @@ def get_constituencies():
         entry["has_2026_data"] = has_2026_data
         
         # Add PDF candidate data if available
-        if bd:
+        if bd and bd.get("booths"):
             entry["total_booths_including_aux"] = len(bd["booths"])
             entry["pdf_candidates"] = bd.get("candidates", [])
             entry["has_pdf_data"] = True
@@ -455,8 +455,8 @@ def get_constituencies():
 def get_booth_data(const_no):
     """Return full booth-level 2021 data for a constituency (for 2021 backtesting)."""
     bd = BOOTH_DATA.get(const_no)
-    if not bd:
-        return jsonify({"error": "No PDF data for this constituency"}), 404
+    if not bd or not bd.get("booths"):
+        return jsonify({"error": "No booth-wise data for this constituency"}), 404
 
     meta = META.get(const_no, {})
     # Group booths by round (count only main booths)

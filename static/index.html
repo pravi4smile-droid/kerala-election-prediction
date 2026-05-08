@@ -644,6 +644,10 @@ function renderEntry() {
   const boothPct = totalMain > 0 ? Math.round(counted / totalMain * 100) : 0;
   // Use vote-based for the bar when available
   const barPct = votePct !== null ? votePct : boothPct;
+  const isCountingComplete =
+    (votesPolled > 0 && votesCountedEci >= votesPolled) ||
+    boothPct >= 100 ||
+    (totalRounds > 0 && curRound >= totalRounds);
 
   const electorateLine = electorate > 0
     ? `<span>Electorate: ${electorate.toLocaleString()}  -  Turnout: ${turnoutPct}%  -  Polled: ${votesPolled.toLocaleString()}</span>`
@@ -654,7 +658,6 @@ function renderEntry() {
     <div class="entry-meta">
       <span>${c.district}</span>
       <span>Constituency #${no}</span>
-      <span>${c.has_pdf_data ? '<span class="tag tag-pdf">PDF data</span>' : '<span class="tag tag-est">Estimated</span>'}</span>
       <span>${totalMain} main booths  -  ${totalRounds} rounds${extraRounds ? ` (${boothDerivedRounds} booth-derived + ${extraRounds} ECI)` : ''}</span>
       ${electorateLine}
     </div>
@@ -665,7 +668,8 @@ function renderEntry() {
     ? `<div style="font-size:12px;color:var(--muted);margin-top:4px;font-family:var(--mono)">${votesCountedEci.toLocaleString()} / ${votesPolled.toLocaleString()} votes  -  <strong>${votePct}%</strong></div>`
     : '';
 
-  html += `<div class="card">
+  if (!isCountingComplete) {
+    html += `<div class="card">
     <div class="card-title">Counting progress</div>
     <div class="booth-grid">
       <div class="field">
@@ -691,6 +695,7 @@ function renderEntry() {
     <div class="progress-done" style="flex:${barPct}"></div>
     <div class="progress-pending" style="flex:${100-barPct}"></div>
   </div></div>`;
+  }
 
   // Candidates - pull allied data from ECI prediction if available
   const eciPred = eciPredRaw?.predictions?.[String(no)];
