@@ -248,6 +248,10 @@ if BOOTHS_COUNT_2021:
 
 BOOTHS_COUNT_2026 = {}
 VPOLL_DATA = {}
+VPOLL_FILE = os.path.join(DATA_PARSING_DIR, "votes_polled.json")
+if os.path.exists(VPOLL_FILE):
+    with open(VPOLL_FILE, encoding="utf-8") as _f:
+        VPOLL_DATA = json.load(_f)
 if os.path.isdir(ROUND_2026_DIR):
     for _fname in os.listdir(ROUND_2026_DIR):
         if not _fname.endswith(".json"):
@@ -258,7 +262,10 @@ if os.path.isdir(ROUND_2026_DIR):
         if _e.get("booth_count"):
             BOOTHS_COUNT_2026[_cno] = _e["booth_count"]
         if _e.get("turnout"):
-            VPOLL_DATA[_cno] = _e["turnout"]
+            VPOLL_DATA.setdefault(_cno, {}).update(_e["turnout"])
+            for _key in ("male", "female", "male_polled", "female_polled"):
+                if _e.get(_key) is not None:
+                    VPOLL_DATA[_cno][_key] = _e.get(_key)
     if BOOTHS_COUNT_2026:
         print(f"[OK] Built 2026 booth counts for {len(BOOTHS_COUNT_2026)} constituencies from 2026 folder")
     if VPOLL_DATA:
@@ -429,6 +436,11 @@ def get_constituencies():
         entry["booth_derived_rounds"] = math.ceil(total_main_booths / 14)
         entry["round_results_rounds"] = round_results_rounds
         entry["has_2026_data"] = has_2026_data
+        if const_no_str in VPOLL_DATA:
+            vpd = VPOLL_DATA[const_no_str]
+            for gender_key in ("male", "female", "male_polled", "female_polled"):
+                if vpd.get(gender_key) is not None:
+                    entry[gender_key] = vpd.get(gender_key)
         
         # Add PDF candidate data if available
         if bd and bd.get("booths"):
@@ -594,6 +606,8 @@ def predict():
         assess_call_readiness,
         projected_winner_history_from_2026,
         shift_pattern_history_from_2026,
+        summarize_shift_stability,
+        call_readiness_timeline_from_2026,
     )
     pred = eci_predict(votes_in, cur_round, tot_rounds,
                        const_no=const_no,
@@ -614,13 +628,17 @@ def predict():
 
     w_idx = pred["winner_idx"]
     winner_alliance = cands[w_idx]["alliance"] if w_idx < len(cands) else "ldf"
+    shift_patterns = shift_pattern_history_from_2026(const_no, cur_round)
+    projected_rank = pred.get("projected", []) or votes_in
+    top_indices = sorted(range(len(projected_rank)), key=lambda i: -projected_rank[i])[:3]
+    call_timeline = call_readiness_timeline_from_2026(const_no, cur_round)
     pred.update(assess_call_readiness(
         pred,
         cur_round,
         tot_rounds,
         votes_in,
         projected_winner_history_from_2026(const_no, cur_round),
-        shift_pattern_history_from_2026(const_no, cur_round),
+        shift_patterns,
     ))
 
     return jsonify({
@@ -643,6 +661,10 @@ def predict():
         "votes_counted":    total_counted,
         "votes_polled":     votes_polled_v,
         "formula":          pred.get("formula", {}),
+        "shift_patterns":   shift_patterns,
+        "shift_stability":  summarize_shift_stability(shift_patterns, top_indices),
+        "call_timeline":    call_timeline,
+        "ready_since_round": call_timeline.get("ready_since_round"),
     })
 
 @app.route("/api/live_results")

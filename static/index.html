@@ -208,6 +208,16 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 }
 
 /* ── Candidate rows ───────────────────────────────────────────────────────── */
+.round-nav-panel {
+  margin-bottom: 12px; padding: 10px 12px; border: 1px solid var(--border);
+  border-radius: var(--radius); background: var(--surface2);
+}
+.round-status-line {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  font-size: 12px; color: var(--muted); font-family: var(--mono);
+}
+.round-status-line strong { color: var(--text); }
+
 .cand-row {
   display: flex; align-items: center; gap: 10px;
   padding: 11px 14px; border-radius: var(--radius);
@@ -275,6 +285,35 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 .call-early { color: var(--nda); border-color: rgba(234,88,12,.28); background: var(--nda-xlight); }
 .call-close { color: var(--accent); border-color: rgba(220,38,38,.25); background: #fff0f0; }
 .call-watch { color: var(--muted); }
+.prediction-insights {
+  display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 12px;
+  padding: 14px 22px; border-top: 1px solid var(--border); background: var(--surface);
+}
+.insight-panel {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--surface2); padding: 10px 12px; min-width: 0;
+}
+.insight-title {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  color: var(--muted); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em;
+  margin-bottom: 8px;
+}
+.insight-title strong { color: var(--ink); font-size: 11px; letter-spacing: 0; text-transform: none; }
+.swing-chart { width: 100%; height: 72px; display: block; overflow: visible; }
+.swing-axis { stroke: var(--border-mid); stroke-width: 1; stroke-dasharray: 3 4; }
+.swing-line { fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.swing-point { stroke: var(--surface2); stroke-width: 2; }
+.swing-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; font-size: 10px; color: var(--muted); }
+.swing-legend span { display: inline-flex; align-items: center; gap: 4px; }
+.call-timeline { display: flex; align-items: center; gap: 4px; min-height: 24px; overflow-x: auto; padding-bottom: 2px; }
+.call-step {
+  width: 13px; height: 13px; border-radius: 999px; flex: 0 0 auto;
+  border: 1px solid var(--border-mid); background: var(--surface);
+}
+.call-step.ready { background: #16a34a; border-color: #15803d; }
+.call-step.called { background: var(--udf); border-color: var(--udf-mid); }
+.call-step.current { outline: 2px solid var(--ink); outline-offset: 2px; }
+.call-timeline-note { margin-top: 7px; font-size: 11px; color: var(--muted); }
 .pred-bars { padding: 16px 22px; border-top: 1px solid var(--border); background: var(--surface); }
 .bar-item { margin-bottom: 12px; }
 .bar-labels { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 5px; }
@@ -393,6 +432,11 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 .tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 100px; letter-spacing: .03em; }
 .tag-pdf { background: #dbeafe; color: #1e40af; }
 .tag-est { background: #fef9c3; color: #713f12; }
+@media (max-width: 820px) {
+  .prediction-insights { grid-template-columns: 1fr; padding: 12px 14px; }
+  .pred-banner { padding: 16px 14px; }
+  .pred-bars { padding: 14px; }
+}
 </style>
 </head>
 <body>
@@ -657,7 +701,6 @@ function renderEntry() {
     <h2>${c.name}</h2>
     <div class="entry-meta">
       <span>${c.district}</span>
-      <span>Constituency #${no}</span>
       <span>${totalMain} main booths  -  ${totalRounds} rounds${extraRounds ? ` (${boothDerivedRounds} booth-derived + ${extraRounds} ECI)` : ''}</span>
       ${electorateLine}
     </div>
@@ -682,19 +725,9 @@ function renderEntry() {
         <div style="font-size:14px;font-weight:500;padding-top:6px;font-family:var(--mono)">${boothPct}% booths counted</div>
         ${voteCountLine}
       </div>
-    </div>
-    <div class="round-btns">`;
-  for (let r = 1; r <= totalRounds; r++) {
-    const active = curRound === r ? 'active' : '';
-    html += `<button class="round-btn ${active}" onclick="setRound(${no},${r})">R${r}</button>`;
-  }
-  html += `</div>`;
+    </div>`;
 
-  // Progress strip - vote-based when available, else booth-based
-  html += `<div class="progress-strip" style="margin-top:10px">
-    <div class="progress-done" style="flex:${barPct}"></div>
-    <div class="progress-pending" style="flex:${100-barPct}"></div>
-  </div></div>`;
+  html += `</div>`;
   }
 
   // Candidates - pull allied data from ECI prediction if available
@@ -707,7 +740,24 @@ function renderEntry() {
   }
 
   html += `<div class="card">
-    <div class="card-title">Votes per candidate (running total)</div>`;
+    <div class="card-title">Votes per candidate (running total)</div>
+    <div class="round-nav-panel">
+      <div class="round-status-line">
+        <span>Round <strong>${curRound || '-'}</strong> of <strong>${totalRounds}</strong></span>
+        <span>${totalMain ? `${counted.toLocaleString()} / ${totalMain.toLocaleString()} booths - <strong>${boothPct}%</strong>` : ''}</span>
+        <span class="vote-count-line">${votesPolled > 0 && votesCountedEci > 0 ? `${votesCountedEci.toLocaleString()} / ${votesPolled.toLocaleString()} votes - <strong>${votePct}%</strong>` : ''}</span>
+      </div>
+      <div class="round-btns">`;
+  for (let r = 1; r <= totalRounds; r++) {
+    const active = curRound === r ? 'active' : '';
+    html += `<button class="round-btn ${active}" onclick="setRound(${no},${r})">R${r}</button>`;
+  }
+  html += `</div>
+      <div class="progress-strip">
+        <div class="progress-done" style="flex:${barPct}"></div>
+        <div class="progress-pending" style="flex:${100-barPct}"></div>
+      </div>
+    </div>`;
   const totalV = ld.votes.reduce((a, b) => a + b, 0);
   c.candidates.forEach((cand, i) => {
     const pctV = totalV > 0 ? Math.round(ld.votes[i] / totalV * 100) : 0;
@@ -742,6 +792,87 @@ function renderEntry() {
   }
 
   document.getElementById('contentArea').innerHTML = html;
+}
+
+function renderSwingStability(no, p) {
+  const raw = eciPredRaw?.predictions?.[String(no)] || {};
+  const patterns = p.shift_patterns || raw.shift_patterns || [];
+  if (!patterns || patterns.length < 2) return '';
+
+  const alliances = ['ldf','udf','nda'];
+  const series = alliances.map((a, idx) => ({
+    a,
+    values: patterns.map(row => Number(row?.[idx])).filter(v => Number.isFinite(v))
+  })).filter(s => s.values.length >= 2);
+  if (!series.length) return '';
+
+  const values = series.flatMap(s => s.values);
+  const minV = Math.min(-5, ...values);
+  const maxV = Math.max(5, ...values);
+  const pad = Math.max(2, (maxV - minV) * 0.12);
+  const lo = minV - pad;
+  const hi = maxV + pad;
+  const w = 300, h = 72, left = 8, right = 8, top = 7, bottom = 14;
+  const xFor = i => left + (series[0].values.length <= 1 ? 0 : i * ((w-left-right) / (series[0].values.length - 1)));
+  const yFor = v => top + ((hi - v) / (hi - lo || 1)) * (h - top - bottom);
+  const zeroY = yFor(0);
+
+  let svg = `<svg class="swing-chart" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+    <line class="swing-axis" x1="${left}" y1="${zeroY.toFixed(1)}" x2="${w-right}" y2="${zeroY.toFixed(1)}"></line>`;
+  series.forEach(s => {
+    const points = s.values.map((v, i) => `${xFor(i).toFixed(1)},${yFor(v).toFixed(1)}`).join(' ');
+    svg += `<polyline class="swing-line" stroke="${ALLIANCE_COLORS[s.a]}" points="${points}"></polyline>`;
+    s.values.forEach((v, i) => {
+      if (i === 0 || i === s.values.length - 1) {
+        svg += `<circle class="swing-point" cx="${xFor(i).toFixed(1)}" cy="${yFor(v).toFixed(1)}" r="3" fill="${ALLIANCE_COLORS[s.a]}"><title>R${i+1} ${ALLIANCE_LABELS[s.a]} ${v >= 0 ? '+' : ''}${v.toFixed(1)}pp</title></circle>`;
+      }
+    });
+  });
+  svg += `</svg>`;
+
+  const stability = p.shift_stability || raw.shift_stability || {};
+  const stableText = stability.stable_all ? 'All-round pattern intact'
+    : stability.stable_recent ? 'Recent rounds stable'
+    : 'Pattern still moving';
+  const legend = series.map(s => {
+    const v = s.values[s.values.length - 1];
+    return `<span><span class="dot" style="background:${ALLIANCE_COLORS[s.a]}"></span>${ALLIANCE_LABELS[s.a]} ${v >= 0 ? '+' : ''}${v.toFixed(1)}pp</span>`;
+  }).join('');
+
+  return `<div class="insight-panel">
+    <div class="insight-title">Swing Stability <strong>${stableText}</strong></div>
+    ${svg}
+    <div class="swing-legend">${legend}</div>
+  </div>`;
+}
+
+function renderCallTimeline(no, p) {
+  const raw = eciPredRaw?.predictions?.[String(no)] || {};
+  const callTimeline = p.call_timeline || raw.call_timeline || {};
+  const timeline = callTimeline.timeline || [];
+  if (!timeline.length) return '';
+
+  const readySince = p.ready_since_round || raw.ready_since_round || callTimeline.ready_since_round;
+  const currentRound = timeline[timeline.length - 1]?.round;
+  const steps = timeline.map(t => {
+    const cls = [
+      'call-step',
+      t.status === 'called' ? 'called' : '',
+      t.ready ? 'ready' : '',
+      t.round === currentRound ? 'current' : '',
+    ].filter(Boolean).join(' ');
+    const title = `R${t.round}: ${t.label || t.status}, margin ${Number(t.margin || 0).toLocaleString()}, ${t.confidence || 0}%`;
+    return `<span class="${cls}" title="${title}"></span>`;
+  }).join('');
+  const note = readySince
+    ? `First ready at R${readySince}; current R${currentRound}`
+    : `Not ready before R${currentRound}`;
+
+  return `<div class="insight-panel">
+    <div class="insight-title">Call Readiness <strong>${readySince ? 'Ready since R' + readySince : 'Not crossed'}</strong></div>
+    <div class="call-timeline">${steps}</div>
+    <div class="call-timeline-note">${note}</div>
+  </div>`;
 }
 
 function renderPrediction(no) {
@@ -787,6 +918,10 @@ function renderPrediction(no) {
         <div class="call-indicator ${callClass}">${callLabel} <span>${callConfidence}${callReason ? ` - ${callReason}` : ''}</span></div>
       </div>
     </div>
+    ${(() => {
+      const insights = `${renderSwingStability(no, p)}${renderCallTimeline(no, p)}`;
+      return insights ? `<div class="prediction-insights">${insights}</div>` : '';
+    })()}
     <div class="pred-bars">`;
 
   const sortedIdx = p.projected.map((v,i)=>({v,i})).sort((a,b)=>b.v-a.v);
@@ -1191,6 +1326,15 @@ async function setRound(no, r) {
   const votePctR  = vpPoll > 0 ? Math.min(Math.round(totalCumul / vpPoll * 100), 100) : null;
   const barPctR   = votePctR !== null ? votePctR : boothPctR;
 
+  const roundStatus = document.querySelector('.round-status-line');
+  if (roundStatus) {
+    roundStatus.innerHTML = `
+      <span>Round <strong>${r}</strong> of <strong>${effectiveTotalRounds(no)}</strong></span>
+      <span>${cm.total_main_booths ? `${c.boothsCounted.toLocaleString()} / ${cm.total_main_booths.toLocaleString()} booths - <strong>${boothPctR}%</strong>` : ''}</span>
+      <span class="vote-count-line">${vpPoll > 0 ? `${totalCumul.toLocaleString()} / ${vpPoll.toLocaleString()} votes - <strong>${votePctR}%</strong>` : ''}</span>
+    `;
+  }
+
   // Update booth% label
   const roundLabel = document.querySelector('.booth-grid .field:nth-child(2) label');
   if (roundLabel) roundLabel.textContent = `of ${cm.total_main_booths} main booths  Round ${r} of ${effectiveTotalRounds(no)}`;
@@ -1419,6 +1563,10 @@ function syncPredictionsToState(preds) {
       votes_polled:    p.votes_polled || votesPollRaw[String(cno)]?.votes_polled,
       used_pdf_pattern: p.used_pattern,
       formula:         p.formula || {},
+      shift_patterns:  p.shift_patterns || [],
+      shift_stability: p.shift_stability || {},
+      call_timeline:   p.call_timeline || {},
+      ready_since_round: p.ready_since_round || null,
       booth_info:      { scaling: 1 },
       eci_names:       ['ldf','udf','nda'].map(a => p.candidates_mapped?.[a]?.eci_name || ''),
     };

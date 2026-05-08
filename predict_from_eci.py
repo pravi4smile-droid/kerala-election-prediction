@@ -879,6 +879,120 @@ def shift_pattern_history_from_2026(const_no: int, upto_round: int) -> list[list
     return patterns
 
 
+def summarize_shift_stability(
+    patterns: list[list[float]],
+    top_indices: list[int] | None = None,
+) -> dict:
+    """Summarize whether swing direction is stable for the main alliances."""
+    alliances = ["ldf", "udf", "nda"]
+    if top_indices is None:
+        top_indices = [0, 1, 2]
+
+    def sign(value: float) -> int:
+        if value > 1.0:
+            return 1
+        if value < -1.0:
+            return -1
+        return 0
+
+    def stable_for(check: list[list[float]], min_rounds: int) -> bool:
+        if len(check) < min_rounds:
+            return False
+        for idx in top_indices:
+            vals = [row[idx] for row in check if idx < len(row)]
+            if len(vals) < min_rounds:
+                return False
+            signs = [sign(v) for v in vals]
+            non_neutral = [s for s in signs if s != 0]
+            if non_neutral and len(set(non_neutral)) > 1:
+                return False
+            if not non_neutral and max(vals) - min(vals) > 3.0:
+                return False
+        return True
+
+    by_alliance = {}
+    for idx, alliance in enumerate(alliances):
+        vals = [row[idx] for row in patterns if idx < len(row)]
+        non_neutral = [sign(v) for v in vals if sign(v) != 0]
+        by_alliance[alliance] = {
+            "rounds": len(vals),
+            "current_delta": round(vals[-1], 2) if vals else None,
+            "min_delta": round(min(vals), 2) if vals else None,
+            "max_delta": round(max(vals), 2) if vals else None,
+            "stable_direction": len(set(non_neutral)) <= 1 if non_neutral else True,
+        }
+
+    return {
+        "rounds": len(patterns),
+        "stable_recent": stable_for(patterns[-2:], 2),
+        "stable_all": stable_for(patterns, 3),
+        "alliances": by_alliance,
+    }
+
+
+def call_readiness_timeline_from_2026(const_no: int, upto_round: int) -> dict:
+    """Replay rounds and return when the aggressive call criteria first passed."""
+    path = os.path.join(DIR_2026, f"{const_no:03d}.json")
+    if not os.path.exists(path):
+        return {"ready_since_round": None, "timeline": []}
+    with open(path, encoding="utf-8") as f:
+        entry = json.load(f)
+
+    alliances = ["ldf", "udf", "nda"]
+    candidate_alliances = {
+        c.get("index"): c.get("alliance")
+        for c in entry.get("candidates_2026", [])
+        if c.get("alliance") in alliances
+    }
+    rounds = entry.get("rounds", []) or []
+    votes_polled = (entry.get("turnout") or {}).get("votes_polled", 0)
+    leaders: list[int] = []
+    patterns: list[list[float]] = []
+    timeline = []
+
+    for r, rr in enumerate(rounds[:upto_round], start=1):
+        cumulative = rr.get("cumulative", [])
+        votes = [0, 0, 0]
+        for idx, alliance in candidate_alliances.items():
+            if isinstance(idx, int) and idx < len(cumulative):
+                votes[alliances.index(alliance)] += int(cumulative[idx] or 0)
+        if sum(votes) <= 0:
+            continue
+
+        pred = predict(
+            votes,
+            r,
+            len(rounds),
+            const_no=const_no,
+            votes_polled=votes_polled,
+            total_counted=sum(int(x or 0) for x in cumulative),
+        )
+        if not pred:
+            continue
+
+        leaders.append(pred.get("winner_idx", 0))
+        delta = pred.get("formula", {}).get("delta")
+        if delta and len(delta) >= 3:
+            patterns.append(delta)
+        readiness = assess_call_readiness(pred, r, len(rounds), votes, leaders[:], patterns[:])
+        timeline.append({
+            "round": r,
+            "status": readiness.get("call_status", "watching"),
+            "label": readiness.get("call_label", "Watching Trend"),
+            "ready": bool(readiness.get("call_ready", False)),
+            "confidence": readiness.get("confidence", pred.get("confidence", 0)),
+            "margin": int(pred.get("margin", 0) or 0),
+            "winner_idx": int(pred.get("winner_idx", 0) or 0),
+            "pct_counted": pred.get("pct_counted", 0),
+        })
+
+    ready_since = next(
+        (t["round"] for t in timeline if t["ready"] and t["status"] in ("ready_to_call", "called")),
+        None,
+    )
+    return {"ready_since_round": ready_since, "timeline": timeline}
+
+
 def run():
     # Build live-style inputs from split 2026 files.  The old live_results.json
     # scraper output is no longer required once data/2026 has complete rounds.
@@ -1003,13 +1117,22 @@ def run():
                        votes_polled=votes_polled_v, total_counted=total_counted)
         if not pred:
             continue
+        winner_history = projected_winner_history_from_2026(cno, cur_round)
+        shift_patterns = shift_pattern_history_from_2026(cno, cur_round)
+        projected = pred.get("projected", []) or votes
+        top_indices = sorted(
+            range(len(projected)),
+            key=lambda i: -projected[i],
+        )[:3]
+        shift_stability = summarize_shift_stability(shift_patterns, top_indices)
+        call_timeline = call_readiness_timeline_from_2026(cno, cur_round)
         pred.update(assess_call_readiness(
             pred,
             cur_round,
             tot_rounds,
             votes,
-            projected_winner_history_from_2026(cno, cur_round),
-            shift_pattern_history_from_2026(cno, cur_round),
+            winner_history,
+            shift_patterns,
         ))
 
         winner_alliance = alliances[pred["winner_idx"]]
@@ -1075,6 +1198,10 @@ def run():
             "votes_polled":    votes_polled_v,
             "used_pattern":    pred["used_pattern"],
             "formula":         pred.get("formula", {}),
+            "shift_patterns":   shift_patterns,
+            "shift_stability":  shift_stability,
+            "call_timeline":    call_timeline,
+            "ready_since_round": call_timeline.get("ready_since_round"),
             "is_upset":        is_upset,
             "eci_lead_alliance": eci_lead_alliance,
             "eci_leader_name": eci_leader_cand["name"] if eci_leader_cand else "",
