@@ -1,6 +1,13 @@
 .git
 __pycache__/
 archive/
+
+# Flask backend — runs on Render, not Vercel.
+app.py
+predict_from_eci.py
+requirements.txt
+Procfile
+.python-version
 *.pyc
 *.pyo
 *.pdf
