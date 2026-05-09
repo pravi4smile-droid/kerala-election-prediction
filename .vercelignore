@@ -1,5 +1,6 @@
 .git
 __pycache__/
+archive/
 *.pyc
 *.pyo
 *.pdf
@@ -12,14 +13,5 @@ data/data_parsing/booth_wise_parsed.json
 data/data_parsing/round_results.json
 data/data_parsing/live_results.json
 
-# Local-only parser, scraper, enrichment, and analysis scripts.
-download_*.py
-parse_*.py
-split_*.py
-scrape_*.py
-enrich_*.py
-extract_*.py
-analyze_*.py
-simulate_*.py
-auto_runner.py
-eci_scraper.py
+# Local-only pipeline scripts (not needed by the deployed app).
+data_pipeline/

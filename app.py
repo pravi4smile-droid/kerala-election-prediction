@@ -6,12 +6,11 @@ Then open: http://localhost:5000
 """
 
 import os, json, math, sys
-from flask import Flask, jsonify, send_from_directory, request
+from flask import Flask, jsonify, request
 
 # ── paths ────────────────────────────────────────────────────────────────────
 BASE        = os.path.dirname(__file__)
 DATA_DIR    = os.path.join(BASE, "data")
-STATIC      = os.path.join(BASE, "static")
 PARSED_2021_DIR = os.path.join(DATA_DIR, "2021")
 ROUND_2026_DIR  = os.path.join(DATA_DIR, "2026")
 META_FILE   = os.path.join(DATA_DIR, "constituency_meta.json")
@@ -272,7 +271,7 @@ if os.path.isdir(ROUND_2026_DIR):
         print(f"[OK] Loaded votes-polled data for {len(VPOLL_DATA)} constituencies")
 
 # ── Flask app ────────────────────────────────────────────────────────────────
-app = Flask(__name__, static_folder=STATIC)
+app = Flask(__name__)
 
 
 def historical_alliance_refs(year, const_no):
@@ -321,10 +320,6 @@ def historical_ls_refs(ls_year, const_no):
         }
     return refs
 
-
-@app.route("/")
-def index():
-    return send_from_directory(STATIC, "index.html")
 
 @app.route("/api/constituencies")
 def get_constituencies():
@@ -1059,21 +1054,6 @@ def get_round_results(const_no):
     return jsonify({**result, "rounds": enriched_rounds, "tot_rounds": tot_rounds,
                     "candidate_alliances": candidate_alliances,
                     "alliance_idx": alliance_idx})
-
-
-@app.route("/api/scrape_now", methods=["POST"])
-def scrape_now():
-    """Trigger an immediate ECI scrape (runs in background thread)."""
-    import threading
-    def _run():
-        try:
-            sys.path.insert(0, BASE)
-            from eci_scraper import scrape_all
-            scrape_all(verbose=False)
-        except Exception as e:
-            print(f"[scrape_now] error: {e}")
-    threading.Thread(target=_run, daemon=True).start()
-    return jsonify({"status": "scrape started"})
 
 
 if __name__ == "__main__":

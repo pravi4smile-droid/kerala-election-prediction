@@ -2,6 +2,10 @@
 app_err.txt
 app_out.txt
 __pycache__/
+node_modules/
+.next/
+out/
+*.tsbuildinfo
 *.pyc
 *.pyo
 *.pyd
